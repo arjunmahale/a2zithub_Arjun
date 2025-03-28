@@ -77,7 +77,7 @@
     </style>
 </head>
 <body>
-    <div class="game-container">
+    <div class="game-container" id="gameContainer">
         <div class="score-board" id="scoreBoard">Distance: 0m</div>
         <img class="mario" id="mario" src="mari-unscreen.gif">
         <div class="obstacle" id="obstacle"></div>
@@ -86,20 +86,30 @@
         <h2>Game Over</h2>
         <p>Your Score: <span id="finalScore">0</span> meters</p>
         <img id="standingMario" src="claps.gif" alt="Standing Mario" style="width: 100%;">
-        <button class="restart-btn" onclick="restartGame()" style="align-self: center;">Restart</button>
+        <button class="restart-btn" onclick="restartGame()">Restart</button>
     </div>
     <script>
         let distance = 0;
         let isGameOver = false;
         let mario = document.getElementById("mario");
 
+        function jump() {
+            if (!mario.classList.contains("jump")) {
+                mario.classList.add("jump");
+                setTimeout(() => mario.classList.remove("jump"), 300);
+            }
+        }
+
+        // Keyboard input (Desktop)
         document.addEventListener("keydown", function(event) {
             if (event.code === "Space") {
-                if (!mario.classList.contains("jump")) {
-                    mario.classList.add("jump");
-                    setTimeout(() => mario.classList.remove("jump"), 300);
-                }
+                jump();
             }
+        });
+
+        // Touch input (Mobile)
+        document.getElementById("gameContainer").addEventListener("touchstart", function() {
+            jump();
         });
 
         let gameInterval = setInterval(() => {
