@@ -2,13 +2,13 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
 }
 .navbar{
     height: 100px;
     width: 100%;
     color: white;
-    background-color: #4b3737;
+    background: rgb(44, 44, 73);
 
 }
 .logo{
@@ -104,14 +104,35 @@
     background-color: transparent;
     color: white;
 }
+.btn1{
+    height: 50px;width: 30%;color: white; background-image: linear-gradient(to right,rgb(112, 112, 247),rgb(165, 165, 241),rgb(85, 85, 250));border-radius: 30px;box-sizing: border-box;font-size:medium;
+}
+.btn2{
+    height: 50px;width: 30%;color: white; background-image: linear-gradient(to right,rgb(149, 243, 86),rgb(13, 233, 13),rgb(233, 212, 30));border-radius: 30px;box-sizing: border-box;font-size:medium
+}
+@media(max-width:667px){
+    .btn1{
+        font-size: x-small;
+    }
+    .btn2{
+        font-size: x-small;
+    }
+}
+
 /* features div started */
 .features{
     height: 300px;
     width: 100%;
     padding-left: 5%;
     padding-right: 5%;
-    background: rgb(39, 25, 25);
+    background: rgb(44, 44, 73);
     float: left;
+}
+.features p{
+    font-size: small;margin-top: 5%;
+}
+.features i{
+    font-size: 50px;margin-top: 7%;margin-bottom: 5%;color: red;
 }
 .container1{
     height: 100%;
@@ -122,7 +143,40 @@
   margin-top: -100px;
    float: left;
    padding: 1%;
-   background-color: #4b3737;
+   background: rgb(64, 64, 87)
+}
+@media(max-width:667px){
+   
+    .features{
+        height: 300px;
+        width: 100%;
+        padding-left: 1%;
+        padding-right: 1%;
+        background: rgb(44, 44, 73);
+        float: left;
+    }
+    
+.container1{
+    height: 100%;
+    width: 23%;
+    color: white;
+    margin-right: 2%;
+    
+  margin-top: -100px;
+   float: left;
+   padding: 1%;
+ background: rgb(64, 64, 87);
+}
+.features p{
+    font-size: small;text-overflow: hidden;
+}
+.features i{
+    font-size: 40px;
+}
+.features h1{
+    font-size: large;
+}
+
 }
 /* our clients */
 .clients{
@@ -130,7 +184,7 @@
     width: 100%;
     padding-left: 5%;
     padding-right: 5%;
-    background: rgb(39, 25, 25);
+    background: rgb(44, 44, 73);
     padding-top: 10%;
     float: left;
     color: white;
@@ -144,12 +198,21 @@
     box-sizing: border-box;
      padding: 3%;
 }
+.images img{
+    height: 100%; width: 100%;
+}
+@media(max-width:667px){
+    
+.images{
+    height: 100px;width: 30%;
+}
+}
 /* About us section started */
 
 .about{
     height: 600px;
     width: 100%;float: left;
-    background: rgb(39, 25, 25);
+    background: rgb(44, 44, 73);
     padding: 5%;
     color: white;
 }
@@ -162,4 +225,140 @@
     color: orange;
     margin-top: 2%;
     margin-right: 1%;
+}
+.btn4{
+    height: 50px;width: 30%;color: white; background-image: linear-gradient(to right,rgb(112, 112, 247),rgb(165, 165, 241),rgb(85, 85, 250));border-radius: 30px;box-sizing: border-box;font-size:medium;margin-top: 5%;float: left;margin-right: 5%;
+}
+.btn3{
+    height: 50px;width: 30%;color: white; background-color: transparent;border-radius: 30px;box-sizing: border-box;font-size:medium;margin-top: 5%;
+}
+@media(max-width:667px){
+  
+.about{
+    height: 1200px;
+    width: 100%;float: left;
+    background: rgb(44, 44, 73);
+    padding: 5%;
+    color: white;
+}  
+.div1{
+    height: 50%;
+    width: 100%;
+    float: left;
+}
+}
+/* portfolio started */
+.Portfolio{
+    height: 300px;
+    width: 100%;
+    background: rgb(44, 44, 73);
+    display: flex;
+   padding-left: 5%;
+   padding-right: 5%;
+
+}
+.port-info{
+    height: 10%;
+    width: 60%;
+    float: left;
+    padding: 3%;
+    color: white;
+}
+.port-info h1{
+    font-size: 50px;
+}
+.port-btn{
+    height: 10%;
+    width: 40%;
+    float: right;
+   
+}
+.port-btn button{
+    height: 50px;
+    width: 40%;
+    border-radius: 30px;
+    background-color: transparent;
+    font-size: large;
+   margin-left: 50%;
+   margin-top: 30%;
+   color: white;
+}
+@media(max-width:667px){
+    .port-btn button{
+        font-size: small;
+    }
+}
+.port-images{
+    height:600px;
+    width:100% ;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 5%;
+    float: left;
+    display: flex;
+    background: rgb(44, 44, 73);
+}
+.port-div1{
+    height: 95%;
+    width: 50%;
+    float: left;
+   background-size: cover;
+   background-repeat: no-repeat;
+    background-image: url(images/webpages/im4.jpg);
+}
+
+.port-div2{
+    height: 95%;
+    width: 50%;
+    float: left;
+   background-size: cover;
+   background-repeat: no-repeat;
+    background-image: url(images/webpages/im3.jpg);
+}
+
+.port-div3{
+    height: 95%;
+    width: 50%;
+    float: left;
+   background-size: cover;
+   background-repeat: no-repeat;
+    background-image: url(images/webpages/im2.jpg);
+}
+
+.port-div4{
+    height: 95%;
+    width: 50%;
+    float: left;
+   background-size: cover;
+   background-repeat: no-repeat;
+    background-image: url(images/webpages/im1.jpg);
+}
+
+@media(max-width:667px){
+
+  
+
+.port-div1{
+    height: 90%;
+    width: 100%;
+   
+}
+
+.port-div2{
+    height: 90%;width: 100%;
+   
+}
+
+.port-div3{
+    height: 0%;width: 0%;
+   
+   
+   
+}
+
+.port-div4{
+    height: 0%;width: 0%;
+
+   
+}
 }
