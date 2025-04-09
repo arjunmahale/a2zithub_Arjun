@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+  }
+  .main{
+      background-image: url(abstract-geometric-pattern-background_1319-242.avif);
+
+      height: 600px;
+      width: 100%;
+     
+  }
+  .div1{
+      height: 100%;
+      width: 50%;
+      background: transparent;
+      box-sizing: border-box;
+      float: left;
+      background-image: url(chatgpt-removebg-preview.png);
+      background-repeat: no-repeat;
+      background-position: bottom;
+      font-size: x-large;
+     
+  }
+ 
+  .list1{
+      height: 100%;
+      width: 50%;
+      background: transparent;
+     float: left;
+      padding: 6%;
+      padding-right: 10%;
+     
+  }
+ 
+ 
+  .list2{
+      height: 100%;
+      width: 50%;
+     float: left;
+      padding: 6%;
+      padding-right: 10%;
+     
+  }
+ 
+  li{
+      margin-bottom: 5%;
+      list-style: none;
+      border: 2px solid red;
+      border-radius: 10px;
+      padding: 10%;
+      text-align: center;
+     
+      background-color: rgba(0, 0, 0, 0.2);
+      
+  }
+  .div2{
+      height: 100%;
+      float: left;
+      width: 50%;
+      background: transparent;
+      box-sizing: border-box;
+     
+      padding-top: 0%;
+      padding-left: 10%;
+      padding-right: 10%;
+      font-size: x-large;
+
+     
+  }
+  form{
+    border: 3px solid black;
+    padding: 5%;
+    margin-top: 3%;
+    padding-bottom: 2%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px 0px rgb(247, 233, 233);
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  input::placeholder {
+    color: white; /* light gray */
+  }
+  form input,select{
+    margin-top:3%;
+   
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    border-radius: 30px;
+    font-size: medium;
+    color: white;
+    background-color: transparent;
+    border-bottom: 3px solid red;
+    box-shadow: 0px 0px 20px 0px black;
+
+  }
+  textarea{
+    margin-top:3%;
+    height: 80px;
+    width: 100%;
+    color: white;
+   background-color: transparent;
+    border-radius: 30px;
+    font-size: medium;
+    box-shadow: 0px 0px 20px 0px black;
+  }
+  
+  button{
+    margin-top:3%;
+    height: 50px;
+    font-size: medium;
+    width: 30%;
+    text-align: center;
+    border-radius: 30px;
+    background-color: orange;
+    margin-left: 35%;
+  }
