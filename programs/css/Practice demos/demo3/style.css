@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+.main{
+    height: 600px;
+    width: 100%;
+}
+.divleft{
+ height: 100%;
+ width: 20%;
+ float: left;
+ box-sizing: border-box;
+ background: rgb(218, 106, 106);
+
+}
+.divright{
+    height: 100%;
+ width: 80%;
+ float: left;
+ box-sizing: border-box;
+ background: rgb(189, 165, 165);
+ 
+}
+.logo{
+    height: 10%;
+    width: 100%;
+    background: blueviolet;
+    text-align: center;
+    padding-top: 3%;
+}
+li{
+    margin: 5%;
+    font-size: large;
+    list-style: none;
+}
