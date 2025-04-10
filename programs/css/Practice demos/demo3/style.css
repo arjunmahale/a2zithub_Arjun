@@ -4,7 +4,9 @@
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
 }
+
 .main{
+    background-image: url(matrix-style-binary-code-digital-falling-numbers-blue-background_1017-37387.avif);
     height: 600px;
     width: 100%;
 }
@@ -13,7 +15,7 @@
  width: 20%;
  float: left;
  box-sizing: border-box;
- background: rgb(218, 106, 106);
+
 
 }
 .divright{
@@ -27,12 +29,142 @@
 .logo{
     height: 10%;
     width: 100%;
-    background: blueviolet;
+    background-color: rgb(115, 65, 161);
     text-align: center;
     padding-top: 3%;
+    border-bottom: 2px dashed black ;
+}
+.home{
+    height: 30%;
+    width: 100%;
+ 
+  justify-content: center;
+}
+.home h2{
+    margin-left: 0px;
+    padding-left: 0px;
+    height: 50px;
+    background-color: rgb(115, 65, 161);
+    padding-top: 5%;
 }
 li{
-    margin: 5%;
-    font-size: large;
+    margin: 4%;
+    margin-left: 20%;
+    font-size: larger;
     list-style: none;
+    text-transform: capitalize;
+    background: transparent;
+    color: white;
+}
+
+
+.nav{
+    height: 10%;
+    width: 100%;
+   float: left;
+    text-align: center;
+   
+   
+}
+.navdiv1{
+    height: 100%;
+    width: 50%;
+    background: #000;
+    float: left;
+    display: flex;
+    align-items: center;
+    gap: 1%;
+}
+.navdiv1 input{
+    height: 70%;
+    width: 50%;float: left;
+    border-radius: 15px;
+}
+.navdiv1 button{
+    height: 70%;
+    color: white;
+    font-size: large;
+    border-radius: 10px;
+    width: 20%;
+    float: left;
+     background-color: rgb(115, 65, 161);
+   
+}
+.links{
+    height: 100%;
+    width: 30%;
+    float: left;
+  background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.links div{
+    height: 70%;
+    width: 11%;
+    margin-right: 5%;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    background-color: rgb(115, 65, 161);
+}
+
+.profilepic{
+    height: 100%;
+    width: 20%;
+    float: left;
+  background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profilepic div{
+    height: 70%;
+    width: 18%;
+   
+    font-size: large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+   
+   background-image: url(user-profile-png-professional-businesswoman-sticker-transparent-background_53876-1049017.avif);
+   background-size: cover;
+   background-repeat: no-repeat;
+    border: 2px solid white;
+}
+
+.mainframe{
+    height: 70%;
+    width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   box-sizing: border-box;
+}
+.mainframe div{
+    width: 33%;
+    height: 95%;
+box-sizing: border-box;
+  margin: 5%;
+   border: 2px solid red;
+}
+
+
+.bottomframe{
+    height: 20%;
+    width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.bottomframe div{
+    height: 100%;
+    width: 33%;
+   color: white;
+   text-align: center;
+
 }
