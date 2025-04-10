@@ -51,7 +51,7 @@
 }
 @media(max-width : 667px){
     .links{
-        /* visibility: hidden; */
+        visibility: hidden;
         .links li{
             font-size: 5px;
         }
@@ -75,7 +75,7 @@
 /* navbar completed */
 
 .main{
-    height: 650px;
+    height: 850px;
     width: 100%;
     color: white;
    background-image: url(images/Windows-11-bg.webp);
@@ -114,6 +114,20 @@
     height: 50px;width: 30%;color: white; background-image: linear-gradient(to right,rgb(149, 243, 86),rgb(13, 233, 13),rgb(233, 212, 30));border-radius: 30px;box-sizing: border-box;font-size:medium
 }
 @media(max-width:667px){
+    .main_info{
+        height: 40%;
+        width:100% ;
+       
+        float: left;
+        padding-top: 10%;
+    }
+    .main_form{
+        height:60%;
+        width: 100%;
+        float: left;
+      
+        padding-top: 10%;
+    }
     .btn1{
         font-size: x-small;
     }
@@ -151,7 +165,7 @@
 @media(max-width:667px){
    
     .features{
-        height: 300px;
+        height: 700px;
         width: 100%;
         padding-left: 1%;
         padding-right: 1%;
@@ -160,12 +174,13 @@
     }
     
 .container1{
-    height: 100%;
-    width: 23%;
+    height: 27%;
+    width: 100%;
     color: white;
+    padding: 2%;
     margin-right: 2%;
-    
-  margin-top: -100px;
+    margin-bottom: 23%;
+box-sizing: border-box;
    float: left;
    padding: 1%;
  background: rgb(64, 64, 87);
@@ -223,6 +238,14 @@
     height: 100%;
     width: 50%;
     float: left;
+   
+}
+.div2forabout{
+    height: 100%;
+    width: 50%;
+    float: left;
+    background-image: url(images/aboutusimage.png);background-repeat: no-repeat;background-size: cover;border-radius: 10%;
+   
 }
 .div1 i{
     color: orange;
@@ -235,19 +258,42 @@
 .btn3{
     height: 50px;width: 30%;color: white; background-color: transparent;border-radius: 30px;box-sizing: border-box;font-size:medium;margin-top: 5%;
 }
+.experience{
+    height: 30%;width: 25%;background: #dab308;text-align: center;margin-top: 10%;margin-left: 20%;border-radius: 50%;
+}
+.experience h1{
+    font-size: 50px;padding-top: 3%;
+}
 @media(max-width:667px){
   
 .about{
-    height: 1200px;
+    height: 800px;
     width: 100%;float: left;
     background: rgb(44, 44, 73);
     padding: 5%;
     color: white;
 }  
 .div1{
-    height: 50%;
+    height: 70%;
     width: 100%;
     float: left;
+}
+.div2forabout{
+    height: 30%;
+    width: 100%;
+    float: left;
+    background-image: url(images/aboutusimage.png);background-repeat: no-repeat;background-size: cover;border-radius: 10%;
+   
+}
+.experience{
+    height: 55%;width: 30%;background: #dab308;text-align: center;margin-top: 10%;margin-left: 10%;border-radius: 50%;
+}
+.experience h1{
+    font-size: 40px;padding-top: 3%;
+}
+.experience h3{
+    font-size:large;
+   
 }
 }
 /* portfolio started */
@@ -259,6 +305,7 @@
    padding-left: 5%;
    padding-right: 5%;
    padding-top: 5%;
+   overflow: hidden;
 
 }
 .port-info{
@@ -288,9 +335,30 @@
    color: white;
 }
 @media(max-width:667px){
+    
+.port-info{
+    height: 10%;
+    width: 70%;
+    float: left;
+    padding: 3%;
+    color: white;
+}
+
+.port-info h1{
+    font-size: 30px;
+}
+.port-btn{
+    height: 10%;
+    width: 30%;
+    float: right;
+    margin-right: 10%;
+}
     .port-btn button{
-        font-size: small;
-    }
+        width: 100%;
+        font-size: xx-small;
+        
+}
+
 }
 .port-images{
     height:600px;
@@ -306,6 +374,7 @@
     height: 95%;
     width: 50%;
     float: left;
+    font-size:x-small;
    background-size: cover;
    background-repeat: no-repeat;
     background-image: url(images/webpages/im4.jpg);
@@ -383,7 +452,7 @@
 }
 .serv-info{
     height: 10%;
-    width: 60%;
+    width: 70%;
     float: left;
     padding: 3%;
     color: white;
@@ -393,10 +462,11 @@
 }
 .serv-btn{
     height: 10%;
-    width: 40%;
+    width: 30%;
     float: right;
    
 }
+
 .serv-btn button{
     height: 50px;
     width: 40%;
@@ -408,6 +478,28 @@
    color: white;
 }
 @media(max-width:667px){
+
+    .serv-btn button{
+        width: 100%;
+        font-size: x-small;
+    }
+.serv-info{
+    height: 10%;
+    width: 70%;
+    float: left;
+    padding: 3%;
+    color: white;
+}
+.serv-info h1{
+    font-size: 30px;
+}
+.serv-btn{
+    height: 10%;
+    width: 30%;
+    float: right;
+    margin-right: 10%;
+   
+}
     .serv-btn button{
         font-size: small;
     }
@@ -421,13 +513,13 @@
     padding-right: 5%;
     background: rgb(44, 44, 73);
     padding-top: 5%;
-
+    overflow: hidden;
 
 }
 .servim1{
     height: 90%;
     width: 28%;
-  
+   overflow: hidden;
     float: left;
     margin-right: 5%;
     background-image:linear-gradient(to right ,rgb(111, 111, 248),rgb(144, 144, 235),rgb(110, 110, 156));
@@ -449,13 +541,13 @@
 }
 .servim1 p{
     color: white;
-   
+   text-align: justify;
 }
 
 .servim2{
     height: 90%;
     width: 28%;
-  
+    overflow: hidden;
     float: left;
     margin-right: 5%;
     background-image:linear-gradient(to right ,rgb(111, 111, 248),rgb(144, 144, 235),rgb(110, 110, 156));
@@ -477,13 +569,13 @@
 }
 .servim2 p{
     color: white;
-   
+   text-align: justify;
 }
 
 .servim3{
     height: 90%;
     width: 28%;
-  
+    overflow: hidden;
     float: left;
     margin-right: 5%;
     background-image:linear-gradient(to right ,rgb(111, 111, 248),rgb(144, 144, 235),rgb(110, 110, 156));
@@ -505,10 +597,13 @@
 }
 .servim3 p{
     color: white;
-   
+   text-align: justify;
 }
 
 @media(max-width:667px){
+    .serv-images{
+        height: 700px;
+    }
     
 .servim1 i{
     font-size: 30px;
@@ -559,6 +654,24 @@
     color: white;
     font-size: 13px;
    
+}
+.servim1{
+    width: 100%;
+    height: 30%;
+    float: left;
+    margin-bottom: 5%;
+}
+.servim2{
+    width: 100%;
+    height: 30%;
+    float: left;
+    margin-bottom: 5%;
+}
+.servim3{
+    width: 100%;
+    height: 30%;
+    float: left;
+    margin-bottom: 5%;
 }
 }
 /* teamword section started */
@@ -590,7 +703,7 @@
    
 }
 .team-info div{
-    height: 30%;
+    height: 33%;
     width: 100%;
     float: left;
     margin-bottom: 3%;
@@ -617,9 +730,10 @@
 }
 
 @media(max-width:667px){
+
     
 .teamwork{
-    height: 1000px;
+    height: 700px;
     width: 100%;
     padding: 3%;
     background: rgb(44, 44, 73);
@@ -636,13 +750,24 @@
     transform:rotate(-2deg);
     margin-right: 5%;
 }
-
+.team-info div{
+    height: 25%;
+}
 .team-info{
-    height: 45%;
+    height: 50%;
     width: 100%;
     float: left;
     margin-top: 50px;
-   
+  
+   overflow: hidden;
+}
+.team-info h1{
+    font-size: 20px;
+}
+.team-info p{
+height: 80%;
+    overflow: hidden;
+    font-size: small;
 }
 }
 
@@ -696,7 +821,14 @@
     font-size: x-large;
     color: white;
 }
-
+.howwework h1{
+    font-size: 30px;
+}
+.howwework p{
+    font-size: small;
+    text-align: justify;
+    padding: 5%;
+}
 }
 
 /* frequentlyy asked  questions started */
