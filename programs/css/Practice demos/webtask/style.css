@@ -1,0 +1,42 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.main{
+    height: 600px;
+    width: 100%;
+
+}
+.nav{
+    height: 100px;
+    width: 100%;
+   
+ 
+}
+.logo{
+    height: 80%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    background-image: url(logo-mediplus.png);
+    margin-top: 1%;
+    background-repeat: no-repeat;
+}
+.links{
+    height: 80%;
+    width: 60%;
+    float: left;
+    background: red;
+}
+
+.book-button{
+    height: 80%;
+    width: 20%;
+    float: left;
+    background: orange;
+}
+/* navbar completed */

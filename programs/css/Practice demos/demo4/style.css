@@ -1,0 +1,145 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.main{
+    height: 600px;
+    width: 100%;
+   background-image: url(bgimage.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div1{
+    height: 90%;
+    width: 27%;
+   color: white;
+    margin: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+  
+}
+
+.div2{
+    height: 90%;
+    width: 25%;
+    color: white;
+   border: 5px solid black;
+   border-radius: 30px;
+   box-shadow: 0px 0px 10px 5px whitesmoke;
+    margin: 2%;
+   padding: 0.5%;
+    font-size: 50px;
+
+
+}
+
+.div2 p{
+    font-size: medium;
+    text-align: end;
+   padding-right: 5px;
+  
+}
+.div2 p i{
+    margin-right: 10px;
+}
+.div2 input{
+    height: 35px;
+    width: 70%;
+    border: 2px solid black;
+    border-radius: 20px;
+
+}
+input::placeholder{
+    padding-left: 5%;
+}
+.apps{
+    height: 40%;
+    width: 90%;
+    margin-left: 5%;
+    box-sizing: border-box;
+  
+}
+.apps div{
+    height: 25%;
+    width: 20%;
+    margin: 2.5%;
+    box-sizing: border-box;
+    float: left;
+    border-radius: 20px;
+    background: goldenrod;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.arrows{
+    height: 7%;
+    margin-top: 5%;
+    width: 100%;
+    font-size: 30px;
+   
+}
+.arrows i{
+    margin-right: 20%;
+    margin-left: 20%;
+}
+.div3{
+    height: 90%;
+    width: 27%;
+    box-shadow: 0px 3px 5px 5px rgb(238, 41, 41);
+    margin: 2%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: white;
+  
+}
+.div3 input{
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 3px red;
+    width: 100%;
+    float: left;
+    border: none;
+    margin-bottom: 5%;
+}
+
+input::placeholder{
+    text-align: center;
+    font-size: larger;
+}
+.div3 textarea{
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: 3px 0px 5px 3px red;
+    width: 100%;
+    float: left;
+    border: none;
+}
+
+textarea::placeholder{
+    text-align: center;
+    font-size: larger;
+}
+.div3 button{
+    height: 50px;
+    width: 40%;
+    font-size: medium;
+    background: goldenrod;
+    margin-left: 30%;
+    border-radius: 20px;
+}
+
+
