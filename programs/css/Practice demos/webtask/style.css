@@ -5,6 +5,10 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+body {
+    width: 100%;
+}
+
 .main {
     height: 600px;
     width: 100%;
@@ -14,7 +18,7 @@
 .nav {
     height: 70px;
     width: 100%;
-   
+
 
 }
 
@@ -42,6 +46,15 @@
 
 }
 
+
+
+
+
+
+
+
+
+
 .links ul {
     display: flex;
     align-items: center;
@@ -60,14 +73,34 @@
 
 .links li:hover {
     color: #1A76D1;
-    border-bottom: 3px solid #1A76D1;
+}
 
+.nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+    cursor: pointer;
+}
 
+.nav ul li::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background-color: #007BFF;
+    /* You can change the color */
+    left: 0;
+    bottom: 0px;
+    transition: 0.3s ease-in-out;
+}
+
+.nav ul li:hover::after {
+    width: 100%;
 }
 
 .active {
     color: #1A76D1;
-    border-bottom: 3px solid #1A76D1;
+    /* border-bottom: 3px solid #1A76D1; */
 }
 
 .book-button {
@@ -176,139 +209,402 @@
 .intro-body {
     height: 600px;
     width: 100%;
-   
+
     background: #8DD8DE;
     background-image: url(bg-doctor.jpg);
-    background-size: cover ;
-   
+    background-size: cover;
+
     background-repeat: no-repeat;
 }
-.doc-info{
+
+.doc-info {
     height: 100%;
     width: 50%;
-   padding: 5%;
-  
+    padding: 5%;
+
 }
-.doc-info span{
+
+.doc-info span {
     color: #1A76D1;
 }
-.doc-info h1{
-    font-size:50px;
+
+.doc-info h1 {
+    font-size: 50px;
     font-weight: 500;
     text-align: left;
 }
-.doc-buttons{
-height: 20%;
-display: flex;
-align-items: center;
-justify-content: space-between;
-width: 60%;
+
+.doc-buttons {
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
 
 
 }
-#btn1{
+
+#btn1 {
     height: 60%;
-    font-size: larger;
+    font-size: medium;
     width: 50%;
     background: #1A76D1;
     color: white;
     border-radius: 5px;
-border: none;
+    border: none;
 }
 
-#btn2{
+#btn2 {
     height: 60%;
-    font-size: larger;
+    font-size: medium;
     width: 40%;
     background: #2c2d3f;
     color: white;
     border-radius: 5px;
-border: none;
+    border: none;
 }
 
 /* intro body completed */
 
-.schedules{
-    height:250px;
+.schedules {
+    height: 250px;
     width: 100%;
- 
+
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding-left: 10%;
     padding-right: 10%;
-   
+
 }
-.s-div1{
+
+.s-div1 {
     height: 120%;
     width: 30%;
- border-radius: 5px;
-  margin-top: -200px;
-  background: #1A76D1;
-  padding: 3%;
-  color: white;
+    border-radius: 5px;
+    margin-top: -150px;
+    background: #1A76D1;
+    padding: 3%;
+    color: white;
 }
-.s-div1 h4:hover{
-border-bottom: 2px solid  white;
+
+.s-div1 h4:hover {
+    border-bottom: 2px solid white;
 }
-.s-div1:hover{
+
+.s-div1:hover {
     margin-bottom: 15px;
-    transition: 0.3s ;
+    transition: 0.3s;
     box-shadow: 0px 40px 20px -25px #398fe6;
 }
 
 
-.s-div2{
+.s-div2 {
     height: 120%;
     width: 30%;
- border-radius: 5px;
-  margin-top: -200px;
-  background: #1A76D1;
-  padding: 3%;
-  color: white;
+    border-radius: 5px;
+    margin-top: -150px;
+    background: #1A76D1;
+    padding: 3%;
+    color: white;
 }
-.s-div2 h4:hover{
-border-bottom: 2px solid  white;
+
+.s-div2 h4:hover {
+    border-bottom: 2px solid white;
 }
-.s-div2:hover{
+
+.s-div2:hover {
     margin-bottom: 15px;
-    transition: 0.3s ;
+    transition: 0.3s;
     box-shadow: 0px 40px 20px -25px #398fe6;
 }
 
-.s-div3{
+.s-div3 {
     height: 120%;
     width: 30%;
- border-radius: 5px;
-  margin-top: -200px;
-  background: #1A76D1;
-  padding: 3%;
-  color: white;
+    border-radius: 5px;
+    margin-top: -150px;
+    background: #1A76D1;
+    padding: 3%;
+    color: white;
 }
-.s-div3 h4:hover{
-border-bottom: 2px solid  white;
+
+.s-div3 h4:hover {
+    border-bottom: 2px solid white;
 }
-.s-div3:hover{
-    margin-bottom: 15px ;
-    transition: 0.3s ;
+
+.s-div3:hover {
+    margin-bottom: 15px;
+    transition: 0.3s;
     box-shadow: 0px 40px 20px -25px #398fe6;
 }
 
 /* .schedules div completed */
 
-.features{
-    height: 500px;
+.features {
+    height: 900px;
+    width: 100%;
+
+
+}
+
+#title {
+    height: 30%;
+}
+
+.features h1 {
+    font-size: 40px;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.features p {
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.f-div2 {
+    height: 40%;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.f-leftdiv {
+    width: 30%;
+    height: 100%;
+    padding: 2%;
+
+    color: black;
+    overflow: hidden;
+
+}
+
+.f-leftdiv .logo-med {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+    margin-left: 30%;
+    border: 2px solid #8DD8DE;
+    border-radius: 50%;
+    height: 35%;
+    color: #398fe6;
+    font-size: 50px;
+
+}
+
+.f-leftdiv p {
+    padding: 0%;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+
+.f-middiv {
+    width: 30%;
+    height: 100%;
+    padding: 2%;
+
+    color: black;
+    overflow: hidden;
+
+}
+
+.f-middiv .logo-med {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+    margin-left: 30%;
+    border: 2px solid #8DD8DE;
+    border-radius: 50%;
+    height: 35%;
+    color: #398fe6;
+    font-size: 50px;
+
+}
+
+.f-middiv p {
+    padding: 0%;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+
+.f-rightdiv {
+    width: 30%;
+    height: 100%;
+    padding: 2%;
+
+    color: black;
+    overflow: hidden;
+
+}
+
+.f-rightdiv .logo-med {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+    margin-left: 30%;
+    border: 2px solid #8DD8DE;
+    border-radius: 50%;
+    height: 35%;
+    color: #398fe6;
+    font-size: 50px;
+
+}
+
+.logo-med:hover {
+    color: white;
+    background: #398fe6;
+}
+
+.f-rightdiv p {
+    padding: 0%;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+.f-div3 {
+
+    height: 30%;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    background: #000;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url(doctors-shaking-hands-.jpg);
+    background-size: cover;
+    background-color: #398fe6;
+    background-blend-mode: overlay;
+
+    background-repeat: no-repeat;
+
+}
+
+.f-div3 div {
+    width: 24%;
+    height: 35%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-div3 div #internal1 {
+    height: 100%;
+    width: 33%;
+    color: white;
+    font-size: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.f-div3 div #internal2 {
+    height: 100%;
+    width: 67%;
+    display: block;
+    color: white;
+    padding: 10%;
+}
+
+#internal2 h2,
+h4 {
+    height: 50%;
+
+
+    width: 100%;
+
+}
+
+#internal1:hover {
+    background: #398fe6;
+
+}
+
+
+.whoweare{
+    padding: 5%;
+    height: 1200px;
+    width: 100%;
+ 
+}
+
+#w-title {
+    height: 30%;
+  
+}
+
+.whoweare h1 {
+    font-size: 40px;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.whoweare p {
+    padding-left: 20%;
+    padding-right: 20%;
+    font-size: medium;
+}
+.w-div2{
+    height: 40%;
     width: 100%;
    
+}
+.w-info{
+ height: 100%;
+ width: 50%;
+ float: left;
 
-}
-.features h1{
-    font-size: 40px;
-    padding-left: 30%;
-    padding-right: 30%;
-}
-.features p{
-    padding-left: 30%;
-    padding-right: 30%;
+ padding: 3%;
 }
 
+.w-info p{
+    padding: 0%;
+}
+.w-videolist1{
+    height: 45%;
+    width: 50%;
+    margin-top: 5%;
+  
+    float: left;
+}
+
+.w-videolist1 li{
+    list-style: none;
+    margin-bottom: 5%;
+   
+}
+
+.w-videolist1 i{
+    margin-right: 4%;
+}
+.w-video{
+ height: 100%;
+ width: 50%;
+ float: left;
+
+
+}
+
+.w-video video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
