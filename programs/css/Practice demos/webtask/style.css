@@ -7,7 +7,9 @@
 
 body {
     width: 100%;
+
 }
+
 
 .main {
     height: 600px;
@@ -102,20 +104,16 @@ body {
     color: #1A76D1;
     /* border-bottom: 3px solid #1A76D1; */
 }
-
 .book-button {
     height: 100%;
     width: 20%;
     float: left;
-
     display: flex;
     align-items: center;
-
     justify-content: center;
-
 }
 
-.book-button button {
+ button {
     height: 75%;
     width: 65%;
     border: none;
@@ -123,7 +121,54 @@ body {
     background: #1A76D1;
     border-radius: 5px;
     color: white;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.3s ease-in-out;
 }
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transition: transform 0.5s ease-in-out;
+    z-index: -1;
+    border-radius: 5px;
+}
+
+ button:hover::before {
+    transform: translateX(-50%) scaleX(1);
+}
+
+ button:hover {
+    color: white;
+}
+
+#btn2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: 100%;
+    background-color: #398fe6;
+    transition: transform 0.5s ease-in-out;
+    z-index: -1;
+    border-radius: 5px;
+}
+
+ #btn2:hover::before {
+    transform: translateX(-50%) scaleX(1);
+}
+
 
 .links i {
     margin-left: 5px;
@@ -207,11 +252,11 @@ body {
 
 /* navbar completed */
 .intro-body {
-    height: 600px;
+    height: 700px;
     width: 100%;
 
     background: #8DD8DE;
-    background-image: url(bg-doctor.jpg);
+    background-image: url(bg-doctor1.jpg);
     background-size: cover;
 
     background-repeat: no-repeat;
@@ -361,6 +406,7 @@ body {
 .features p {
     padding-left: 25%;
     padding-right: 25%;
+    color: #757575;
 }
 
 .f-div2 {
@@ -384,7 +430,7 @@ body {
 }
 
 .f-leftdiv .logo-med {
-    width: 40%;
+    width: 30%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -402,6 +448,7 @@ body {
     padding: 0%;
     overflow: hidden;
     text-align: center;
+    color: #757575;
 
 }
 
@@ -417,7 +464,7 @@ body {
 }
 
 .f-middiv .logo-med {
-    width: 40%;
+    width: 30%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -435,7 +482,7 @@ body {
     padding: 0%;
     overflow: hidden;
     text-align: center;
-
+    color: #757575;
 }
 
 
@@ -450,7 +497,7 @@ body {
 }
 
 .f-rightdiv .logo-med {
-    width: 40%;
+    width: 30%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -473,7 +520,7 @@ body {
     padding: 0%;
     overflow: hidden;
     text-align: center;
-
+    color: #757575;
 }
 
 .f-div3 {
@@ -486,7 +533,7 @@ body {
     background: #000;
     align-items: center;
     justify-content: space-between;
-    background-image: url(doctors-shaking-hands-.jpg);
+    background-image: url(doctors-shaking-hands-close-up.jpg);
     background-size: cover;
     background-color: #398fe6;
     background-blend-mode: overlay;
@@ -509,7 +556,7 @@ body {
 
 .f-div3 div #internal1 {
     height: 100%;
-    width: 33%;
+    width: 30%;
     color: white;
     font-size: 40px;
     border-radius: 50%;
@@ -541,9 +588,9 @@ h4 {
 
 .whoweare{
     padding: 5%;
-    height: 1200px;
+    height: 1300px;
     width: 100%;
- 
+
 }
 
 #w-title {
@@ -561,11 +608,16 @@ h4 {
     padding-left: 20%;
     padding-right: 20%;
     font-size: medium;
+    color: #757575;
 }
 .w-div2{
-    height: 40%;
+    height: 30%;
     width: 100%;
    
+}
+.w-div2 h3{
+    width: fit-content;
+    border-bottom:3px solid #398fe6;
 }
 .w-info{
  height: 100%;
@@ -577,6 +629,7 @@ h4 {
 
 .w-info p{
     padding: 0%;
+    color: #757575;
 }
 .w-videolist1{
     height: 45%;
@@ -589,22 +642,351 @@ h4 {
 .w-videolist1 li{
     list-style: none;
     margin-bottom: 5%;
-   
+    color: #757575;
 }
 
 .w-videolist1 i{
     margin-right: 4%;
-}
-.w-video{
- height: 100%;
- width: 50%;
- float: left;
-
-
+    color: #398fe6;
 }
 
-.w-video video {
+
+.w-video {
+    height: 100%;
+    width: 50%;
+    float: left;
+    background-image: url(video-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .wave-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 150px;
+    width: 150px;
+  }
+  
+  .wave {
+    position: absolute;
+    border-radius: 50%;
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    background: rgba(255, 255, 255, 0.3);
+    animation: pulse 3s linear infinite;
   }
+  
+  .wave2 {
+    animation-delay: 1s;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .wave3 {
+    animation-delay: 2s;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(0.5);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(2.2);
+      opacity: 0;
+    }
+  }
+  
+  /* Play button in center */
+  .center-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 60px;
+    width: 60px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .center-icon i{
+  font-size:70px;
+  color: #398fe6;
+  transition: font-size 0.3s ease;
+  }
+  
+  
+  .center-icon i:hover{
+    font-size:80px;
+   
+    }
+
+
+.w-div3{
+    height: 35%;
+    width: 100%;
+  background-image: url(call-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+    margin-top: 5%;
+  
+    background-blend-mode: overlay;
+}
+.w-div3-info{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(50, 103, 218, 0.5); 
+    display: flex;  color: white;
+    align-items: center;
+    justify-content: center;
+}
+.w-div3-info div{
+ padding-left: 25%;
+ padding-right: 25%;
+ padding-top: 0%;
+}
+.w-div3-info p{
+color: white;
+}
+.w-div3-info div h2{
+    font-size: 32px;
+  
+
+}
+.w-div3-info button{
+    width: 25%;
+    height: 50px;
+}
+#btn3{
+    color:#398fe6;
+    background: white;
+}
+#btn4{
+    background: transparent;
+    border: 2px solid white;
+}
+#btn4 i{
+    margin-left: 4%;
+}
+/* <!-- who we are section complete --> */
+.cleanness{
+    height: 600px;
+    width: 100%;
+   
+}
+
+#c-title {
+    height: 50%;
+  
+}  
+#c-title h1{
+    font-size: 40px;
+}
+.c-images{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.c-images .img1{
+    height: 70%;
+    width: 18%;
+   background-image: url(pf1-for\ clean.jpg);
+   background-size: cover;
+   background-repeat: no-repeat
+}
+.c-images .img2{
+    height: 70%;
+    width: 18%;
+   background-image: url(pf2-for\ clean.jpg);
+   background-size: cover;
+   background-repeat: no-repeat
+}
+.c-images .img3{
+    height: 70%;
+    width: 18%;
+   background-image: url(pf3-for\ clean.jpg);
+   background-size: cover;
+   background-repeat: no-repeat
+}
+.c-images .img4{
+    height: 70%;
+    width: 18%;
+   background-image: url(pf4-for\ clean.jpg);
+   background-size: cover;
+   background-repeat: no-repeat
+}
+.c-images .img5{
+    height: 70%;
+    width: 18%;
+   background-image: url(blog1-for\ clean.jpg);
+   background-size: cover;
+   background-repeat: no-repeat
+}
+
+/* cleanliness div completed */
+.services{
+    height: 800px;
+    padding: 3%;
+    width: 100%;
+    background: whitesmoke;
+  
+}
+#s-title {
+    height: 30%;
+  
+}  
+#s-title h1{
+    font-size: 40px;
+}
+.s-serves{
+    height: 70%;
+    width: 100%;
+    margin-top: 5%;
+  box-sizing: border-box;
+}
+.s-serves .serv1{
+    height: 40%;
+    width: 30%;
+    float: left;
+
+ margin-bottom: 2%;
+ margin-left: 2.3%;
+ 
+   background-size: cover;
+   background-repeat: no-repeat
+}
+
+.sdiv-top{
+    height: 40%;
+    width: 100%;
+    overflow: hidden;
+    padding: 5%;
+  
+}
+.sdiv-top i{
+    height: 100%;
+    font-size: 50px;
+   width: 20%;float: left;
+   color: #398fe6;
+  
+}
+.sdiv-top h4{
+    height: 100%;
+    width: 70%;
+    float: left;
+}
+.sdiv-top div{
+    width: 30%;
+    height: 100%;
+    display: block;
+}
+.sdiv-botm{
+    height: 60%;
+    width: 100%;
+  padding-left: 20%;
+}
+/* services div completed */
+.prices{
+    height: 800px;
+    padding: 3%;
+    width: 100%;
+}
+
+
+#p-title {
+    height: 30%;
+  
+}  
+#p-title h1{
+    font-size: 40px;
+}
+.p-serves{
+    height: 70%;
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
+align-items: center;
+justify-content: center;
+
+}
+.p-serves .serv1{
+    height: 95%;
+    width: 27%;
+    float: left;
+border:  1px solid #808080;
+ margin-bottom: 2%;
+ margin-left: 2.3%;
+ 
+   background-size: cover;
+   background-repeat: no-repeat
+}
+
+
+.pdiv-top{
+    height: 40%;
+    width: 100%;
+    overflow: hidden;
+    padding: 5%;
+   padding-bottom: 0px;
+  
+}
+.pdiv-top i{
+    height: 100%;
+    font-size: 50px;
+   width: 100%;
+ 
+   color: #398fe6;
+  
+}
+.pdiv-top h3{
+   padding-top: 5%;
+   padding-bottom: 5%;
+    width: 100%;
+    float: left;
+    font-size: 30px;
+}
+.pdiv-top div{
+    width: 30%;
+    height: 100%;
+    display: block;
+}
+
+.pdiv-mid{
+    height: 45%;
+    width: 100%;
+    padding: 8%;
+padding-top: 2%;
+   
+  
+}
+.pdiv-mid li{
+    list-style: none;
+    margin-top: 5%;
+}
+.pdiv-mid i{
+    float: right;
+    color: #398fe6;
+    font-size: larger;
+}
+.pdiv-bottom{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
+  
+}
+.pdiv-bottom button{
+    background: #398fe6;
+    color: white;
+}
