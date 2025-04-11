@@ -1,21 +1,24 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.main{
+
+.main {
     height: 600px;
     width: 100%;
 
 }
-.nav{
-    height: 100px;
+
+.nav {
+    height: 70px;
     width: 100%;
    
- 
+
 }
-.logo{
+
+.logo {
     height: 80%;
     width: 20%;
     display: flex;
@@ -25,18 +28,287 @@
     background-image: url(logo-mediplus.png);
     margin-top: 1%;
     background-repeat: no-repeat;
-}
-.links{
-    height: 80%;
-    width: 60%;
-    float: left;
-    background: red;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
-.book-button{
-    height: 80%;
+.links {
+    height: 100%;
+    width: 50%;
+    float: left;
+    margin-bottom: 0px;
+
+
+
+}
+
+.links ul {
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+    height: 100%;
+}
+
+.links li {
+    display: block;
+    height: 100%;
+    padding: 3%;
+
+
+}
+
+.links li:hover {
+    color: #1A76D1;
+    border-bottom: 3px solid #1A76D1;
+
+
+}
+
+.active {
+    color: #1A76D1;
+    border-bottom: 3px solid #1A76D1;
+}
+
+.book-button {
+    height: 100%;
     width: 20%;
     float: left;
-    background: orange;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+
 }
+
+.book-button button {
+    height: 75%;
+    width: 65%;
+    border: none;
+    font-size: 1.0rem;
+    background: #1A76D1;
+    border-radius: 5px;
+    color: white;
+}
+
+.links i {
+    margin-left: 5px;
+}
+
+.dropdown-box-pages {
+    display: none;
+    position: absolute;
+}
+
+@media(max-width:1000px) {
+    .book-button {
+        visibility: hidden;
+    }
+
+    .links {
+        width: 60%;
+    }
+
+    .logo {
+        width: 30%;
+    }
+}
+
+@media(max-width:700px) {
+    .links {
+        width: 0%;
+        visibility: hidden;
+    }
+
+    .book-button {
+        visibility: visible;
+        float: right;
+        width: 45%;
+    }
+
+    .logo {
+        overflow: visible;
+        width: 50%;
+        margin-left: 0px;
+    }
+}
+
+.dropdown-box {
+    visibility: hidden;
+    margin-top: 21%;
+
+}
+
+.dropdown-box li {
+    padding: 5%;
+    /* border-right: 3px solid #1A76D1;
+    border-bottom: 3px solid #1A76D1; */
+    box-shadow: 5px 5px 10px 0px whitesmoke;
+    transform: scaleX(1.6);
+    background: white;
+    margin-top: 17%;
+    color: #000;
+    height: 40px;
+    font-size: small;
+
+}
+
+.dropdown-box a {
+    text-decoration: none;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-box {
+    display: none;
+    position: absolute;
+}
+
+.dropdown:hover .dropdown-box {
+    display: block;
+    visibility: visible;
+}
+
 /* navbar completed */
+.intro-body {
+    height: 600px;
+    width: 100%;
+   
+    background: #8DD8DE;
+    background-image: url(bg-doctor.jpg);
+    background-size: cover ;
+   
+    background-repeat: no-repeat;
+}
+.doc-info{
+    height: 100%;
+    width: 50%;
+   padding: 5%;
+  
+}
+.doc-info span{
+    color: #1A76D1;
+}
+.doc-info h1{
+    font-size:50px;
+    font-weight: 500;
+    text-align: left;
+}
+.doc-buttons{
+height: 20%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+width: 60%;
+
+
+}
+#btn1{
+    height: 60%;
+    font-size: larger;
+    width: 50%;
+    background: #1A76D1;
+    color: white;
+    border-radius: 5px;
+border: none;
+}
+
+#btn2{
+    height: 60%;
+    font-size: larger;
+    width: 40%;
+    background: #2c2d3f;
+    color: white;
+    border-radius: 5px;
+border: none;
+}
+
+/* intro body completed */
+
+.schedules{
+    height:250px;
+    width: 100%;
+ 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 10%;
+    padding-right: 10%;
+   
+}
+.s-div1{
+    height: 120%;
+    width: 30%;
+ border-radius: 5px;
+  margin-top: -200px;
+  background: #1A76D1;
+  padding: 3%;
+  color: white;
+}
+.s-div1 h4:hover{
+border-bottom: 2px solid  white;
+}
+.s-div1:hover{
+    margin-bottom: 15px;
+    transition: 0.3s ;
+    box-shadow: 0px 40px 20px -25px #398fe6;
+}
+
+
+.s-div2{
+    height: 120%;
+    width: 30%;
+ border-radius: 5px;
+  margin-top: -200px;
+  background: #1A76D1;
+  padding: 3%;
+  color: white;
+}
+.s-div2 h4:hover{
+border-bottom: 2px solid  white;
+}
+.s-div2:hover{
+    margin-bottom: 15px;
+    transition: 0.3s ;
+    box-shadow: 0px 40px 20px -25px #398fe6;
+}
+
+.s-div3{
+    height: 120%;
+    width: 30%;
+ border-radius: 5px;
+  margin-top: -200px;
+  background: #1A76D1;
+  padding: 3%;
+  color: white;
+}
+.s-div3 h4:hover{
+border-bottom: 2px solid  white;
+}
+.s-div3:hover{
+    margin-bottom: 15px ;
+    transition: 0.3s ;
+    box-shadow: 0px 40px 20px -25px #398fe6;
+}
+
+/* .schedules div completed */
+
+.features{
+    height: 500px;
+    width: 100%;
+   
+
+}
+.features h1{
+    font-size: 40px;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+.features p{
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
