@@ -49,14 +49,6 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
 .links ul {
     display: flex;
     align-items: center;
@@ -73,18 +65,18 @@ body {
 
 }
 
-.links li:hover {
+.links #l1:hover {
     color: #1A76D1;
 }
 
-.nav ul li {
+.nav ul #l1 {
     display: inline-block;
     margin: 0 10px;
     position: relative;
     cursor: pointer;
 }
 
-.nav ul li::after {
+.nav ul #l1::after {
     content: '';
     position: absolute;
     width: 0%;
@@ -96,9 +88,44 @@ body {
     transition: 0.3s ease-in-out;
 }
 
-.nav ul li:hover::after {
+.nav ul #l1:hover::after {
     width: 100%;
 }
+
+
+
+/* drop down left animation */
+
+
+.dropdown ul li {
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown ul li::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 0%;
+    background-color: #007BFF;
+    /* You can change the color */
+    left: 0;
+    top: 0px;
+  
+    transition: 0.3s ease-in-out;
+}
+
+.dropdown ul li:hover::after {
+    height: 100%; 
+}
+
+
+
+
+
+
 
 .active {
     color: #1A76D1;
@@ -215,20 +242,23 @@ button::before {
 .dropdown-box {
     visibility: hidden;
     margin-top: 21%;
-
+margin-left: -30%;
 }
 
 .dropdown-box li {
-    padding: 5%;
+    padding: 15%;
     /* border-right: 3px solid #1A76D1;
     border-bottom: 3px solid #1A76D1; */
     box-shadow: 5px 5px 10px 0px whitesmoke;
-    transform: scaleX(1.6);
+    /* transform: scaleX(1.6); */
     background: white;
     margin-top: 17%;
     color: #000;
-    height: 40px;
-    font-size: small;
+    height: 50px;
+    /* padding-top: 20%; */
+    
+    width: max-content;
+    font-size: medium;
 
 }
 
