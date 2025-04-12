@@ -1020,3 +1020,436 @@ padding-top: 2%;
     background: #398fe6;
     color: white;
 }
+
+/* new div started */
+
+.news{
+    height: 900px;
+    padding: 3%;
+    width: 100%;
+}
+
+
+#n-title {
+    height: 40%;
+    padding-top: 5%;
+  
+}  
+#n-title h1{
+    font-size: 40px;
+}
+
+
+
+
+.n-serves{
+    height: 60%;
+    width: 100%;
+   
+    margin-bottom: 5%;
+    display: flex;
+align-items: center;
+justify-content: space-between;
+
+}
+.n-serves .serv1{
+    height: 95%;
+    width: 32%;
+    float: left;
+border:  1px solid #808080;
+ margin-bottom: 2%;
+
+ overflow: hidden;
+   background-size: cover;
+   background-repeat: no-repeat
+}
+
+
+.ndiv-top1{
+    height: 50%;
+    width: 100%;
+    overflow: hidden;
+  background-image: url(blog1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+
+.ndiv-top2{
+    height: 50%;
+    width: 100%;
+    overflow: hidden;
+  background-image: url(blog2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+
+.ndiv-top3{
+    height: 50%;
+    width: 100%;
+    overflow: hidden;
+  background-image: url(blog3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+
+
+.ndiv-bottom1{
+    height: 50%;
+    width: 100%;
+   
+    padding: 10%;
+  
+  
+}
+
+.date{
+    height: 20%;
+    width: fit-content;
+    padding-left: 5%;
+    padding-right: 5%;
+    background: #398fe6;
+    color: white;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  border-radius: 5px;
+
+}
+.ndiv-bottom1 p{
+    float: left;
+    font-size: 15px ;
+    color: #808080;
+    text-align: justify;
+    padding-top: 5%;
+}
+
+.ndiv-bottom1 h3{
+    float: left;
+    padding-top: 5%;
+}
+
+.ndiv-bottom2{
+    height: 50%;
+    width: 100%;
+   
+    padding: 10%;
+  
+  
+}
+
+.date{
+    height: 20%;
+    width: fit-content;
+    padding-left: 5%;
+    padding-right: 5%;
+    background: #398fe6;
+    color: white;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  border-radius: 5px;
+
+}
+.ndiv-bottom2 p{
+    float: left;
+    font-size: 15px ;
+    color: #808080;
+    text-align: justify;
+    padding-top: 5%;
+}
+
+.ndiv-bottom2 h3{
+    float: left;
+    padding-top: 5%;
+}
+
+
+
+.ndiv-bottom3{
+    height: 50%;
+    width: 100%;
+   
+    padding: 10%;
+  
+  
+}
+
+.date{
+    height: 20%;
+    width: fit-content;
+    padding-left: 5%;
+    padding-right: 5%;
+    background: #398fe6;
+    color: white;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  border-radius: 5px;
+
+}
+.ndiv-bottom3 p{
+    float: left;
+    font-size: 15px ;
+    color: #808080;
+    text-align: justify;
+    padding-top: 5%;
+}
+
+.ndiv-bottom3 h3{
+    float: left;
+    padding-top: 5%;
+   
+}
+
+
+.ndiv-bottom1 {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Border element, initially hidden */
+.ndiv-bottom1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #007BFF; /* Customize color */
+    transition: width 0.5s ease-out;
+}
+
+/* Animate border on hover */
+.ndiv-bottom1:hover::after {
+    width: 100%;
+}
+
+.ndiv-bottom2 {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Border element, initially hidden */
+.ndiv-bottom2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #007BFF; /* Customize color */
+    transition: width 0.5s ease-out;
+}
+
+/* Animate border on hover */
+.ndiv-bottom2:hover::after {
+    width: 100%;
+}
+
+.ndiv-bottom3 {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Border element, initially hidden */
+.ndiv-bottom3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #007BFF; /* Customize color */
+    transition: width 0.5s ease-out;
+}
+
+/* Animate border on hover */
+.ndiv-bottom3:hover::after {
+    width: 100%;
+}
+
+
+/* new div completed */
+
+.brands{
+    height: 250px;
+    width: 100%;
+   background-image:url(client-bg-news.jpg) ;
+   background-size: cover;
+   background-repeat: no-repeat;
+
+}
+
+.block-images{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(73, 136, 230, 0.3);
+
+}
+
+.b-images1{
+    height: 30%;
+    width: 20%;
+    overflow: hidden;
+ 
+   background-image: url(client1.png);
+   background-size: contain;
+   background-repeat: no-repeat;
+}
+
+.b-images2{
+    height: 30%;
+    width: 20%;
+    overflow: hidden;
+ 
+   background-image: url(client2.png);
+   background-size: contain;
+   background-repeat: no-repeat;
+}
+
+.b-images3{
+    height: 30%;
+    width: 20%;
+    overflow: hidden;
+ 
+   background-image: url(client3.png);
+   background-size: contain;
+   background-repeat: no-repeat;
+}
+
+.b-images4{
+    height: 30%;
+    width: 20%;
+    overflow: hidden;
+ 
+   background-image: url(client4.png);
+   background-size: contain;
+   background-repeat: no-repeat;
+}
+
+.b-images5{
+    height: 30%;
+    width: 20%;
+    overflow: hidden;
+ 
+   background-image: url(client5.png);
+   background-size: contain;
+   background-repeat: no-repeat;
+}
+
+/* new div completed */
+
+
+/* appointment div started */
+
+
+.appoint{
+    height: 1000px;
+    padding: 3%;
+    width: 100%;
+}
+
+
+#a-title {
+    height: 40%;
+    padding-top: 5%;
+  
+}  
+#a-title h1{
+    font-size: 40px;
+}
+
+
+
+
+.n-serves{
+    height: 60%;
+    width: 100%;
+   
+    margin-bottom: 5%;
+    display: flex;
+align-items: center;
+justify-content: space-between;
+
+}
+.n-serves .serv1-left{
+    height: 95%;
+    width: 50%;
+    float: left;
+border:  1px solid #808080;
+ margin-bottom: 2%;
+
+  
+   background-repeat: no-repeat
+    
+
+
+}
+.n-serves .serv2-right{
+    height: 95%;
+    width: 50%;
+    float: left;
+border:  1px solid #808080;
+ margin-bottom: 2%;
+background-image: url(contact-img-appointment.png);
+background-size: contain;
+background-repeat: no-repeat;
+ overflow: hidden;
+   background-size: cover;
+   background-repeat: no-repeat
+}
+
+.serv1-left input{
+    height: 50px;
+    width: 40%;
+    margin: 5%;
+    margin-bottom: 0px;
+    border-radius: 5px;
+    border: 1px solid #8DD8DE;
+
+}
+
+.serv1-left select{
+    height: 50px;
+    width: 40%;
+    margin: 5%;
+    margin-bottom: 0px;
+float: left;
+
+}
+
+.serv1-left textarea{
+    height: 180px;
+    width: 90%;
+    margin: 5%;
+float: left;
+}
+
+.serv1-left button{
+    height: 50px;
+    width: 40%;
+   margin-left: 4%;
+   margin-right: 4%;
+float: left;
+}
+
+.serv1-left p{
+    height: 50px;
+    width: 40%;
+  
+  
+float: left;
+}
+
+
+
+
