@@ -1385,10 +1385,10 @@ justify-content: space-between;
     height: 95%;
     width: 50%;
     float: left;
-border:  1px solid #808080;
+
  margin-bottom: 2%;
 
-  
+  padding-left: 5%;
    background-repeat: no-repeat
     
 
@@ -1398,7 +1398,7 @@ border:  1px solid #808080;
     height: 95%;
     width: 50%;
     float: left;
-border:  1px solid #808080;
+
  margin-bottom: 2%;
 background-image: url(contact-img-appointment.png);
 background-size: contain;
@@ -1410,42 +1410,50 @@ background-repeat: no-repeat;
 
 .serv1-left input{
     height: 50px;
-    width: 40%;
-    margin: 5%;
+    width: 45%;
+    margin: 2.5%;
     margin-bottom: 0px;
     border-radius: 5px;
     border: 1px solid #8DD8DE;
 
 }
+.serv1-left input::placeholder{
+    padding-left: 5%;
+}
+
 
 .serv1-left select{
     height: 50px;
-    width: 40%;
-    margin: 5%;
+    width: 45%;
+    margin: 2.5%;
     margin-bottom: 0px;
+    border: 1px solid #8DD8DE;
 float: left;
 
 }
-
+.serv1-left select option::placeholder{
+    margin-left: 10%;
+}
 .serv1-left textarea{
     height: 180px;
-    width: 90%;
-    margin: 5%;
+    border: 1px solid #8DD8DE;
+    width: 95%;
+    margin: 2.5%;
 float: left;
 }
 
 .serv1-left button{
     height: 50px;
     width: 40%;
-   margin-left: 4%;
-   margin-right: 4%;
+   margin-left: 2%;
+   margin-right: 2%;
 float: left;
 }
 
 .serv1-left p{
     height: 50px;
-    width: 40%;
-  
+    width: 50%;
+ color: #757575;
   
 float: left;
 }
