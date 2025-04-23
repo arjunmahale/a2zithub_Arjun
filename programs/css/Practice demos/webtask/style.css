@@ -1385,7 +1385,7 @@ justify-content: space-between;
     height: 95%;
     width: 50%;
     float: left;
-
+margin-top: 10%;
  margin-bottom: 2%;
 
   padding-left: 5%;
@@ -1399,7 +1399,7 @@ justify-content: space-between;
     width: 50%;
     float: left;
 
- margin-bottom: 2%;
+ margin-bottom: 7%;
 background-image: url(contact-img-appointment.png);
 background-size: contain;
 background-repeat: no-repeat;
@@ -1439,6 +1439,8 @@ float: left;
     border: 1px solid #8DD8DE;
     width: 95%;
     margin: 2.5%;
+    margin-bottom: 5%;
+    margin-top: 5%;
 float: left;
 }
 
@@ -1459,5 +1461,204 @@ float: left;
 }
 
 
+/* appoint div completed */
+
+.signin-row{
+    height: 250px;
+    width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: #EDF2FF;
+}
+
+.main-row{height: 40%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.main-row1{
+    height: 100%;
+    width: 50%;
+}
+
+.main-row1 p{
+    color: #757575;
+}
+.main-row2{
+    height: 100%;
+    width: 50%;
+   display: inline-flex;
+}
+
+.main-row2 input{
+ height: 70%;
+ width: 60%;
+ margin-right: 3%;
+ border: none;
+ border-radius: 10px;
+}
+.main-row2 input::placeholder{
+    padding-left: 5%;
+    font-size: medium;
+}
+.main-row2 button{
+ height: 70%;
+ width: 35%;
+ border-radius: 10px;
+ font-size: medium;
+}
 
 
+.footer{
+    height: 400px;
+    width: 100%;
+  background: #176ABC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-div{
+    height: 90%;
+    width: 90%;
+ color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-subdiv1{
+    height: 100%;
+    padding: 1%;
+    overflow: hidden;
+    background-color: transparent;
+    width:25%;
+   
+   
+}
+
+.footer-subdiv1 li{
+    display: inline;
+   margin: 1.5%; 
+   flex-wrap: wrap;
+   gap: 10px; 
+   
+}
+
+.footer-subdiv1 i{
+    display: inline;
+  padding: 3%;
+   border: 1px solid white;
+   border-radius: 50%;
+}
+.footer-subdiv1 i:hover{
+    background: white;
+    color: #000;
+}
+
+
+
+
+.footer-subdiv2{
+    height: 100%;
+    padding: 1%;
+    overflow: hidden;
+    background-color: transparent;
+    width:25%;
+   
+   
+}
+
+.qd1{
+    height: 70%;
+    width: 50%;float: left;
+   
+}
+.qd1 li{
+    margin-top: 10%;
+    list-style: none;
+    margin-left: 2%;
+}
+
+.qd1 i{
+    margin-right: 5%;
+}
+
+
+
+.footer-subdiv3{
+    height: 100%;
+    padding: 1%;
+    overflow: hidden;
+    background-color: transparent;
+    width:25%;
+   
+   
+}
+
+.footer-subdiv3 li{
+list-style: none;
+margin-top: 5%;
+}
+
+
+
+.footer-subdiv4{
+    height: 100%;
+    padding: 1%;
+    overflow: hidden;
+    background-color: transparent;
+    width:25%;
+   
+   
+}
+
+#foot-mail{
+    height: 15%;
+    width: 100%;
+    float: left;
+    
+}
+
+#foot-mail input{
+        width: 72%;
+        height: 100%;
+        margin-bottom: 10px;
+        border: 2px solid white;
+      border-radius: 5px 0px 0px 5px;
+       
+}
+
+#foot-mail input::placeholder{
+    padding-left: 5%;
+}
+#foot-mail button{
+        width: 28%;
+     color: black;
+        height: 99%;
+        box-sizing: border-box;
+        background: white;
+      
+       border-radius: 0px 5px 5px 0px;
+       box-sizing: border-box;
+}
+
+#foot-mail button:hover{
+    background: white;
+    color: white;
+}
+
+
+.finaldiv{
+    height: 70px;
+    width: 100%;
+background: #1A76D1;
+display: flex;
+color:  white;
+align-items: center;
+justify-content: center;
+}
