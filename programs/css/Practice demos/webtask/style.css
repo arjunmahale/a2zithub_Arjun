@@ -1211,6 +1211,8 @@ color: white;
 #s-title h1{
     font-size: 40px;
 }
+
+
 .s-serves{
     height: 70%;
     width: 100%;
@@ -1243,7 +1245,7 @@ color: white;
    color: #398fe6;
   
 }
-.sdiv-top h4{
+.sdiv-top h3{
     height: 100%;
     width: 70%;
     float: left;
@@ -1257,6 +1259,76 @@ color: white;
     height: 60%;
     width: 100%;
   padding-left: 20%;
+}
+
+@media(max-width:700px) {
+
+    .services{
+        height: 1100px;
+        padding: 3%;
+        width: 100%;
+        background: whitesmoke;
+      overflow: hidden;
+    }
+    #s-title {
+        height: 20%;
+      
+    }  
+    #s-title h1{
+        font-size: 20px;
+    }
+
+    .s-serves{
+        height: 80%;
+        width: 100%;
+        margin-top: 5%;
+      box-sizing: border-box;
+    }
+    .s-serves .serv1{
+        height: 30%;
+        width: 45%;
+        float: left;
+    
+  margin-bottom: 3%;
+     margin-left: 1%;
+     
+       background-size: cover;
+       background-repeat: no-repeat
+    }
+
+    
+.sdiv-top{
+    height: 30%;
+    width: 100%;
+    overflow: hidden;
+    padding: 5%;
+  
+}
+.sdiv-top i{
+    height: 100%;
+    font-size: 25px;
+   width: 20%;float: left;
+   color: #398fe6;
+  
+}
+.sdiv-top h3{
+    height: 100%;
+    width: 70%;
+    float: left;
+    font-size: 18px;
+}
+.sdiv-top div{
+    width: 30%;
+    height: 100%;
+    display: block;
+}
+.sdiv-botm{
+    height: 60%;
+    width: 100%;
+  padding-left: 20%;
+  font-size: medium;
+  text-align: justify;
+}
 }
 /* services div completed */
 .prices{
