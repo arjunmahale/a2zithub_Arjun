@@ -557,7 +557,7 @@ padding-top: 10%;
 }
 
 .f-leftdiv .logo-med {
-    width: 30%;
+    width: 25%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -591,7 +591,7 @@ padding-top: 10%;
 }
 
 .f-middiv .logo-med {
-    width: 30%;
+    width: 25%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -620,6 +620,22 @@ padding-top: 10%;
 
     color: black;
     overflow: hidden;
+
+}
+
+
+.f-rightdiv .logo-med {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+    margin-left: 30%;
+    border: 2px solid #8DD8DE;
+    border-radius: 50%;
+    height: 35%;
+    color: #398fe6;
+    font-size: 50px;
 
 }
 
@@ -662,11 +678,8 @@ padding-top: 10%;
     overflow: hidden;
 
 }
-
-    
-}
 .f-rightdiv .logo-med {
-    width: 30%;
+    width: 25%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -680,6 +693,9 @@ padding-top: 10%;
 
 }
 
+
+    
+}
 .logo-med:hover {
     color: white;
     background: #398fe6;
