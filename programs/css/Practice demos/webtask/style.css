@@ -562,7 +562,7 @@ padding-top: 10%;
     align-items: center;
     justify-content: center;
     margin-bottom: 5%;
-    margin-left: 30%;
+    margin-left: 37%;
     border: 2px solid #8DD8DE;
     border-radius: 50%;
     height: 35%;
@@ -596,7 +596,7 @@ padding-top: 10%;
     align-items: center;
     justify-content: center;
     margin-bottom: 5%;
-    margin-left: 30%;
+    margin-left: 37%;
     border: 2px solid #8DD8DE;
     border-radius: 50%;
     height: 35%;
@@ -684,7 +684,7 @@ padding-top: 10%;
     align-items: center;
     justify-content: center;
     margin-bottom: 5%;
-    margin-left: 30%;
+    margin-left: 37%;
     border: 2px solid #8DD8DE;
     border-radius: 50%;
     height: 35%;
@@ -806,7 +806,7 @@ h4 {
 
 
 .whoweare{
-    padding: 5%;
+    
     height: 1300px;
     width: 100%;
 
@@ -814,6 +814,7 @@ h4 {
 
 #w-title {
     height: 30%;
+    padding: 5%;
   
 }
 
@@ -834,7 +835,7 @@ h4 {
 .w-div2{
     height: 30%;
     width: 100%;
-   
+   padding: 5%;
 }
 
 .w-div2 h3{
@@ -999,7 +1000,7 @@ h4 {
 
 .w-div3{
     height: 35%;
-    width: 100%;
+    max-width: 100%;
   background-image: url(call-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -1089,6 +1090,7 @@ color: white;
 
 #c-title {
     height: 50%;
+    padding-top: 5%;
   
 }  
 
@@ -1503,7 +1505,7 @@ padding-top: 2%;
 
 
 #n-title {
-    height: 50%;
+    height: 30%;
     padding-top: 5%;
   
 }  
@@ -1872,7 +1874,7 @@ border:  1px solid #808080;
 
 
 #a-title {
-    height: 40%;
+    height: 30%;
     padding-top: 5%;
   
 }  
@@ -1897,7 +1899,7 @@ justify-content: space-between;
     height: 95%;
     width: 50%;
     float: left;
-margin-top: 10%;
+margin-top: 5%;
  margin-bottom: 2%;
 
   padding-left: 5%;
