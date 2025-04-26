@@ -8,14 +8,14 @@
 body {
     width: 100%;
     margin: 0px;
-overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 
 .main {
     height: 600px;
     max-width: 100%;
-   display: flexbox;
+    display: flexbox;
 
 }
 
@@ -115,12 +115,12 @@ overflow-x: hidden;
     /* You can change the color */
     left: 0;
     top: 0px;
-  
+
     transition: 0.3s ease-in-out;
 }
 
 .dropdown ul li:hover::after {
-    height: 100%; 
+    height: 100%;
 }
 
 
@@ -133,6 +133,7 @@ overflow-x: hidden;
     color: #1A76D1;
     /* border-bottom: 3px solid #1A76D1; */
 }
+
 .book-button {
     height: 100%;
     width: 20%;
@@ -142,7 +143,7 @@ overflow-x: hidden;
     justify-content: center;
 }
 
- button {
+button {
     height: 75%;
     width: 65%;
     border: none;
@@ -171,11 +172,11 @@ button::before {
     border-radius: 5px;
 }
 
- button:hover::before {
+button:hover::before {
     transform: translateX(-50%) scaleX(1);
 }
 
- button:hover {
+button:hover {
     color: white;
 }
 
@@ -194,7 +195,7 @@ button::before {
     border-radius: 5px;
 }
 
- #btn2:hover::before {
+#btn2:hover::before {
     transform: translateX(-50%) scaleX(1);
 }
 
@@ -244,7 +245,7 @@ button::before {
 .dropdown-box {
     visibility: hidden;
     margin-top: 21%;
-margin-left: -30%;
+    margin-left: -30%;
 }
 
 .dropdown-box li {
@@ -258,7 +259,7 @@ margin-left: -30%;
     color: #000;
     height: 50px;
     /* padding-top: 20%; */
-    
+
     width: max-content;
     font-size: medium;
 
@@ -345,27 +346,35 @@ margin-left: -30%;
     .intro-body {
         height: 600px;
     }
-.doc-info{
-    width: 100%;
+
+    .doc-info {
+        width: 100%;
+    }
+
+    .doc-info h1 {
+        font-size: 30px;
+    }
+
+    .doc-buttons {
+        width: 100%;
+        height: 40%;
+        display: flexbox;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #btn1 {
+        width: 100%;
+        height: 60px;
+        margin-right: 5%;
+    }
+
+    #btn2 {
+        width: 100%;
+        height: 60px;
+    }
 }
-.doc-info h1{
-    font-size: 30px;
-}
-.doc-buttons{
-    width: 100%;
-    height: 40%;
-    display: flexbox;
-    align-items:center;
-    justify-content: center;
-}
-#btn1{
-    width: 100%;
-    height: 60px;
-margin-right: 5%;
-}
-#btn2{width: 100%;
-    height: 60px;}
-}
+
 /* intro body completed */
 
 .schedules {
@@ -443,43 +452,46 @@ margin-right: 5%;
 
 @media(max-width:700px) {
 
-    .schedules{
+    .schedules {
         height: 800px;
         display: block;
         padding-left: 5%;
         padding-right: 5%;
-       
+
     }
+
     .s-div1 {
         height: 33%;
         width: 100%;
         border-radius: 5px;
-      
+
         background: #1A76D1;
         padding: 7%;
         color: white;
     }
-    
-.s-div2 {
-    height: 33%;
-    width: 100%;
-    border-radius: 5px;
-    margin-top: 10px;
-    background: #1A76D1;
-    padding: 7%;
-    color: white;
-}
-.s-div3 {
-    height: 33%;
-    width: 100%;
-    border-radius: 5px;
-    margin-top: 10px;
-    background: #1A76D1;
-    padding: 7%;
-    color: white;
-}
+
+    .s-div2 {
+        height: 33%;
+        width: 100%;
+        border-radius: 5px;
+        margin-top: 10px;
+        background: #1A76D1;
+        padding: 7%;
+        color: white;
+    }
+
+    .s-div3 {
+        height: 33%;
+        width: 100%;
+        border-radius: 5px;
+        margin-top: 10px;
+        background: #1A76D1;
+        padding: 7%;
+        color: white;
+    }
 
 }
+
 /* .schedules div completed */
 
 
@@ -487,8 +499,6 @@ margin-right: 5%;
 .features {
     height: 900px;
     width: 100%;
-
-
 }
 
 
@@ -511,30 +521,33 @@ margin-right: 5%;
 
 @media(max-width:700px) {
 
-    
-.features {
-    height: 1800px;
-    width: 100%;
-padding-top: 10%;
+
+    .features {
+        height: 1800px;
+        width: 100%;
+        padding-top: 10%;
+
+    }
+
+    #title {
+        height: 20%;
+    }
+
+
+    .features h1 {
+        font-size: 30px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .features p {
+        padding-left: 5%;
+        padding-right: 5%;
+        color: #757575;
+    }
 
 }
-#title {
-    height: 20%;
-}
 
-
-.features h1 {
-    font-size: 30px;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-.features p {
-    padding-left: 5%;
-    padding-right: 5%;
-    color: #757575;
-}
-
-}
 .f-div2 {
     height: 40%;
     width: 100%;
@@ -557,7 +570,7 @@ padding-top: 10%;
 }
 
 .f-leftdiv .logo-med {
-    width: 25%;
+    width: 30%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -591,7 +604,7 @@ padding-top: 10%;
 }
 
 .f-middiv .logo-med {
-    width: 25%;
+    width: 30%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -647,55 +660,58 @@ padding-top: 10%;
         padding-left: 5%;
         padding-right: 5%;
         display: block;
-       
+
     }
-    
+
     .f-leftdiv {
         width: 100%;
         height: 33%;
         padding: 2%;
-    
+
         color: black;
         overflow: hidden;
-    
+
     }
+
     .f-middiv {
         width: 100%;
         height: 33%;
         padding: 2%;
-    
+
         color: black;
         overflow: hidden;
-    
+
     }
-    
-.f-rightdiv {
-    width: 100%;
-    height: 33%;
-    padding: 2%;
 
-    color: black;
-    overflow: hidden;
+    .f-rightdiv {
+        width: 100%;
+        height: 33%;
+        padding: 2%;
+
+        color: black;
+        overflow: hidden;
+
+    }
+
+    .f-rightdiv .logo-med {
+        width: 25%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 5%;
+        margin-left: 37%;
+        border: 2px solid #8DD8DE;
+        border-radius: 50%;
+        height: 35%;
+        color: #398fe6;
+        font-size: 50px;
+
+    }
+
+
 
 }
-.f-rightdiv .logo-med {
-    width: 25%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 5%;
-    margin-left: 37%;
-    border: 2px solid #8DD8DE;
-    border-radius: 50%;
-    height: 35%;
-    color: #398fe6;
-    font-size: 50px;
 
-}
-
-
-    
-}
 .logo-med:hover {
     color: white;
     background: #398fe6;
@@ -741,34 +757,37 @@ padding-top: 10%;
 }
 
 @media(max-width:700px) {
-   .f-div3{
-    height: 30%;
-    display: block;
-    padding-top: 3%;
-    padding-left: 20%;
-   }
-   .f-div3 div {
-    width: 100%;
-    height: 20%;
-margin-bottom: 5%;
-   margin-top: 5%;
-    align-items: center;
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.f-div3 div #internal1 {
-    height: 50%;
-    width: 70%;
-    color: white;
-    font-size: 40px;
-    border-radius: 50%;
-    border: 2px solid white;
-}
+    .f-div3 {
+        height: 30%;
+        display: block;
+        padding-top: 3%;
+        padding-left: 20%;
+    }
+
+    .f-div3 div {
+        width: 100%;
+        height: 20%;
+        margin-bottom: 5%;
+        margin-top: 5%;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .f-div3 div #internal1 {
+        height: 50%;
+        width: 70%;
+        color: white;
+        font-size: 40px;
+        border-radius: 50%;
+        border: 2px solid white;
+    }
 
 
 }
+
 .f-div3 div #internal1 {
     height: 100%;
     width: 30%;
@@ -805,8 +824,8 @@ h4 {
 
 
 
-.whoweare{
-    
+.whoweare {
+
     height: 1300px;
     width: 100%;
 
@@ -815,7 +834,7 @@ h4 {
 #w-title {
     height: 30%;
     padding: 5%;
-  
+
 }
 
 
@@ -832,44 +851,46 @@ h4 {
     color: #757575;
 }
 
-.w-div2{
+.w-div2 {
     height: 30%;
     width: 100%;
-   padding: 5%;
+    padding: 5%;
 }
 
-.w-div2 h3{
+.w-div2 h3 {
     width: fit-content;
-    border-bottom:3px solid #398fe6;
-}
-.w-info{
- height: 100%;
- width: 50%;
- float: left;
-
- padding: 3%;
+    border-bottom: 3px solid #398fe6;
 }
 
+.w-info {
+    height: 100%;
+    width: 50%;
+    float: left;
 
-.w-info p{
+    padding: 3%;
+}
+
+
+.w-info p {
     padding: 0%;
     color: #757575;
 }
-.w-videolist1{
+
+.w-videolist1 {
     height: 45%;
     width: 50%;
     margin-top: 5%;
-  
+
     float: left;
 }
 
-.w-videolist1 li{
+.w-videolist1 li {
     list-style: none;
     margin-bottom: 5%;
     color: #757575;
 }
 
-.w-videolist1 i{
+.w-videolist1 i {
     margin-right: 4%;
     color: #398fe6;
 }
@@ -884,44 +905,48 @@ h4 {
     background-repeat: no-repeat;
     position: relative;
     overflow: hidden;
-  }
-  
+}
 
 
-  @media(max-width:700px) {
 
-    .whoweare{
+@media(max-width:700px) {
+
+    .whoweare {
         height: 1500px;
     }
+
     #w-title {
         height: 20%;
-       padding-top: 5%;
+        padding-top: 5%;
     }
+
     .whoweare h1 {
         font-size: 30px;
         padding-left: 0%;
         padding-right: 0%;
     }
+
     .whoweare p {
         padding-left: 0%;
         padding-right: 0%;
         font-size: medium;
         color: #757575;
     }
-    .w-div2{
+
+    .w-div2 {
         height: 55%;
-     display: block;
+        display: block;
     }
 
-    .w-info{
+    .w-info {
         height: 60%;
         width: 100%;
         float: left;
-       
-        padding: 3%;
-       }
 
-       .w-video {
+        padding: 3%;
+    }
+
+    .w-video {
         height: 40%;
         width: 100%;
         float: left;
@@ -930,50 +955,52 @@ h4 {
         background-repeat: no-repeat;
         position: relative;
         overflow: hidden;
-      }
-      
+    }
+
 }
-  .wave-wrapper {
+
+.wave-wrapper {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     height: 150px;
     width: 150px;
-  }
-  
-  .wave {
+}
+
+.wave {
     position: absolute;
     border-radius: 50%;
     height: 100%;
     width: 100%;
     background: rgba(255, 255, 255, 0.3);
     animation: pulse 3s linear infinite;
-  }
-  
-  .wave2 {
+}
+
+.wave2 {
     animation-delay: 1s;
     background: rgba(255, 255, 255, 0.2);
-  }
-  
-  .wave3 {
+}
+
+.wave3 {
     animation-delay: 2s;
     background: rgba(255, 255, 255, 0.1);
-  }
-  
-  @keyframes pulse {
+}
+
+@keyframes pulse {
     0% {
-      transform: scale(0.5);
-      opacity: 1;
+        transform: scale(0.5);
+        opacity: 1;
     }
+
     100% {
-      transform: scale(2.2);
-      opacity: 0;
+        transform: scale(2.2);
+        opacity: 0;
     }
-  }
-  
-  /* Play button in center */
-  .center-icon {
+}
+
+/* Play button in center */
+.center-icon {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -984,120 +1011,128 @@ h4 {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  .center-icon i{
-  font-size:70px;
-  color: #398fe6;
-  transition: font-size 0.3s ease;
-  }
-  
-  
-  .center-icon i:hover{
-    font-size:80px;
-   
-    }
+}
+
+.center-icon i {
+    font-size: 70px;
+    color: #398fe6;
+    transition: font-size 0.3s ease;
+}
 
 
-.w-div3{
+.center-icon i:hover {
+    font-size: 80px;
+
+}
+
+
+.w-div3 {
     height: 35%;
     max-width: 100%;
-  background-image: url(call-bg.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+    background-image: url(call-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     margin-top: 5%;
-  
+
     background-blend-mode: overlay;
 }
 
 
-.w-div3-info{
+.w-div3-info {
     height: 100%;
     width: 100%;
-    background-color: rgba(50, 103, 218, 0.5); 
-    display: flex;  color: white;
+    background-color: rgba(50, 103, 218, 0.5);
+    display: flex;
+    color: white;
     align-items: center;
     justify-content: center;
 }
-.w-div3-info div{
- padding-left: 25%;
- padding-right: 25%;
- padding-top: 0%;
+
+.w-div3-info div {
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 0%;
 }
 
-.w-div3-info p{
-color: white;
+.w-div3-info p {
+    color: white;
 }
-.w-div3-info div h2{
+
+.w-div3-info div h2 {
     font-size: 32px;
-  
+
 
 }
 
 
-.w-div3-info button{
+.w-div3-info button {
     width: 25%;
     height: 50px;
 }
 
-#btn3{
-    color:#398fe6;
+#btn3 {
+    color: #398fe6;
     background: white;
 }
-#btn4{
+
+#btn4 {
     background: transparent;
     border: 2px solid white;
 }
-#btn4 i{
+
+#btn4 i {
     margin-left: 4%;
 }
 
 
 @media(max-width:700px) {
-    .w-div3{
+    .w-div3 {
         height: 25%;
         width: 100%;
-      background-image: url(call-bg.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
+        background-image: url(call-bg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
         margin-top: 1%;
-      
+
         background-blend-mode: overlay;
     }
-    .w-div3-info div{
+
+    .w-div3-info div {
         padding-left: 2%;
         padding-right: 2%;
         padding-top: 0%;
-       }
-
-       .w-div3-info div h2{
-        font-size: 25px;
-      
-    
     }
 
-    .w-div3-info button{
+    .w-div3-info div h2 {
+        font-size: 25px;
+
+
+    }
+
+    .w-div3-info button {
         width: 40%;
         height: 50px;
     }
 }
 
 /* <!-- who we are section complete --> */
-.cleanness{
+.cleanness {
     height: 600px;
     width: 100%;
-   
+
 }
 
 #c-title {
     height: 50%;
     padding-top: 5%;
-  
-}  
 
-#c-title h1{
+}
+
+#c-title h1 {
     font-size: 40px;
 }
-.c-images{
+
+.c-images {
     height: 50%;
     width: 100%;
     display: flex;
@@ -1107,255 +1142,281 @@ color: white;
 }
 
 
-.c-images .img1{
+.c-images .img1 {
     height: 70%;
     width: 18%;
-   background-image: url(pf1-for\ clean.jpg);
-   background-size: cover;
-   background-repeat: no-repeat
+    background-image: url(pf1-for\ clean.jpg);
+    background-size: cover;
+    background-repeat: no-repeat
 }
 
 
-.c-images .img2{
+.c-images .img2 {
     height: 70%;
     width: 18%;
-   background-image: url(pf2-for\ clean.jpg);
-   background-size: cover;
-   background-repeat: no-repeat
+    background-image: url(pf2-for\ clean.jpg);
+    background-size: cover;
+    background-repeat: no-repeat
 }
-.c-images .img3{
+
+.c-images .img3 {
     height: 70%;
     width: 18%;
-   background-image: url(pf3-for\ clean.jpg);
-   background-size: cover;
-   background-repeat: no-repeat
+    background-image: url(pf3-for\ clean.jpg);
+    background-size: cover;
+    background-repeat: no-repeat
 }
-.c-images .img4{
+
+.c-images .img4 {
     height: 70%;
     width: 18%;
-   background-image: url(pf4-for\ clean.jpg);
-   background-size: cover;
-   background-repeat: no-repeat
+    background-image: url(pf4-for\ clean.jpg);
+    background-size: cover;
+    background-repeat: no-repeat
 }
-.c-images .img5{
+
+.c-images .img5 {
     height: 70%;
     width: 18%;
-   background-image: url(blog1-for\ clean.jpg);
-   background-size: cover;
-   background-repeat: no-repeat
+    background-image: url(blog1-for\ clean.jpg);
+    background-size: cover;
+    background-repeat: no-repeat
 }
 
 
 
 @media(max-width:700px) {
-    .cleanness{
+    .cleanness {
         height: 2000px;
         width: 100%;
-       padding: 5%;
+        padding: 5%;
     }
+
     #c-title {
-        height:15%;
-      
-    }  
-    #c-title h1{
+        height: 15%;
+
+    }
+
+    #c-title h1 {
         font-size: 30px;
     }
 
-    .c-images{
+    .c-images {
         height: 80%;
         width: 100%;
-       padding-top: 10%;
+        padding-top: 10%;
         display: block;
         align-items: center;
         justify-content: center;
-    
+
     }
 
-    .c-images .img1{
+    .c-images .img1 {
         height: 20%;
         width: 100%;
         margin-bottom: 5%;
-       background-image: url(pf1-for\ clean.jpg);
-       background-size: cover;
-       background-repeat: no-repeat
+        background-image: url(pf1-for\ clean.jpg);
+        background-size: cover;
+        background-repeat: no-repeat
     }
-    .c-images .img2{
+
+    .c-images .img2 {
         height: 20%;
         width: 100%;
-       background-image: url(pf2-for\ clean.jpg);
-       background-size: cover;
-       margin-bottom: 5%;
-       background-repeat: no-repeat
+        background-image: url(pf2-for\ clean.jpg);
+        background-size: cover;
+        margin-bottom: 5%;
+        background-repeat: no-repeat
     }
-    .c-images .img3{
+
+    .c-images .img3 {
         height: 20%;
         width: 100%;
         margin-bottom: 5%;
-       background-image: url(pf3-for\ clean.jpg);
-       background-size: cover;
-       background-repeat: no-repeat
+        background-image: url(pf3-for\ clean.jpg);
+        background-size: cover;
+        background-repeat: no-repeat
     }
-    .c-images .img4{
+
+    .c-images .img4 {
         height: 20%;
         margin-bottom: 5%;
         width: 100%;
-       background-image: url(pf4-for\ clean.jpg);
-       background-size: cover;
-       background-repeat: no-repeat
+        background-image: url(pf4-for\ clean.jpg);
+        background-size: cover;
+        background-repeat: no-repeat
     }
-    .c-images .img5{
+
+    .c-images .img5 {
         height: 20%;
         width: 100%;
         margin-bottom: 5%;
-       background-image: url(blog1-for\ clean.jpg);
-       background-size: cover;
-       background-repeat: no-repeat
+        background-image: url(blog1-for\ clean.jpg);
+        background-size: cover;
+        background-repeat: no-repeat
     }
-    
+
 }
 
 /* cleanliness div completed */
-.services{
+.services {
     height: 800px;
     padding: 3%;
     width: 100%;
     background: whitesmoke;
-  
+
 }
+
 #s-title {
     height: 30%;
-  
-}  
-#s-title h1{
+
+}
+
+#s-title h1 {
     font-size: 40px;
 }
 
 
-.s-serves{
+.s-serves {
     height: 70%;
     width: 100%;
     margin-top: 5%;
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
-.s-serves .serv1{
+
+.s-serves .serv1 {
     height: 40%;
     width: 30%;
     float: left;
 
- margin-bottom: 2%;
- margin-left: 2.3%;
- 
-   background-size: cover;
-   background-repeat: no-repeat
+    margin-bottom: 2%;
+    margin-left: 2.3%;
+
+    background-size: cover;
+    background-repeat: no-repeat
 }
 
-.sdiv-top{
+.sdiv-top {
     height: 40%;
     width: 100%;
     overflow: hidden;
     padding: 5%;
-  
+
 }
-.sdiv-top i{
+
+.sdiv-top i {
     height: 100%;
     font-size: 50px;
-   width: 20%;float: left;
-   color: #398fe6;
-  
+    width: 20%;
+    float: left;
+    color: #398fe6;
+
 }
-.sdiv-top h3{
+
+.sdiv-top h3 {
     height: 100%;
     width: 70%;
     float: left;
 }
-.sdiv-top div{
+
+.sdiv-top div {
     width: 30%;
     height: 100%;
     display: block;
 }
-.sdiv-botm{
+
+.sdiv-botm {
     height: 60%;
     width: 100%;
-  padding-left: 20%;
+    padding-left: 20%;
 }
 
 @media(max-width:700px) {
 
-    .services{
+    .services {
         height: 1100px;
         padding: 3%;
         width: 100%;
         background: whitesmoke;
-      overflow: hidden;
+        overflow: hidden;
     }
+
     #s-title {
         height: 20%;
-      
-    }  
-    #s-title h1{
+
+    }
+
+    #s-title h1 {
         font-size: 20px;
     }
 
-    #s-title p{
+    #s-title p {
         padding-left: 5%;
         padding-right: 5%;
         text-align: justify;
     }
 
-    .s-serves{
+    .s-serves {
         height: 80%;
         width: 100%;
         margin-top: 5%;
-      box-sizing: border-box;
+        box-sizing: border-box;
     }
-    .s-serves .serv1{
+
+    .s-serves .serv1 {
         height: 30%;
         width: 45%;
         float: left;
-    
-  margin-bottom: 5%;
-     margin-left: 1%;
-     
-       background-size: cover;
-       background-repeat: no-repeat
+
+        margin-bottom: 5%;
+        margin-left: 1%;
+
+        background-size: cover;
+        background-repeat: no-repeat
     }
 
-    
-.sdiv-top{
-    height: 30%;
-    width: 100%;
-    overflow: hidden;
-    padding: 5%;
-  
+
+    .sdiv-top {
+        height: 30%;
+        width: 100%;
+        overflow: hidden;
+        padding: 5%;
+
+    }
+
+    .sdiv-top i {
+        height: 100%;
+        font-size: 25px;
+        width: 20%;
+        float: left;
+        color: #398fe6;
+
+    }
+
+    .sdiv-top h3 {
+        height: 100%;
+        width: 70%;
+        float: left;
+        font-size: 18px;
+    }
+
+    .sdiv-top div {
+        width: 30%;
+        height: 100%;
+        display: block;
+    }
+
+    .sdiv-botm {
+        height: 60%;
+        width: 100%;
+        padding-left: 20%;
+        font-size: medium;
+        text-align: justify;
+    }
 }
-.sdiv-top i{
-    height: 100%;
-    font-size: 25px;
-   width: 20%;float: left;
-   color: #398fe6;
-  
-}
-.sdiv-top h3{
-    height: 100%;
-    width: 70%;
-    float: left;
-    font-size: 18px;
-}
-.sdiv-top div{
-    width: 30%;
-    height: 100%;
-    display: block;
-}
-.sdiv-botm{
-    height: 60%;
-    width: 100%;
-  padding-left: 20%;
-  font-size: medium;
-  text-align: justify;
-}
-}
+
 /* services div completed */
-.prices{
+.prices {
     height: 800px;
     padding: 3%;
     width: 100%;
@@ -1364,13 +1425,14 @@ color: white;
 
 #p-title {
     height: 30%;
-  
-}  
 
-#p-title h1{
+}
+
+#p-title h1 {
     font-size: 40px;
 }
-.p-serves{
+
+.p-serves {
     height: 70%;
     width: 100%;
     margin-top: 5%;
@@ -1379,108 +1441,117 @@ color: white;
     justify-content: center;
 
 }
-.p-serves .serv1{
+
+.p-serves .serv1 {
     height: 95%;
     width: 27%;
     float: left;
-border:  1px solid #808080;
- margin-bottom: 2%;
- margin-left: 2.3%;
- 
-   background-size: cover;
-   background-repeat: no-repeat
+    border: 1px solid #808080;
+    margin-bottom: 2%;
+    margin-left: 2.3%;
+
+    background-size: cover;
+    background-repeat: no-repeat
 }
 
 
 @media(max-width:700px) {
 
-    .prices{
+    .prices {
         height: 1800px;
         padding: 3%;
         width: 100%;
     }
-    
-    
+
+
     #p-title {
         height: 15%;
         padding-top: 5%;
-      
-    }  
 
-    #p-title h1{
+    }
+
+    #p-title h1 {
         font-size: 20px;
     }
-    .p-serves{
+
+    .p-serves {
         height: 90%;
         width: 100%;
         margin-top: 5%;
         display: block;
         align-items: center;
         justify-content: center;
-    
+
     }
-    .p-serves .serv1{
+
+    .p-serves .serv1 {
         height: 30%;
         width: 100%;
         float: left;
-    border:  1px solid #808080;
-     margin-bottom: 2%;
-     margin-left: 0px;
-     
-       background-size: cover;
-       background-repeat: no-repeat
+        border: 1px solid #808080;
+        margin-bottom: 2%;
+        margin-left: 0px;
+
+        background-size: cover;
+        background-repeat: no-repeat
     }
-    
+
 }
 
 
-.pdiv-top{
+.pdiv-top {
     height: 40%;
     width: 100%;
     overflow: hidden;
     padding: 5%;
-   padding-bottom: 0px;
-  
+    padding-bottom: 0px;
+
 }
-.pdiv-top i{
+
+.pdiv-top i {
     height: 100%;
     font-size: 50px;
-   width: 100%;
- 
-   color: #398fe6;
-  
+    width: 100%;
+
+    color: #398fe6;
+
 }
-.pdiv-top h3{
-   padding-top: 5%;
-   padding-bottom: 5%;
+
+.pdiv-top h3 {
+    padding-top: 5%;
+    padding-bottom: 5%;
     width: 100%;
     float: left;
     font-size: 30px;
 }
-.pdiv-top div{
+
+.pdiv-top div {
     width: 30%;
     height: 100%;
     display: block;
 }
 
-.pdiv-mid{
+.pdiv-mid {
     height: 45%;
     width: 100%;
     padding: 8%;
-padding-top: 2%;
-   
-  
+    padding-top: 2%;
+
+
 }
-.pdiv-mid li{
+
+.pdiv-mid li {
     list-style: none;
     margin-top: 5%;
 }
-.pdiv-mid i{
+
+.pdiv-mid i {
     float: right;
     color: #398fe6;
     font-size: larger;
 }
-.pdiv-bottom{
+
+.pdiv-bottom {
     height: 15%;
     width: 100%;
     display: flex;
@@ -1488,16 +1559,17 @@ padding-top: 2%;
     justify-content: center;
     padding-left: 5%;
     padding-right: 5%;
-  
+
 }
-.pdiv-bottom button{
+
+.pdiv-bottom button {
     background: #398fe6;
     color: white;
 }
 
 /* new div started */
 
-.news{
+.news {
     height: 900px;
     padding: 3%;
     width: 100%;
@@ -1507,78 +1579,80 @@ padding-top: 2%;
 #n-title {
     height: 30%;
     padding-top: 5%;
-  
-}  
-#n-title h1{
+
+}
+
+#n-title h1 {
     font-size: 40px;
 }
 
 
 
 
-.n-serves{
+.n-serves {
     height: 50%;
     width: 100%;
-  margin-top: 5%;
+    margin-top: 5%;
     margin-bottom: 5%;
     display: flex;
-align-items: center;
-justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
 
 }
-.n-serves .serv1{
+
+.n-serves .serv1 {
     height: 95%;
     width: 32%;
     float: left;
-border:  1px solid #808080;
- margin-bottom: 2%;
+    border: 1px solid #808080;
+    margin-bottom: 2%;
 
- overflow: hidden;
-   background-size: cover;
-   background-repeat: no-repeat
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat
 }
 
-.ndiv-top1{
+.ndiv-top1 {
     height: 50%;
     width: 100%;
     overflow: hidden;
-  background-image: url(blog1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  
+    background-image: url(blog1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
 }
 
-.ndiv-top2{
+.ndiv-top2 {
     height: 50%;
     width: 100%;
     overflow: hidden;
-  background-image: url(blog2.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  
+    background-image: url(blog2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
 }
 
-.ndiv-top3{
+.ndiv-top3 {
     height: 50%;
     width: 100%;
     overflow: hidden;
-  background-image: url(blog3.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  
+    background-image: url(blog3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
 }
 
 
-.ndiv-bottom1{
+.ndiv-bottom1 {
     height: 50%;
     width: 100%;
-   
+
     padding: 10%;
-  
-  
+
+
 }
 
-.date{
+.date {
     height: 20%;
     width: fit-content;
     padding-left: 5%;
@@ -1589,32 +1663,33 @@ border:  1px solid #808080;
     display: flex;
     align-items: center;
     justify-content: center;
-  border-radius: 5px;
+    border-radius: 5px;
 
 }
-.ndiv-bottom1 p{
+
+.ndiv-bottom1 p {
     float: left;
-    font-size: 15px ;
+    font-size: 15px;
     color: #808080;
     text-align: justify;
     padding-top: 5%;
 }
 
-.ndiv-bottom1 h3{
+.ndiv-bottom1 h3 {
     float: left;
     padding-top: 5%;
 }
 
-.ndiv-bottom2{
+.ndiv-bottom2 {
     height: 50%;
     width: 100%;
-   
+
     padding: 10%;
-  
-  
+
+
 }
 
-.date{
+.date {
     height: 20%;
     width: fit-content;
     padding-left: 5%;
@@ -1625,34 +1700,35 @@ border:  1px solid #808080;
     display: flex;
     align-items: center;
     justify-content: center;
-  border-radius: 5px;
+    border-radius: 5px;
 
 }
-.ndiv-bottom2 p{
+
+.ndiv-bottom2 p {
     float: left;
-    font-size: 15px ;
+    font-size: 15px;
     color: #808080;
     text-align: justify;
     padding-top: 5%;
 }
 
-.ndiv-bottom2 h3{
+.ndiv-bottom2 h3 {
     float: left;
     padding-top: 5%;
 }
 
 
 
-.ndiv-bottom3{
+.ndiv-bottom3 {
     height: 50%;
     width: 100%;
-   
+
     padding: 10%;
-  
-  
+
+
 }
 
-.date{
+.date {
     height: 20%;
     width: fit-content;
     padding-left: 5%;
@@ -1663,21 +1739,22 @@ border:  1px solid #808080;
     display: flex;
     align-items: center;
     justify-content: center;
-  border-radius: 5px;
+    border-radius: 5px;
 
 }
-.ndiv-bottom3 p{
+
+.ndiv-bottom3 p {
     float: left;
-    font-size: 15px ;
+    font-size: 15px;
     color: #808080;
     text-align: justify;
     padding-top: 5%;
 }
 
-.ndiv-bottom3 h3{
+.ndiv-bottom3 h3 {
     float: left;
     padding-top: 5%;
-   
+
 }
 
 
@@ -1686,6 +1763,7 @@ border:  1px solid #808080;
     position: relative;
     overflow: hidden;
 }
+
 @media(max-width:700px) {
     .news {
         height: auto;
@@ -1722,7 +1800,8 @@ border:  1px solid #808080;
     .ndiv-top1,
     .ndiv-top2,
     .ndiv-top3 {
-        height: 200px; /* adjust as needed */
+        height: 200px;
+        /* adjust as needed */
     }
 }
 
@@ -1735,7 +1814,8 @@ border:  1px solid #808080;
     bottom: 0;
     height: 2px;
     width: 0;
-    background-color: #007BFF; /* Customize color */
+    background-color: #007BFF;
+    /* Customize color */
     transition: width 0.5s ease-out;
 }
 
@@ -1757,7 +1837,8 @@ border:  1px solid #808080;
     bottom: 0;
     height: 2px;
     width: 0;
-    background-color: #007BFF; /* Customize color */
+    background-color: #007BFF;
+    /* Customize color */
     transition: width 0.5s ease-out;
 }
 
@@ -1779,7 +1860,8 @@ border:  1px solid #808080;
     bottom: 0;
     height: 2px;
     width: 0;
-    background-color: #007BFF; /* Customize color */
+    background-color: #007BFF;
+    /* Customize color */
     transition: width 0.5s ease-out;
 }
 
@@ -1791,16 +1873,16 @@ border:  1px solid #808080;
 
 /* new div completed */
 
-.brands{
+.brands {
     height: 250px;
     width: 100%;
-   background-image:url(client-bg-news.jpg) ;
-   background-size: cover;
-   background-repeat: no-repeat;
+    background-image: url(client-bg-news.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 
 }
 
-.block-images{
+.block-images {
     height: 100%;
     width: 100%;
     display: flex;
@@ -1810,54 +1892,54 @@ border:  1px solid #808080;
 
 }
 
-.b-images1{
+.b-images1 {
     height: 30%;
     width: 20%;
     overflow: hidden;
- 
-   background-image: url(client1.png);
-   background-size: contain;
-   background-repeat: no-repeat;
+
+    background-image: url(client1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-.b-images2{
+.b-images2 {
     height: 30%;
     width: 20%;
     overflow: hidden;
- 
-   background-image: url(client2.png);
-   background-size: contain;
-   background-repeat: no-repeat;
+
+    background-image: url(client2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-.b-images3{
+.b-images3 {
     height: 30%;
     width: 20%;
     overflow: hidden;
- 
-   background-image: url(client3.png);
-   background-size: contain;
-   background-repeat: no-repeat;
+
+    background-image: url(client3.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-.b-images4{
+.b-images4 {
     height: 30%;
     width: 20%;
     overflow: hidden;
- 
-   background-image: url(client4.png);
-   background-size: contain;
-   background-repeat: no-repeat;
+
+    background-image: url(client4.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-.b-images5{
+.b-images5 {
     height: 30%;
     width: 20%;
     overflow: hidden;
- 
-   background-image: url(client5.png);
-   background-size: contain;
-   background-repeat: no-repeat;
+
+    background-image: url(client5.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 /* new div completed */
@@ -1866,7 +1948,7 @@ border:  1px solid #808080;
 /* appointment div started */
 
 
-.appoint{
+.appoint {
     height: 1000px;
     padding: 3%;
     width: 100%;
@@ -1876,53 +1958,53 @@ border:  1px solid #808080;
 #a-title {
     height: 30%;
     padding-top: 5%;
-  
-}  
-#a-title h1{
+
+}
+
+#a-title h1 {
     font-size: 40px;
 }
 
 
 
 
-.n-serves{
+.n-serves {
     height: 60%;
     width: 100%;
-   
+
     margin-bottom: 5%;
     display: flex;
-align-items: center;
-justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
 
 }
-.n-serves .serv1-left{
+
+.n-serves .serv1-left {
     height: 95%;
     width: 50%;
     float: left;
-margin-top: 5%;
- margin-bottom: 2%;
+    margin-top: 5%;
+    margin-bottom: 2%;
 
-  padding-left: 5%;
-   background-repeat: no-repeat
-    
-
-
+    padding-left: 5%;
+    background-repeat: no-repeat
 }
-.n-serves .serv2-right{
+
+.n-serves .serv2-right {
     height: 95%;
     width: 50%;
     float: left;
 
- margin-bottom: 7%;
-background-image: url(contact-img-appointment.png);
-background-size: contain;
-background-repeat: no-repeat;
- overflow: hidden;
-   background-size: cover;
-   background-repeat: no-repeat
+    margin-bottom: 7%;
+    background-image: url(contact-img-appointment.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat
 }
 
-.serv1-left input{
+.serv1-left input {
     height: 50px;
     width: 45%;
     margin: 2.5%;
@@ -1931,47 +2013,50 @@ background-repeat: no-repeat;
     border: 1px solid #8DD8DE;
 
 }
-.serv1-left input::placeholder{
+
+.serv1-left input::placeholder {
     padding-left: 5%;
 }
 
 
-.serv1-left select{
+.serv1-left select {
     height: 50px;
     width: 45%;
     margin: 2.5%;
     margin-bottom: 0px;
     border: 1px solid #8DD8DE;
-float: left;
+    float: left;
 
 }
-.serv1-left select option::placeholder{
+
+.serv1-left select option::placeholder {
     margin-left: 10%;
 }
-.serv1-left textarea{
+
+.serv1-left textarea {
     height: 180px;
     border: 1px solid #8DD8DE;
     width: 95%;
     margin: 2.5%;
     margin-bottom: 5%;
     margin-top: 5%;
-float: left;
+    float: left;
 }
 
-.serv1-left button{
+.serv1-left button {
     height: 50px;
     width: 40%;
-   margin-left: 2%;
-   margin-right: 2%;
-float: left;
+    margin-left: 2%;
+    margin-right: 2%;
+    float: left;
 }
 
-.serv1-left p{
+.serv1-left p {
     height: 50px;
     width: 50%;
- color: #757575;
-  
-float: left;
+    color: #757575;
+
+    float: left;
 }
 
 @media(max-width:700px) {
@@ -2007,7 +2092,8 @@ float: left;
 
     .n-serves .serv2-right {
         width: 100%;
-        height: 450px; /* Or adjust based on image ratio */
+        height: 450px;
+        /* Or adjust based on image ratio */
         float: none;
         background-size: cover;
         background-repeat: no-repeat;
@@ -2031,16 +2117,17 @@ float: left;
 
 /* appoint div completed */
 
-.signin-row{
+.signin-row {
     height: 250px;
     width: 100%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   background: #EDF2FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EDF2FF;
 }
 
-.main-row{height: 40%;
+.main-row {
+    height: 40%;
     width: 90%;
     display: flex;
     align-items: center;
@@ -2048,36 +2135,39 @@ float: left;
 
 }
 
-.main-row1{
+.main-row1 {
     height: 100%;
     width: 50%;
 }
 
-.main-row1 p{
+.main-row1 p {
     color: #757575;
 }
-.main-row2{
+
+.main-row2 {
     height: 100%;
     width: 50%;
-   display: inline-flex;
+    display: inline-flex;
 }
 
-.main-row2 input{
- height: 70%;
- width: 60%;
- margin-right: 3%;
- border: none;
- border-radius: 10px;
+.main-row2 input {
+    height: 70%;
+    width: 60%;
+    margin-right: 3%;
+    border: none;
+    border-radius: 10px;
 }
-.main-row2 input::placeholder{
+
+.main-row2 input::placeholder {
     padding-left: 5%;
     font-size: medium;
 }
-.main-row2 button{
- height: 70%;
- width: 35%;
- border-radius: 10px;
- font-size: medium;
+
+.main-row2 button {
+    height: 70%;
+    width: 35%;
+    border-radius: 10px;
+    font-size: medium;
 }
 
 @media(max-width:700px) {
@@ -2122,50 +2212,51 @@ float: left;
 
 /* signin-row completed */
 
-.footer{
+.footer {
     height: 400px;
     width: 100%;
-  background: #176ABC;
+    background: #176ABC;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.footer-div{
+.footer-div {
     height: 90%;
     width: 90%;
- color: white;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.footer-subdiv1{
+.footer-subdiv1 {
     height: 100%;
     padding: 1%;
     overflow: hidden;
     background-color: transparent;
-    width:25%;
-   
-   
+    width: 25%;
+
+
 }
 
 
-.footer-subdiv1 li{
+.footer-subdiv1 li {
     display: inline;
-   margin: 1.5%; 
-   flex-wrap: wrap;
-   gap: 10px; 
-   
+    margin: 1.5%;
+    flex-wrap: wrap;
+    gap: 10px;
+
 }
 
-.footer-subdiv1 i{
+.footer-subdiv1 i {
     display: inline;
-  padding: 3%;
-   border: 1px solid white;
-   border-radius: 50%;
+    padding: 3%;
+    border: 1px solid white;
+    border-radius: 50%;
 }
-.footer-subdiv1 i:hover{
+
+.footer-subdiv1 i:hover {
     background: white;
     color: #000;
 }
@@ -2173,157 +2264,161 @@ float: left;
 
 
 
-.footer-subdiv2{
+.footer-subdiv2 {
     height: 100%;
     padding: 1%;
     overflow: hidden;
     background-color: transparent;
-    width:25%;
-   
-   
+    width: 25%;
+
+
 }
 
-.qd1{
+.qd1 {
     height: 70%;
-    width: 50%;float: left;
-   
+    width: 50%;
+    float: left;
+
 }
-.qd1 li{
+
+.qd1 li {
     margin-top: 10%;
     list-style: none;
     margin-left: 2%;
 }
 
-.qd1 i{
+.qd1 i {
     margin-right: 5%;
 }
 
 
 
-.footer-subdiv3{
+.footer-subdiv3 {
     height: 100%;
     padding: 1%;
     overflow: hidden;
     background-color: transparent;
-    width:25%;
-   
-   
+    width: 25%;
+
+
 }
 
-.footer-subdiv3 li{
-list-style: none;
-margin-top: 5%;
+.footer-subdiv3 li {
+    list-style: none;
+    margin-top: 5%;
 }
 
 
 
-.footer-subdiv4{
+.footer-subdiv4 {
     height: 100%;
     padding: 1%;
     overflow: hidden;
     background-color: transparent;
-    width:25%;
-   
-   
+    width: 25%;
+
+
 }
 
 
 @media(max-width:700px) {
-    .footer{
-        height:1100px;
+    .footer {
+        height: 1250px;
         width: 100%;
-      background: #176ABC;
+        background: #176ABC;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    
-    .footer-div{
+
+    .footer-div {
         height: 90%;
         width: 90%;
-     color: white;
+        color: white;
         display: block;
         align-items: center;
         justify-content: center;
     }
-    
-    .footer-subdiv1{
+
+    .footer-subdiv1 {
         height: 25%;
         padding: 1%;
         overflow: hidden;
         background-color: transparent;
-        width:100%;
+        width: 100%;
         float: left;
-       
-       
+
+
     }
-    
-.footer-subdiv2{
-    height: 25%;
-    padding: 1%;
-    overflow: hidden;
-    background-color: transparent;
-    width:100%;
-    float: left;
-   
-   
-}
-.footer-subdiv3{
-    height: 25%;
-    padding: 1%;
-    overflow: hidden;
-    background-color: transparent;
-    width:100%;
-    float: left;
-   
-   
-}
 
-.footer-subdiv4{
-    height: 25%;
-    padding: 1%;
-    overflow: hidden;
-    background-color: transparent;
-    width:100%;
-    float: left;
-   
-   
-}
+    .footer-subdiv2 {
+        height: 25%;
+        padding: 1%;
+        overflow: hidden;
+        background-color: transparent;
+        width: 100%;
+        float: left;
 
 
+    }
+
+    .footer-subdiv3 {
+        height: 25%;
+        padding: 1%;
+        overflow: hidden;
+        background-color: transparent;
+        width: 100%;
+        float: left;
+
+
+    }
+
+    .footer-subdiv4 {
+        height: 25%;
+        padding: 1%;
+        overflow: hidden;
+        background-color: transparent;
+        width: 100%;
+        float: left;
+
+
+    }
+
+
 }
 
-#foot-mail{
+#foot-mail {
     height: 15%;
     width: 100%;
     float: left;
-    
+
 }
 
-#foot-mail input{
-        width: 72%;
-        height: 100%;
-        margin-bottom: 10px;
-        border: 2px solid white;
-      border-radius: 5px 0px 0px 5px;
-       
+#foot-mail input {
+    width: 72%;
+    height: 100%;
+    margin-bottom: 10px;
+    border: 2px solid white;
+    border-radius: 5px 0px 0px 5px;
+
 }
 
-#foot-mail input::placeholder{
+#foot-mail input::placeholder {
     padding-left: 5%;
 }
-#foot-mail button{
-        width: 28%;
-     color: black;
-        height: 99%;
-        box-sizing: border-box;
-        background: white;
-      
-       border-radius: 0px 5px 5px 0px;
-       box-sizing: border-box;
+
+#foot-mail button {
+    width: 28%;
+    color: black;
+    height: 99%;
+    box-sizing: border-box;
+    background: white;
+
+    border-radius: 0px 5px 5px 0px;
+    box-sizing: border-box;
 }
 
-#foot-mail button:hover{
+#foot-mail button:hover {
     background: white;
     color: white;
 }
@@ -2331,19 +2426,19 @@ margin-top: 5%;
 
 
 /* footer completed */
-.finaldiv{
+.finaldiv {
     height: 70px;
     width: 100%;
-background: #1A76D1;
-display: flex;
-color:  white;
-align-items: center;
-justify-content: center;
+    background: #1A76D1;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
 }
 
 
 @media(max-width:700px) {
-    .finaldiv p{
+    .finaldiv p {
         font-size: small;
     }
 }
