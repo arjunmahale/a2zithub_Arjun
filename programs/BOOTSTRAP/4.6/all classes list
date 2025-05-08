@@ -1,0 +1,95 @@
+text color
+	.text-primary
+
+	.text-secondary
+
+	.text-success
+
+	.text-danger
+
+	.text-warning
+
+	.text-info
+
+	.text-light
+
+	.text-dark
+
+	.text-body
+
+	.text-muted
+
+	.text-white
+
+	.text-black-50
+
+	.text-white-50
+===========================================
+bg-color
+
+.text-primary
+
+	.bg-secondary
+
+	.bg-success
+
+	.bg-danger
+
+	.bg-warning
+
+	.bg-info
+
+	.bg-light
+
+	.bg-dark
+
+	.bg-body
+
+	.bg-muted
+
+	.bg-white
+
+	.bg-black-50
+
+	.bg-white-50
+===========================================
+alerts 
+
+	.alert-primary
+
+	.alert-secondary
+
+	.alert-success
+
+	.alert-danger
+
+	.alert-warning
+
+	.alert-info
+
+	.alert-light
+
+	.alert-dark
+
+	.alert-body
+
+	.alert-muted
+
+	.alert-white
+
+	.alert-black-50
+
+	.alert-white-50
+=====================
+button 
+	btn btn-primary
+    btn btn-danger
+    btn btn-info
+    btn btn-secondary
+    btn btn-warning
+    btn btn-outline-primary
+    btn btn-outline-primary
+	btn btn-outline-danger
+    btn btn-outline-info
+    btn btn-outline-secondary
+    btn btn-outline-warning
