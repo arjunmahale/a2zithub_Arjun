@@ -93,3 +93,32 @@ button
     btn btn-outline-info
     btn btn-outline-secondary
     btn btn-outline-warning
+
+=====================
+
+bg color
+alert classes
+btn classes
+spinner classes
+
+CSS Syllabus
+	Borders
+	Border-radius
+	Margin and padding(8-5)
+	Shadows
+	Overflow
+	Text
+	Sizing(height & width)
+	Float
+	Display
+	List
+	Position
+	z-index
+	Background gradient
+
+==============================
+
+table classes
+images classes
+pagination
+cards
