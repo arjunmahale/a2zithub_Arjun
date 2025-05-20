@@ -24,6 +24,14 @@
     integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
     crossorigin="anonymous"></script>
   <style type="text/css">
+    html{
+       font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/josefinsans/v32/Qw3aZQNVED7rKGKxtqIqX5EUAnx4RHw.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+    }
     body {
       overflow-x: hidden;
       background-color: #FFFFFF;
@@ -72,6 +80,40 @@
       height: 300px; 
     }
   }
+     .follow1-section  {
+    background-image: url('instra1.png.webp');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 80vh; 
+    position: relative;
+  }
+
+ 
+  @media (max-width: 768px) {
+    .follow1-section {
+      height: 300px; 
+    }
+  }
+     .follow2-section  {
+    background-image: url('instra2.png.webp');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 80vh; 
+    position: relative;
+  }
+
+ 
+  @media (max-width: 768px) {
+    .follow2-section {
+      height: 300px; 
+    }
+  }
+
+li :hover{
+color: grey;
+}
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -94,12 +136,12 @@
         <div class="collapse navbar-collapse" id="da">
           <!-- Added ml-auto here -->
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item pr-5 pt-4 pb-4 pl-3"><a class="nav-link text-dark" href="#"><b>Home</b></a></li>
-            <li class="nav-item pr-5 pt-4 pb-4 pl-3"><a class="nav-link text-dark" href="#"><b>About</b></a></li>
-            <li class="nav-item pr-5 pt-4 pb-4 pl-3"><a class="nav-link text-dark" href="#"><b>Services</b></a></li>
-            <li class="nav-item pr-5 pt-4 pb-4 pl-3"><a class="nav-link text-dark" href="#"><b>Blog</b></a></li>
-            <li class="nav-item pr-5 pt-4 pb-4 pl-3"><a class="nav-link text-dark" href="#"><b>Contact</b></a></li>
-            <li class="nav-item pr-5 pt-4 pb-4 pl-5 bg-success"><a class="nav-link text-white" href="#"><b>Visit Us</b></a></li>
+            <li class="nav-item pr-5 pt-4 pb-4 pl-3"><a class="nav-link text-dark" href="#home"><b>Home</b></a></li>
+            <li class="nav-item pr-5 pt-4 pb-4 pl-3"><a class="nav-link text-dark" href="#about"><b>About</b></a></li>
+            <li class="nav-item pr-5 pt-4 pb-4 pl-3"><a class="nav-link text-dark" href="#services"><b>Services</b></a></li>
+            <li class="nav-item pr-5 pt-4 pb-4 pl-3"><a class="nav-link text-dark" href="#blog"><b>Blog</b></a></li>
+            <li class="nav-item pr-5 pt-4 pb-4 pl-3"><a class="nav-link text-dark" href="#contact"><b>Contact</b></a></li>
+            <li class="nav-item pr-5 pt-4 pb-4 pl-5 bg-success"><a class="nav-link text-white" href="#visit"><b>Visit Us</b></a></li>
           </ul>
         </div>
       </nav>
@@ -110,7 +152,7 @@
 <!-- navbar completed -->
  
 
- <div class="container-fluid">
+ <div class="container-fluid" id="home">
   <div class="row">
     <!-- Left Column -->
     <div class="col-lg-6 col-12 pt-5" style="background: linear-gradient(to right,#555C6C, #101A31);">
@@ -122,7 +164,7 @@
         </div>
         <div class="row mt-3">
           <div class="col-12">
-            <h2 class="text-white" style="font-family: josefin-sans;">we make clothes that suits you</h2>
+            <h2 class="text-white" style="font-family: josefin-sans;">We Make clothes that suits you</h2>
           </div>
         </div>
         <div class="row mt-2">
@@ -143,7 +185,7 @@
     </div>
 
     <!-- Right Column -->
-    <div class="col-lg-6 col-12 d-none d-lg-block" style="background-color:#121A2D">
+    <div class="col-lg-6 col-12 d-none d-lg-block pt-5" style="background-color:#121A2D">
       <img src="h1_hero1.png.webp" class="img-fluid h-100" />
     </div>
   </div>
@@ -162,7 +204,13 @@
             <img src="offers1.png" class="w-100 h-50 ">
           </div>
           <div class="card-body"></div>
-          <p class="pl-3  h2">Tailor Sweing</p>
+          <div class="d-flex align-items-center pl-3 h2">
+  <div class="text-white text-center bg-warning rounded-circle d-flex justify-content-center align-items-center" style="width: 40px; height: 40px;">
+    1
+  </div>
+  <span class="ml-3">Tailor Sewing</span>
+</div>
+
           <p class="pl-3  pt-4" style="font-size: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Suspendisse varius enim in eros elementum tristique</p>
         </div>
@@ -175,7 +223,13 @@
             <img src="offers2.png" class="w-100 h-50">
           </div>
           <div class="card-body"></div>
-          <h2 class="pl-3 pr-3">Measurement</h2>
+         <div class="d-flex align-items-center pl-3 h2">
+  <div class="text-white text-center bg-warning rounded-circle d-flex justify-content-center align-items-center" style="width: 40px; height: 40px;">
+    2
+  </div>
+  <span class="ml-3">Tailor Sewing</span>
+</div>
+
           <p class="pl-3  pt-4" style="font-size: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Suspendisse varius enim in eros elementum tristique</p>
         </div>
@@ -189,7 +243,13 @@
             <img src="offers3.png" class="w-100 h-50">
           </div>
           <div class="card-body"></div>
-          <h2 class="pl-3 pr-3">Ready-made</h2>
+         <div class="d-flex align-items-center pl-3 h2">
+  <div class="text-white text-center bg-warning rounded-circle d-flex justify-content-center align-items-center" style="width: 40px; height: 40px;">
+    3
+  </div>
+  <span class="ml-3">Tailor Sewing</span>
+</div>
+
           <p class="pl-3  pt-4" style="font-size: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Suspendisse varius enim in eros elementum tristique</p>
         </div>
@@ -199,7 +259,7 @@
  <!-- about div started -->
 
   <div class="container-fluid p-5"
-    style="background-image: url(bg-about.jpg); background-repeat: no-repeat; background-size: cover;">
+    style="background-image: url(bg-about.jpg); background-repeat: no-repeat; background-size: cover;" id="about">
     <div class="row">
       <div class="col-lg-7 ">
 
@@ -224,11 +284,11 @@
 
 
   <!-- Why use our service? div started -->
-  <div class="container-fluid">
+  <div class="container-fluid" id="services">
     <div class="row">
       <div class="col-lg-12 text-center text-dark pt-5">
         <p class="h2">Why use our service?</p>
-        <p style="font-size: 20px;" class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br> Quia praesentium, est repudiandae iste</p>
+        <p style="font-size: 15px;" class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br> Quia praesentium, est repudiandae iste</p>
       </div>
     </div>
 
@@ -299,8 +359,127 @@
 
 
 
+<div class="container-fluid pb-5 mb-5" id="blog">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-6">
+      <div id="da12" class="carousel slide" data-ride="carousel">
+
+        <ol class="carousel-indicators">
+          <li data-target="#da12" data-slide-to="0" class="active">1</li>
+          <li data-target="#da12" data-slide-to="1">2</li>
+          
+        <a class="carousel-control-prev mt-5" href="#da12" role="button" data-slide="prev">
+          <i class="fas fa-arrow-left fa-2x text-dark"></i>
+        </a>
+        <a class="carousel-control-next mt-5 float-right" href="#da12" role="button" data-slide="next">
+          <i class="fas fa-arrow-right fa-2x text-dark"></i>
+        </a>
+
+        </ol>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active pt-5 pl-5" style="background-image: url('quotes-sign.png'); background-repeat: no-repeat; font-size: larger;">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus aliquam a alias fugiat iure quibusdam quo eius reiciendis placeat illum!</p>
+            <div class="mt-5 d-flex align-items-center">
+              <img src="testimonial.png" alt="" class="mr-3">
+              <div>
+                <h2>Robert Brown</h2>
+                <p>Creative Designer at colorlib</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item pt-5 pl-5" style="background-image: url('quotes-sign.png'); background-repeat: no-repeat; font-size: larger;">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ipsam ad quod explicabo doloribus molestiae? Reiciendis corrupti omnis assumenda consequuntur!</p>
+            <div class="mt-5 d-flex align-items-center">
+              <img src="testimonial.png" alt="" class="mr-3">
+              <div>
+                <h2>Robert Crown</h2>
+                <p>Creative Designer at colorlib</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
 
 
+
+  <!-- follow us on instagram div started -->
+  <div class="container-fluid mt-5 mb-5" id="contact">
+    <div class="row">
+      <div class="col-lg-12 text-center text-dark pt-5">
+        <p class="h2">Follow Us on Instagram</p>
+        <p style="font-size: 15px;" class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br> Quia praesentium, est repudiandae iste</p>
+      </div>
+    </div>
+
+
+ <!-- follow us images Section -->
+<div class="container-fluid mt-5 mb-5">
+  <div class="row ">
+    <div class="col-lg-6 p-5">
+      <div class="follow1-section d-flex align-items-center justify-content-center">
+      <div>
+        <i class="fa-brands fa-instagram follow-logo"  style="font-size: xx-large;color: white;"></i>
+      </div>
+      </div>
+    </div>
+    <div class="col-lg-6 p-5">
+      <div class="follow2-section d-flex align-items-center justify-content-center">
+          <div>
+            <i class="fa-brands fa-instagram follow-logo" style="font-size: xx-large; color:  white;"></i>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="visit">
+  <div class="row text-white pt-5 pb-5" style="background-image: url(footer-bg.png);  background-repeat: no-repeat; background-size: cover; ">
+    <!-- map Column -->
+    <div class="col-lg-4 col-12 d-none d-lg-block ">
+      <img src="map.png.webp" class="img-fluid h-100 " />
+    </div>
+
+
+    <div class="col-lg-4 col-12 " >
+     <h2 class="text-success">Tailor.</h2><br>
+     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore velit, recusandae dicta nesciunt ratione voluptatibus!</p><br>
+     <h4 class="text-success">(93)234 423-3454</h4><br>
+     <h6 class="text-success">(93)876 645-9075</h6>
+
+     <ul style="list-style: none; display: flex; font-size: x-large;">
+      <li class="text-success p-3"><i class="fa-brands fa-twitter"></i></li>
+      <li class="text-success p-3"><i class="fa-brands fa-facebook"></i></li>
+      <li class="text-success p-3"><i class="fa-brands fa-pinterest"></i></li>
+     </ul>
+    </div>
+
+
+    <div class="col-lg-4 col-12 ">
+      <h1 class="text-success">Our Solution</h1><br><br>
+      <ul style="list-style: none;">
+        <li class="pb-3">Home</li>
+        <li  class="pb-3">About</li>
+        <li  class="pb-3">Services</li>
+        <li  class="pb-3">Blog</li>
+        <li  class="pb-3">Contact </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class=" container-fluid">
+  <div class="row">
+    <div class="col-12 bg-dark text-white text-center pt-3">
+<p>Copyright @2025 All rights reserved | This template is made with ❤ by colorlib</p>
+    </div>
+  </div>
+</div>
 </body>
 
 </html>
