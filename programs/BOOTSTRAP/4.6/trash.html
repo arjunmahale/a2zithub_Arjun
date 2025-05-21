@@ -1,93 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
 
-  <div class="container-fluid p-0">
-    <div class="row" >
-      <div class=" col-lg-6 col-12 p-5 " style="background: linear-gradient(to right,#555C6C, #101A31);">
-        <div class="col-12 ">
-          <img class="pb-5 rotate m-0 p-0  " id="rotate-img" src="hero-icon.png.webp">
-          <h2 class="text-white" style="font-family: josefin-sans;">we make clothes that suits you</h2>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>website</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
+  <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+  <script type="javascript" src="js/bootstrap.bundle.min.js"></script>
+  <script type="javascript" src="js/bootstrap.js"></script>
+  <script type="javascript" src="js/bootstrap.min.js"></script>
 
-          <p class="pb-5 text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation</p>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"></script>
+  <style type="text/css">
+    
+    
+   
+    body {
+      overflow-x: hidden;
+      background-color: #FFFFFF;
+      margin: 0;
+      padding: 0;
 
-          <div class=" col-lg-3 col-6 bg-success text-center p-4 text-white" style="height:70px">Our Services</div>
+    }
+
+    html {
+      scroll-behavior: smooth;
+     
+    }
+
+    .nav-item:hover {
+      color: green !important;
+    }
+
+    .rotate {
+      animation: spin 20s linear infinite;
+      display: block;
+      margin: 0 auto;
+      transform-origin: center center;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+     .video-section {
+    background-image: url('video-bg.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 80vh; 
+    position: relative;
+  }
+
+ 
+  @media (max-width: 768px) {
+    .video-section {
+      height: 300px; 
+    }
+  }
+     .follow1-section  {
+    background-image: url('instra1.png.webp');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 80vh; 
+    position: relative;
+  }
+
+ 
+  @media (max-width: 768px) {
+    .follow1-section {
+      height: 300px; 
+    }
+  }
+     .follow2-section  {
+    background-image: url('instra2.png.webp');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 80vh; 
+    position: relative;
+  }
+
+ 
+  @media (max-width: 768px) {
+    .follow2-section {
+      height: 300px; 
+    }
+  }
+
+li :hover{
+color: grey;
+}
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+ <div class="container-fluid p-0 shadow">
+  <div class="row no-gutters">
+    <div class="col-12 p-0 m-0">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white w-100 p-0">
+        <a class="navbar-brand text-success" href="#"><b class="p-5">Tailor.</b></a>
+        <button class="navbar-toggler bg-dark text-white text-center m-3" type="button" data-toggle="collapse"
+          data-target="#da">
+          <span><b>MENU</b></span>
+          <span class=""><i class="fa-solid fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="da">
+          <!-- Added ml-auto here -->
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item pr-5 pt-4 pb-4 pl-3"><a class="nav-link text-dark" href="#home"><b>Home</b></a></li>
+            <li class="nav-item pr-5 pt-4 pb-4 pl-3"><a class="nav-link text-dark" href="#about"><b>About</b></a></li>
+            <li class="nav-item pr-5 pt-4 pb-4 pl-3"><a class="nav-link text-dark" href="#services"><b>Services</b></a></li>
+            <li class="nav-item pr-5 pt-4 pb-4 pl-3"><a class="nav-link text-dark" href="#blog"><b>Blog</b></a></li>
+            <li class="nav-item pr-5 pt-4 pb-4 pl-3"><a class="nav-link text-dark" href="#contact"><b>Contact</b></a></li>
+            <li class="nav-item pr-5 pt-4 pb-4 pl-5 bg-success"><a class="nav-link text-white" href="#visit"><b>Visit Us</b></a></li>
+          </ul>
         </div>
-      </div>
-
-
-      <div class=" col-lg-6 col-12" style="background-color:#121A2D">
-
-        <img src="h1_hero1.png.webp" class="img-fluid pt-5 h-100 pb-0">
-      </div>
+      </nav>
     </div>
   </div>
+</div>
+
+<!-- navbar completed -->
+ 
+
+ <div class="container-fluid" id="home">
+  <div class="row">
+    <!-- Left Column -->
+    <div class="col-lg-6 col-12 pt-5" style="background: linear-gradient(to right,#555C6C, #101A31);">
+      <div class="container pb-5">
+        <div class="row">
+          <div class="col-12 ">
+            <img class="rotate float-left" id="rotate-img" src="hero-icon.png.webp" />
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12">
+            <h2 class="text-white" style="font-family: josefin-sans;">We Make clothes that suits you</h2>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-12">
+            <p class="text-white">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation
+            </p>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-lg-4 col-6 ">
+            <div class="bg-success text-center text-white py-3">Our Services</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="col-lg-6 col-12 d-none d-lg-block pt-5" style="background-color:#121A2D">
+      <img src="h1_hero1.png.webp" class="img-fluid h-100" />
+    </div>
+  </div>
+</div>
+
+
 
   <!-- offers div started -->
-  <div class="container-fluid p-0">
+  <div class="container-fluid ">
     <div class="row">
-      <div class="col-lg-4 p-5">
+      <div class="col-lg-4 p-3 ">
         <div class="card border-0
             ">
 
           <div class="card-header p-0">
-            <img src="offers1.png" class="w-100 h-100 ">
+            <img src="offers1.png" class="w-100 h-50 ">
           </div>
           <div class="card-body"></div>
-          <h1 class="pl-3 pr-3">Tailor Sweing</h1>
-          <p class="pl-3 pr-3 pt-4" style="font-size: 22px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <div class="d-flex align-items-center pl-3 h2">
+  <div class="text-white text-center bg-warning rounded-circle d-flex justify-content-center align-items-center" style="width: 40px; height: 40px;">
+    1
+  </div>
+  <span class="ml-3">Tailor Sewing</span>
+</div>
+
+          <p class="pl-3  pt-4" style="font-size: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Suspendisse varius enim in eros elementum tristique</p>
         </div>
       </div>
-      <div class="col-lg-4 p-5">
+
+      <div class="col-lg-4 p-3 pr-0">
         <div class="card border-0">
 
           <div class="card-header p-0">
-            <img src="offers2.png" class="w-100 h-100">
+            <img src="offers2.png" class="w-100 h-50">
           </div>
           <div class="card-body"></div>
-          <h1 class="pl-3 pr-3">Mesurement</h1>
-          <p class="pl-3 pr-3 pt-4" style="font-size: 22px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         <div class="d-flex align-items-center pl-3 h2">
+  <div class="text-white text-center bg-warning rounded-circle d-flex justify-content-center align-items-center" style="width: 40px; height: 40px;">
+    2
+  </div>
+  <span class="ml-3">Tailor Sewing</span>
+</div>
+
+          <p class="pl-3  pt-4" style="font-size: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Suspendisse varius enim in eros elementum tristique</p>
         </div>
       </div>
-      <div class="col-lg-4 p-5">
+
+      <div class="col-lg-4 p-3 pr-0">
         <div class="card border-0
             ">
 
           <div class="card-header p-0">
-            <img src="offers3.png" class="w-100 h-100">
+            <img src="offers3.png" class="w-100 h-50">
           </div>
           <div class="card-body"></div>
-          <h1 class="pl-3 pr-3">Ready-made</h1>
-          <p class="pl-3 pr-3 pt-4" style="font-size: 22px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         <div class="d-flex align-items-center pl-3 h2">
+  <div class="text-white text-center bg-warning rounded-circle d-flex justify-content-center align-items-center" style="width: 40px; height: 40px;">
+    3
+  </div>
+  <span class="ml-3">Tailor Sewing</span>
+</div>
+
+          <p class="pl-3  pt-4" style="font-size: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Suspendisse varius enim in eros elementum tristique</p>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- about div started -->
+ <!-- about div started -->
 
   <div class="container-fluid p-5"
-    style="background-image: url(bg-about.jpg); background-repeat: no-repeat; background-size: cover;">
+    style="background-image: url(bg-about.jpg); background-repeat: no-repeat; background-size: cover;" id="about">
     <div class="row">
       <div class="col-lg-7 ">
 
         <img src="visit_bg.png" alt="" class="w-100 ">
       </div>
       <div class="col-lg-5 pt-5">
-        <p style="font-size: 50px;"><b>About Our <br> Tailor House</b></p>
-        <p class="pb-5 text-dark pr-5" style="font-size: x-large;">Lorem ipsum dolor sit amet, consectetur adipisicing
+        <h1 ><b>About Our <br> Tailor House</b></h1>
+        <p class="pb-5 text-dark pr-2 pt-4 text-justify" style="font-size: larger;">Lorem ipsum dolor sit amet, consectetur adipisicing
           elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
           quis nostrud exercitation</p>
-        <p class="pb-5 text-dark pr-5" style="font-size: larger;">Lorem ipsum dolor sit amet, consectetur adipisicing
+        <p class="pb-5 text-dark pr-2 text-justify" style="font-size: large; ">Lorem ipsum dolor sit amet, consectetur adipisicing
           elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
           quis nostrud exercitation</p>
 
-        <div class=" col-lg-4 col-6 bg-success text-center p-4 text-white overflow-hidden" style="height:70px ;font-size: x-large;">More
+        <div class=" col-lg-6 pt-3 col-10 bg-success text-center  text-white overflow-hidden" style="height:70px ;font-size: x-large;">More
           About Us</div>
       </div>
     </div>
@@ -95,104 +280,102 @@
 
 
   <!-- Why use our service? div started -->
-  <div class="container-fluid">
+  <div class="container-fluid" id="services">
     <div class="row">
       <div class="col-lg-12 text-center text-dark pt-5">
-        <p  class="h1">Why use our service?</p>
-        <p style="font-size: 20px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br> Quia praesentium, est
-          repudiandae iste</p>
+        <p class="h2">Why use our service?</p>
+        <p style="font-size: 15px;" class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br> Quia praesentium, est repudiandae iste</p>
       </div>
     </div>
 
 
 
     <div class="row">
-      <div class="col-lg-3 p-5">
-        <div class="card border-0 ">
+      <div class="col-lg-3">
+        <div class="card border-0 pt-5">
 
-          <div class="card-header p-0 border-0" style="background-color: transparent;">
+          <div class="card-header p-0 border-0 " style="background-color: transparent;">
             <img src="services1.svg" class="w-25 h-25 ">
           </div>
           <div class="card-body"></div>
-          <h1 class="pl-3 pr-3">Tailor Sweing</h1>
-          <p class="pl-3 pr-3 pt-4" style="font-size: 22px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <h3 class=" ">Tailor Sweing</h3>
+          <p class="text-justify  pt-4" >Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Suspendisse varius enim in eros elementum tristique</p>
         </div>
       </div>
-      <div class="col-lg-3 p-5">
-        <div class="card border-0 ">
+      <div class="col-lg-3 ">
+        <div class="card border-0 pt-5">
 
           <div class="card-header p-0 border-0" style="background-color: transparent;">
             <img src="services2.svg" class="w-25 h-25 ">
           </div>
           <div class="card-body"></div>
-          <h1 class="pl-3 pr-3">Tailor Sweing</h1>
-          <p class="pl-3 pr-3 pt-4" style="font-size: 22px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <h3 class="">Tailor Sweing</h3>
+          <p class="text-justify pt-4" >Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Suspendisse varius enim in eros elementum tristique</p>
         </div>
       </div>
-      <div class="col-lg-3 p-5">
-        <div class="card border-0 ">
+      <div class="col-lg-3 ">
+        <div class="card border-0 pt-5">
 
           <div class="card-header p-0 border-0" style="background-color: transparent;">
             <img src="services3.svg" class="w-25 h-25 ">
           </div>
           <div class="card-body"></div>
-          <h1 class="pl-3 pr-3">Tailor Sweing</h1>
-          <p class="pl-3 pr-3 pt-4" style="font-size: 22px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <h3 class="">Tailor Sweing</h3>
+          <p class="text-justify pt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Suspendisse varius enim in eros elementum tristique</p>
         </div>
       </div>
-      <div class="col-lg-3 p-5">
-        <div class="card border-0 ">
+      <div class="col-lg-3 ">
+        <div class="card border-0 pt-5">
 
           <div class="card-header p-0 border-0" style="background-color: transparent;">
             <img src="services4.svg" class="w-25 h-25 ">
           </div>
           <div class="card-body"></div>
-          <h1 class="pl-3 pr-3">Tailor Sweing</h1>
-          <p class="pl-3 pr-3 pt-4" style="font-size: 22px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <h3 class="">Tailor Sweing</h3>
+          <p class="text-justify pt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Suspendisse varius enim in eros elementum tristique</p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- video div  started -->
-  <div class="container-fluid" >
-    <div class="row" >
-      <div class="col-lg-12 p-0" >
-        <div style="background-image: url('video-bg.png'); background-size: cover; background-position: center; width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center; position: relative;">
-          <i class="fa-solid fa-circle-play" style="font-size: 80px;  "></i>
-        </div>
+ <!-- Video Section -->
+<div class="container-fluid mt-5 mb-5">
+  <div class="row">
+    <div class="col-lg-12 p-0">
+      <div class="video-section d-flex align-items-center justify-content-center">
+        <i class="fa-solid fa-circle-play" style="font-size: 80px;"></i>
       </div>
     </div>
   </div>
+</div>
 
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-lg-12  d-flex justify-content-center align-items-center">
-      <div id="da12" class="carousel slide w-50" data-ride="carousel">
 
-        
-        <ol class="carousel-indicators ">
-          <li data-target="#da12" data-slide-to="0" class="active "></li>
+<div class="container-fluid pb-5 mb-5" id="blog">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-6">
+      <div id="da12" class="carousel slide" data-ride="carousel">
+
+        <ol class="carousel-indicators">
+          <li data-target="#da12" data-slide-to="0" class="active">1</li>
           <li data-target="#da12" data-slide-to="1">2</li>
-           <a class="carousel-control-prev  mt-5" href="#da12" role="button" data-slide="prev">
+          
+        <a class="carousel-control-prev mt-5" href="#da12" role="button" data-slide="prev">
           <i class="fas fa-arrow-left fa-2x text-dark"></i>
         </a>
-        <a class="carousel-control-next  mt-5" href="#da12" role="button" data-slide="next">
+        <a class="carousel-control-next mt-5 float-right" href="#da12" role="button" data-slide="next">
           <i class="fas fa-arrow-right fa-2x text-dark"></i>
         </a>
+
         </ol>
 
-       
         <div class="carousel-inner">
-
-        
           <div class="carousel-item active pt-5 pl-5" style="background-image: url('quotes-sign.png'); background-repeat: no-repeat; font-size: larger;">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis dolorem, quod consectetur aperiam esse nobis reprehenderit quaerat nam facere inventore! Nam cumque libero quia corrupti a dolores autem totam itaque?</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus aliquam a alias fugiat iure quibusdam quo eius reiciendis placeat illum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quis aliquam qui recusandae repellat accusamus illo a, dolor est. Sapiente.</p>
             <div class="mt-5 d-flex align-items-center">
               <img src="testimonial.png" alt="" class="mr-3">
               <div>
@@ -202,9 +385,8 @@
             </div>
           </div>
 
-         
           <div class="carousel-item pt-5 pl-5" style="background-image: url('quotes-sign.png'); background-repeat: no-repeat; font-size: larger;">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate accusantium doloremque eius vero dolores sed, facilis eum alias temporibus! Maiores adipisci tempora commodi? Sint fugit magni, id sapiente debitis earum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ipsam ad quod explicabo doloribus molestiae? Reiciendis corrupti omnis assumenda consequuntur! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi laboriosam aspernatur corrupti eum quam at quas autem laborum nesciunt ex?</p>
             <div class="mt-5 d-flex align-items-center">
               <img src="testimonial.png" alt="" class="mr-3">
               <div>
@@ -213,14 +395,87 @@
               </div>
             </div>
           </div>
-
         </div>
-
-      
-       
 
       </div>
     </div>
   </div>
 </div>
 
+
+
+  <!-- follow us on instagram div started -->
+  <div class="container-fluid mt-5 mb-5" id="contact">
+    <div class="row">
+      <div class="col-lg-12 text-center text-dark pt-5">
+        <p class="h2">Follow Us on Instagram</p>
+        <p style="font-size: 15px;" class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br> Quia praesentium, est repudiandae iste</p>
+      </div>
+    </div>
+
+
+ <!-- follow us images Section -->
+<div class="container-fluid mt-5 mb-5">
+  <div class="row ">
+    <div class="col-lg-6 p-3">
+      <div class="follow1-section d-flex align-items-center justify-content-center">
+      <div>
+        <i class="fa-brands fa-instagram follow-logo"  style="font-size: xx-large;color: white;"></i>
+      </div>
+      </div>
+    </div>
+    <div class="col-lg-6 p-3">
+      <div class="follow2-section d-flex align-items-center justify-content-center">
+          <div>
+            <i class="fa-brands fa-instagram follow-logo" style="font-size: xx-large; color:  white;"></i>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid p-0" id="visit">
+  <div class="row text-white pt-5 pb-0" style="background-image: url(footer-bg.png);  background-repeat: no-repeat; background-size: cover; ">
+    <!-- map Column -->
+    <div class="col-lg-4 col-12 d-none d-lg-block ">
+      <img src="map.png.webp" class="img-fluid h-100 " />
+    </div>
+
+
+    <div class="col-lg-4 col-12 " >
+     <h2 class="text-success">Tailor.</h2><br>
+     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore velit, recusandae dicta nesciunt ratione voluptatibus!</p><br>
+     <h4 class="text-success">(93)234 423-3454</h4><br>
+     <h6 class="text-success">(93)876 645-9075</h6>
+
+     <ul style="list-style: none; display: flex; font-size: x-large;">
+      <li class="text-success p-3"><i class="fa-brands fa-twitter"></i></li>
+      <li class="text-success p-3"><i class="fa-brands fa-facebook"></i></li>
+      <li class="text-success p-3"><i class="fa-brands fa-pinterest"></i></li>
+     </ul>
+    </div>
+
+
+    <div class="col-lg-4 col-12 ">
+      <h1 class="text-success">Our Solution</h1><br><br>
+      <ul style="list-style: none;">
+        <li class="pb-3">Home</li>
+        <li  class="pb-3">About</li>
+        <li  class="pb-3">Services</li>
+        <li  class="pb-3">Blog</li>
+        <li  class="pb-3">Contact </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class=" container-fluid p-0">
+  <div class="row">
+    <div class="col-12 bg-dark text-white text-center pt-3">
+<p>Copyright @2025 All rights reserved | This template is made with ❤ by colorlib</p>
+    </div>
+  </div>
+</div> 
+</body>
+
+</html>
