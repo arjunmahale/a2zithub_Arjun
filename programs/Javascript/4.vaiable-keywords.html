@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+          document.write("<h1>var keyword </h1><br>");
+        var val=100;
+        if(true){
+            var val=200;
+            document.write(val+"=value from block<br>");
+        }
+          document.write(val+"=value from global");
+
+            document.write("<h1>let keyword </h1><br> ");
+        let val1=100;
+        if(true){
+           let val1=200;
+            document.write(val1+"=value from block<br>");
+        }
+          document.write(val1+"=value from global<br>");
+
+            document.write("<h1>const keyword </h1><br>");
+        const cnt=100;
+        if(true){
+            const cnt=200;
+          
+
+            document.write(cnt+"=value from block<br> const variable can be redeclare in block scope");
+        }
+          document.write(cnt+"=value from global");
+    </script>
+   
+
+</body>
+</html>
