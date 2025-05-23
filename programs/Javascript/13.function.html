@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- fundtion
+    normal function
+    parametric function
+    return keyword function
+    function in expression
+    anonymous function
+    arrow function
+     -->
+ <button onclick="demo()"> click</button>
+ <h1>calculate following discount</h1>
+
+     <script>
+        // simple function
+function demo(){
+    alert("hello sir");
+}
+
+
+// parameterized function
+function demo2( a, b){
+    document.write("addition is : "+(a+b));
+}
+
+
+// return function
+function ret(){
+    var amount=210
+   document.write(" "+amount);
+   return amount;
+}
+
+var a=ret();
+var dis=a*10/100;
+document.write(` <br>discount on ${a} is ${dis}`);
+
+
+
+
+     </script>
+</body>
+</html>
