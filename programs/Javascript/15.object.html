@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj={"name":"arjun","email":"arjun@gmail.com","mo":23234234,"address":"nashik"};
+
+        document.write("<br>"+obj.name);
+        document.write("<br>"+obj.email);
+        document.write("<br>"+obj.mo);
+        document.write("<br>"+obj.address);
+
+
+        //object in function
+
+        var obj1={
+            "fname":"vaibhav",
+            "lname":"mahale",
+            "fullname":function (){
+                return this.fname+" "+this.lname;
+            }
+        };
+
+        document.write("<br>"+obj1.fullname());
+
+
+        // printing object
+        for(key in obj){
+            document.write("<br>"+obj[key]);
+        }
+    </script>
+</body>
+</html>

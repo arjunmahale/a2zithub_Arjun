@@ -15,7 +15,7 @@
     anonymous function
     arrow function
      -->
- <button onclick="demo()"> click</button>
+ <button onclick="demo()" class="btn btn-primary "> click</button>
  <h1>calculate following discount</h1>
 
      <script>
@@ -27,20 +27,62 @@ function demo(){
 
 // parameterized function
 function demo2( a, b){
+    document.write("  <hr>parameterized function  <br>");
     document.write("addition is : "+(a+b));
 }
 
 
 // return function
 function ret(){
-    var amount=210
+    var amount=210;
+
+    document.write("return function <br>  <hr>");
    document.write(" "+amount);
    return amount;
 }
 
 var a=ret();
 var dis=a*10/100;
-document.write(` <br>discount on ${a} is ${dis}`);
+document.write(` <br>discount on ${a} is ${dis} <br>`);
+
+// function in expression
+var f=function ret(){
+    var amount=210;
+    document.write(" function in expression <br>  <hr>");
+   document.write(" "+amount);
+   return amount;
+}
+
+var a=f();
+var dis=a*10/100;
+document.write(` <br>discount on ${a} is ${dis}<br>`);
+
+
+// anonymous function 
+var f=function (){
+    var amount=210;
+    document.write("anonymous function <br>  <hr>");
+   document.write(" "+amount);
+   return amount;
+}
+
+var a=f();
+var dis=a*10/100;
+document.write(` <br>discount on ${a} is ${dis}<br>`);
+
+
+// arrow function 
+var f= () =>{
+    document.write("arrow function <br>  <hr>");
+    var amount=210;
+   document.write(" "+amount);
+   return amount;
+}
+
+var a=f();
+var dis=a*10/100;
+document.write(` <br>discount on ${a} is ${dis}<br>  <hr>`);
+
 
 
 

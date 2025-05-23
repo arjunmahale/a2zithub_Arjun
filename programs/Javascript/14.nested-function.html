@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function demo1(a,b){
+            function demo2(aa,bb) {
+                var add=aa+bb;
+                document.write("addition is : "+add);
+                return add;
+                
+            }
+            return demo2(a,b);
+        }
+        var out=demo1(12,23);
+        document.write("<br>addition is : "+out);
+    </script>
+</body>
+</html>
