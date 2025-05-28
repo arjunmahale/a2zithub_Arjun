@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="id1">welcome</h1>
+    <h2 id="id2"></h2>
+
+    <h3 class="class2">hii</h3>
+
+    <h3 class="class2">hii hello</h3>
+
+
+    <p>lorem</p>
+    <p name="lorem2">lorem2 with name</p>
+
+
+    <h6 class="que" id="que">query selector</h6>
+    <script>
+        //DOM=document object model
+        // var a=document;
+        // console.log(a);
+        // var a=document.body;
+        // console.log(a);
+        // var a=document.head;
+        // console.log(a);
+
+        //get and set
+ //by id
+        var a=document.getElementById('id1').innerHTML;
+        document.write(a);
+
+        var b=document.getElementById('id2').innerHTML='hello';
+        // get set by id, class, tag,name 
+        //query selector
+
+              //by class    
+        var c=document.getElementsByClassName('class2')[0].innerHTML;
+        document.write("<br>"+c);
+        var d=document.getElementsByClassName('class2')[1].innerHTML;
+        document.write("<br>"+c);
+
+        var d=document.getElementsByClassName('class2')[0].innerHTML="new data in class2";
+        var d=document.getElementsByClassName('class2')[1].innerHTML="new data in class2";
+
+
+// by tag
+
+var t=document.getElementsByTagName('p')[0].innerHTML;
+document.write(t);
+
+// by name
+
+var v=document.getElementsByName('lorem2')[0].innerHTML="kjhadsfjkal";
+
+
+document.write(v);
+
+
+var qr=document.querySelector('h6').innerHTML;
+document.write("<br>"+qr);
+var qr=document.querySelector('.que').innerHTML;
+document.write("<br>"+qr);
+var qr=document.querySelector('#que').innerHTML;
+document.write("<br>"+qr);
+
+
+
+var qr=document.querySelector('h6').innerHTML='from tag selector';
+document.write("<br>--------------<br>"+qr);
+var qr=document.querySelector('.que').innerHTML="from class selector";
+document.write("<br>"+qr);
+var qr=document.querySelector('#que').innerHTML="from id selector";
+document.write("<br>"+qr);
+    </script>
+</body>
+</html>

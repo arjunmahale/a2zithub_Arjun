@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Table</title>
+</head>
+<body>
+    <script>
+        var arr = [
+            {
+                name: "arjun",
+                age: 23,
+                dpt: "it"
+            },
+            {
+                name: "vaibhav",
+                age: 21,
+                dpt: "it"
+            },
+            {
+                name: "omkar",
+                age: 22,
+                dpt: "it"
+            },
+        ];
+
+        // Optional: Print array to console for debugging
+        console.log(arr);
+
+        // Create Table Header
+        document.write("<table border='1' cellspacing='0' cellpadding='10'>");
+        document.write("<tr><th>Name</th><th>Age</th><th>Department</th></tr>");
+
+        // Create Table Rows from Array
+        for (var i = 0; i < arr.length; i++) {
+            document.write("<tr>");
+            for (var key in arr[i]) {
+                document.write("<td>" + arr[i][key] + "</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <script>
+        var arr = new Array({
+           "id": "0003",
+		"type": "donut",
+		"name": "Old Fashioned",
+		"ppu": 0.55,
+        },
+            {
+               "id": "0003",
+		"type": "donut",
+		"name": "Old Fashioned",
+		"ppu": 0.55,
+            },
+            {
+               "id": "0003",
+		"type": "donut",
+		"name": "Old Fashioned",
+		"ppu": 0.55,
+            },
+            
+
+        );
+        document.write(`<table class="table">`);
+        document.write(`<tr><th>id</th><th>type</th><th>name</th><th>ppu</th>`);
+        for (var i = 0; i < arr.length; i++) {
+            document.write("<tr>");
+            for (var key in arr[i]) {
+                document.write("<td>" + arr[i][key] + "</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("<table>");
+
+
+
+
+
+    </script>
+    <script>
+        var arr=[2,3,4,5,6,6,7];
+         document.write(arr);
+        arr.reverse();
+        document.write("<br>"+arr);
+        arr.pop();
+        document.write("<br>"+arr);
+        arr.push(2,3,4);
+        document.write("<br>"+arr);
+        arr.shift();
+        document.write("<br>"+arr);
+        arr.unshift(121,23);
+        document.write("<br>"+arr);
+        
+        document.write("<br>"+arr.indexOf(6,0));
+        
+        document.write("<br>"+ arr.join('/'));
+    </script>
+</body>
+
+</html>
