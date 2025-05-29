@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .demo4{
+                height: 100px;
+                width: 100px;
+                background-color: red;
+                float: left;
+        }
+        .demo5{
+                height: 100px;
+                width: 100px;
+                background-color: violet;
+                float: left;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 id="data"><mark>welcome</mark></h1>
+    <h1 id="data1"></h1>
+    <h1 id="data2"></h1>
+
+    <script>
+// innerHTML = treats data as HTML code  
+// innerText = treats data as plain text, does not support HTML tags
+
+        var a =document.getElementById('data').innerHTML;
+        console.log(a);
+        document.getElementById('data1').innerHTML=a;
+        document.getElementById('data1').innerText=a;
+
+    </script>
+
+
+<input type="text" id="inp" value="demo value">
+
+<script>
+    var c=document.getElementById('inp').value;
+    document.write(c);
+    document.getElementById('inp').value="new updated value";
+
+
+
+
+</script>
+<!-- <div id="demo">
+
+</div>
+<div id="demo1"></div>
+<script>
+    document.getElementById('demo').style.height="100px";
+    document.getElementById('demo').style.width="100px";
+    document.getElementById('demo').style.backgroundColor="red";
+
+    document.getElementById('demo').style="background-color:orange;height:200px;width:200px;float:right";
+     
+</script> -->
+
+
+<!-- 
+<div class="demo4" id="dem" style="" >
+    
+    <script>
+        //getattribute and set attribute
+        var n=document.getElementById('dem').getAttribute('style');
+        console.log(n);
+        var n=document.getElementById('dem').getAttribute('id');
+        console.log(n);
+        var n=document.getElementById('dem').getAttribute('class');
+        console.log(n);
+
+        document.getElementById('dem').setAttribute('class','demo5');
+
+    </script> -->
+
+    <div class="demo4" id="demm" >
+<h1 id="app">sdfsdfsdf</h1>
+    </div>
+    <div>
+        <button id="b1 " onclick=" add()">add</button>
+        <button id="b2 " onclick=" remove()">remove</button>
+        <button id="b2 " onclick=" toggle()">toggle</button>
+    </div>
+    <script>
+
+        function add(){
+             var z=document.getElementById('demm').classList.add('demo5');
+        }
+       
+        function remove(){
+             var z=document.getElementById('demm').classList.remove('demo5');
+        }
+
+        function toggle(){
+             var z=document.getElementById('demm').classList.toggle('demo5');
+        }
+       
+        // append and prepend
+
+        document.getElementById('app').append('hello sir how are you    ');
+        document.getElementById('app').prepend('hello sir how are you    ');
+
+      
+    </script>
+
+</div>
+</body>
+</html>

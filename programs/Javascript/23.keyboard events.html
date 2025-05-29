@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ 
+    </style>
+</head>
+<body>
+    
+    <input type="text"  id="demo"  onkeyup="onkeyup1()">
+    <h1 id="out"></h1>
+    <script>
+         //    2] keyboard event = onkeydown onkeypress onkeyup
+        // function onkeydown1(){
+        //     document.getElementById('demo').style="background-color:green;";
+        // }
+
+        // function onkeypress1(){
+        //     document.getElementById('demo').style="background-color:blue;";
+        // }
+        
+        function onkeyup1(){
+            let a=document.getElementById('demo').value;
+           document.getElementById('out').innerHTML=a;
+
+        }
+    </script>
+</body>
+</html>

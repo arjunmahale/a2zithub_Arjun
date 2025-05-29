@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mousediv{
+            height: 200px;
+            width: 200px;
+            float: left;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mousediv" id="mo" onclick="onclick1()" ondblclick="ondblclick1()" oncontextmenu="oncontextmenu1()" onmouseover="onmouseover1()" onmouseout="onmouseout1()">
+
+    </div>
+    <script>
+    //    1] mouse event = onclick ondblclick oncontextmenu    onmouseover onmouseout 
+function onclick1(){
+    document.getElementById('mo').style="background-color:red";
+}
+function ondblclick1(){
+    document.getElementById('mo').style="background-color:black";
+}
+function oncontextmenu1(){
+    document.getElementById('mo').style="background-color:blue";
+}
+function onmouseover1(){
+    document.getElementById('mo').style="background-color:orange";
+}
+function onmouseout1(){
+    document.getElementById('mo').style="background-color:green";
+}
+
+
+    //    2] keyboard event = onkeydown onkeypress onkeyup
+
+    
+
+    //    3] form events = onfocus onblur onselect onchange onsubmit
+
+    //    4] window events= onresize onscroll 
+
+
+
+    </script>
+</body>
+</html>
