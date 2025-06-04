@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <table border="1" style="width: 100%;border-collapse: collapse;text-align: center;" cellpadding="10px">
+        <tr>
+            <td>status</td>
+            <td>Product Name</td>
+            <td> Price</td>
+            <td> Quantity</td>
+            <td> Total</td>
+        </tr>
+        <tr>
+            <td> <button>OK</button></td>
+
+            <td>
+                <input type="text" placeholder="mouse">
+            </td>
+
+            <td>
+                <input type="text" name="" id="rate" onkeyup="cal('qty','tot','rate')">
+            </td>
+
+            <td>
+                <button id="decr" onclick="dec('qty','tot','rate')">-</button>
+                <input type="text" name="" id="qty" onkeyup="cal('qty','tot','rate')">
+                <button id="incr" onclick="inc('qty','tot','rate')">+</button>
+            </td>
+
+            <td>
+                <input type="text" name="" id="tot" readonly class="ftp">
+            </td>
+        </tr>
+        <tr>
+            <td> <button>OK</button></td>
+
+            <td>
+                <input type="text"placeholder="keyboard">
+            </td>
+
+            <td>
+                <input type="text" name="" id="rate1" onkeyup="cal('qty1','tot1','rate1')">
+            </td>
+
+            <td>
+                <button  onclick="dec('qty1','tot1','rate1')">-</button>
+                <input type="text" name="" id="qty1" onkeyup="cal('qty1','tot1','rate1')">
+                <button  onclick="inc('qty1','tot1','rate1')">+</button>
+            </td>
+
+            <td>
+                <input type="text" name="" id="tot1" readonly class="ftp">
+            </td>
+        </tr>
+        <tr>
+            <td> <button>OK</button></td>
+
+            <td>
+                <input type="text"placeholder="laptop">
+            </td>
+
+            <td>
+                <input type="text" name="" id="rate2" onkeyup="cal('qty2','tot2','rate2')">
+            </td>
+
+            <td>
+                <button  onclick="dec('qty2','tot2','rate2')">-</button>
+                <input type="text" name="" id="qty2" onkeyup="cal('qty2','tot2','rate2')">
+                <button  onclick="inc('qty2','tot2','rate2')">+</button>
+            </td>
+
+            <td>
+                <input type="text" name="" id="tot2" readonly class="ftp">
+            </td>
+        </tr>
+        <tr>
+            <td> <button>OK</button></td>
+
+            <td>
+                <input type="text"placeholder="pc">
+            </td>
+
+            <td>
+                <input type="text" name="" id="rate3" onkeyup="cal('qty3','tot3','rate3')">
+            </td>
+
+            <td>
+                <button  onclick="dec('qty3','tot3','rate3')">-</button>
+                <input type="text" name="" id="qty3" onkeyup="cal('qty3','tot3','rate3')">
+                <button  onclick="inc('qty3','tot3','rate3')">+</button>
+            </td>
+
+            <td>
+                <input type="text" name="" id="tot3" readonly class="ftp">
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: right;column-span: 3;" colspan="4"><h3>Total=</h3></td>
+
+            <td>
+                <h4 id="ftot"></h4>
+            </td>
+
+           
+        </tr>
+    </table>
+
+    <script>
+
+        function ftotal(){
+           
+                var p=document.getElementsByClassName('ftp');
+               
+                var sum =0;
+                for(var i=0;i<p.length;i++){
+                        sum+=Number(p[i].value);
+                }
+                document.getElementById('ftot').innerHTML=sum;
+
+        }
+        function dec(q, t, r) {
+            var d = document.getElementById(q).value;
+            if (d > 0) {
+                d--;
+                document.getElementById(q).value = d;
+            }
+            cal(q, t, r);
+           
+        }
+
+        function inc(q, t, r) {
+            var c = document.getElementById(q).value;
+            c++;
+            document.getElementById(q).value = c;
+            cal(q, t, r);
+           
+        }
+
+
+        function cal(q, t, r) {
+            var rate = document.getElementById(r).value;
+            var qty = document.getElementById(q).value;
+            var tot = document.getElementById(t).value;
+
+            tot = rate * qty;
+
+            document.getElementById(t).value = tot;
+            ftotal();
+        }
+    </script>
+</body>
+
+</html>

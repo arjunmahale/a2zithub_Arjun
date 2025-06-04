@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body onresize="return confirm('are you sure to resize !!!')" onscroll="confirm('are you sure to scroll !!!')">
+    
+    <form action=" submit.html" onsubmit="return false" style="height: 3000px;">
+        <label >first name</label>
+    <input type="text" id="fname" onfocus="focus1('fname')" onblur="blur1('fname')" onselect="select1('fname')">
+    <label >middle name</label>
+    <input type="text" id="mname"  onfocus="focus1('mname')" onblur="blur1('mname')" onselect="select1('fname')">
+    <label>city list</label>
+    <select id="ops"  onfocus="focus1('lname')"onblur="blur1('lname')" onchange="change1('ops')">
+        <option value="">nashik</option>
+        <option value="">mumbai</option>
+        <option value="">pune</option>
+    </select>
+    <button type="submit">submit</button>
+    </form>
+
+    <script>
+        
+        function focus1(da){
+            document.getElementById(da).style="background-color:red";
+        }
+        function blur1(da){
+            document.getElementById(da).style="background-color:black";
+        }
+
+        function select1(da){
+            document.getElementById(da).style="background:blue";
+        }
+        function change1(da){
+            document.getElementById(da).style="background:yellow";
+        }
+    </script>
+    
+</body>
+</html>
