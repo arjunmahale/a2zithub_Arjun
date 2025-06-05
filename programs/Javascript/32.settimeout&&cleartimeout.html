@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>setTimeout Example</title>
+</head>
+<body style="font-size: x-large; margin: 50px;">
+    <h1>Welcome!</h1>
+    <div id="message"></div>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").innerHTML = "This message appears after 3 seconds!";
+        }
+
+        setTimeout(showMessage, 3000); // 3000 milliseconds = 3 seconds
+    </script>
+</body>
+</html>

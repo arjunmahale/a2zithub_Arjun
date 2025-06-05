@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // bom objects
+        //  Date
+        //  Math
+        //  window
+        var m=Math;
+        console.log(m);
+        var pi=m.PI;
+        document.write("<br>PI : "+pi);
+        document.write("<br> MAX : "+m.max(2,3,434,45,45));
+        document.write("<br> MIN :"+m.min(2,3,434,45,45));
+
+        document.writeln("<br> POWER OF 2^8 : "+m.pow(2,8));
+
+        
+        document.writeln("<br>SQUARE ROOT OF 225 : "+m.sqrt(225));
+        document.writeln("<br>CUBE ROOT OF 125 : "+m.cbrt(125));
+
+
+        //rounding figures
+
+        document.writeln("<br><h1>Rounding figures</h1><br>rounded(rounds figures with rules  ):"+m.round(100.100));
+        document.writeln("<br>ceil (gives maximum):"+m.ceil(100.20));
+        document.writeln("<br> floor(gives minimum) :"+m.floor(100.20));
+        document.writeln("<br> trunc (removes points): "+m.trunc(100.20));
+        
+        
+        document.writeln("<br><h1>OTP</h1><br>otp using trunc and random:"+m.trunc(m.random()*10000));
+
+    </script>
+</body>
+</html>
