@@ -11,7 +11,7 @@
     <button onclick="tim()">start timer</button>
 
     <script>
-        var min=3;
+      var min;
        function txt(){
          
              document.getElementsByTagName('h1')[0].innerText=min;
@@ -19,6 +19,7 @@
         }
         var idd;
         function tim(){
+               min=3;
             idd=setInterval(txt,1000);
             setTimeout(() =>clearInterval(idd), 4000);
            
