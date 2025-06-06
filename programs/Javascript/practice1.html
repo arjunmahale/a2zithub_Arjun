@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <h1>timer</h1>
+    <button onclick="tim()">start timer</button>
+
+    <script>
+        var min=3;
+       function txt(){
+         
+             document.getElementsByTagName('h1')[0].innerText=min;
+            min--;
+        }
+        var idd;
+        function tim(){
+            idd=setInterval(txt,1000);
+            setTimeout(() =>clearInterval(idd), 4000);
+           
+        }
+      
+
+    </script>
+</body>
+</html>
