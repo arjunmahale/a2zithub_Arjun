@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Top Header Bar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+  .floating {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-30px);
+      }
+    }
+
+    .right-image-container {
+      position: relative;
+      height: 100%;
+      min-height: 500px;
+      background: url('about-01.png') no-repeat center center/cover;
+    }
+
+    .small-floating-img {
+      position: absolute;
+      width: 120px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .img-one {
+      top: 20%;
+      left: 10%;
+    }
+
+    .img-two {
+      bottom: 20%;
+      right: 10%;
+    }
+.get-quote:hover{
+      background: whitesmoke;
+    color: red;
+}
+.icon-circle:hover{
+    background: red;
+    color: white;
+}
+    .top-bar {
+      background-color: #f14500; /* Orange color */
+      color: white;
+      font-size: 14px;
+      padding: 5px 0;
+    }
+    .top-bar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+
+    #get1:hover{
+        background-color: #3C3C3C;
+    }
+    .top-bar i {
+      margin-right: 5px;
+    }
+    .divider {
+      border-left: 1px solid white;
+      height: 20px;
+      margin: 0 10px;
+    }
+
+       /* Header container */
+    .custom-header {
+      background-color: #fff;
+      padding: 10px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Logo and subtitle */
+    .brand {
+      display: flex;
+      align-items: center;
+    }
+
+    .brand img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .brand-text {
+      line-height: 1;
+    }
+
+    .brand-text span {
+      font-size: 12px;
+      color: gray;
+    }
+
+    /* Navbar styles */
+    .custom-nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      color: #000;
+      text-decoration: none;
+      position: relative;
+      padding-right: 15px;
+    }
+
+    .nav-link::after {
+      content: "+";
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: 0.3s;
+    }
+
+    .dropdown:hover .nav-link::after {
+      content: "–";
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      border-top: 3px solid red;
+      border-radius: 0%;
+      border-left: none;
+      border-right: none;
+      border-bottom: none;
+      z-index: 1000;
+      margin-top: 25px;
+      padding: 10px 0;
+      min-width: 150px;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 5px 20px;
+      text-decoration: none;
+      color: #000;
+    }
+
+    .dropdown-menu a:hover {
+      background-color: #f8f9fa;
+    }
+
+    /* Right-side controls */
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .icon-circle {
+      background-color: #ffeeee;
+      border-radius: 50%;
+      padding: 8px 10px;
+      cursor: pointer;
+    }
+
+    .get-quote {
+      background-color: #f14500;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 8px 20px;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .custom-nav {
+        display: none;
+      }
+    }
+
+
+  /* Animation for sliding up */
+  .slide-up {
+    animation: slideUp 1s ease-out;
+  }
+
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Optional for smoother appearance */
+  #caro > div > * {
+    animation: slideUp 0.8s ease forwards;
+    animation-delay: 0.2s;
+  }
+
+  #caro > div h1 {
+    animation-delay: 0.4s;
+  }
+
+  #caro > div p:last-of-type {
+    animation-delay: 0.6s;
+  }
+
+  #caro > div button {
+    animation-delay: 0.8s;
+  }
+</style>
+
+ 
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="container-fluid">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-md-6 d-flex align-items-center">
+        <span><i class="fas fa-envelope"></i> info@example.com</span>
+        <div class="divider d-none d-md-block"></div>
+        <span><i class="fas fa-clock"></i> Working: 8.00am – 5.00pm</span>
+      </div>
+      <div class="col-md-6 text-end">
+        <a href="#">About</a>
+        <a href="#">News</a>
+        <a href="#">Contact</a>
+        <span class="divider d-none d-md-inline-block"></span>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ✅ Combined Header -->
+<div class="custom-header">
+
+  <!-- Logo + Brand -->
+  <div class="brand">
+    <img src="logo-1.svg" alt="Logo">
+    
+  </div>
+
+  <!-- Nav Links -->
+  <div class="custom-nav">
+    <div class="nav-item dropdown">
+      <a href="#" class="nav-link">Home</a>
+      <div class="dropdown-menu shadow">
+        <a href="#" style="border-bottom: 2px solid whitesmoke;">Home v1</a>
+        <a href="#">Home v2</a>
+        
+      </div>
+    </div>
+    <div class="nav-item dropdown">
+      <a href="#" class="nav-link">Services</a>
+      <div class="dropdown-menu shadow">
+        <a href="#">Consulting</a>
+        <a href="#">Strategy</a>
+      </div>
+    </div>
+    <div class="nav-item dropdown">
+      <a href="#" class="nav-link">Pages</a>
+      <div class="dropdown-menu shadow">
+        <a href="#">About</a>
+        <a href="#">Team</a>
+      </div>
+    </div>
+    <div class="nav-item dropdown">
+      <a href="#" class="nav-link">Blog</a>
+      <div class="dropdown-menu shadow">
+        <a href="#">Blog Grid</a>
+        <a href="#">Blog Details</a>
+      </div>
+    </div>
+    <div class="nav-item dropdown">
+      <a href="#" class="nav-link">Elements</a>
+      <div class="dropdown-menu shadow">
+        <a href="#">FAQ</a>
+        <a href="#">Testimonials</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="#" class="nav-link" style="padding-right: 0;">Contact</a>
+    </div>
+  </div>
+
+  <!-- Right Controls -->
+  <div class="header-controls">
+    <div class="icon-circle"><i class="fas fa-search"></i></div>
+    <button class="get-quote">Get Quote</button>
+    <div class="icon-circle"><i class="fas fa-bars"></i></div>
+  </div>
+</div>
+
+
+<!-- Container to show dynamic content -->
+<div id="caro" class="position-relative overflow-hidden"></div>
+
+
+<script>
+  var arr = [
+    `<div class="col-8 p-5 m-5 slide-up">
+      <p><span style="color: #f14500;">WELCOME</span> START GROWING YOUR BUSINESS TODAY</p>
+      <h1 class="p-3" style="font-size: 50px;">MAKE <span style="color: #f14500;"><b>BUSINESS GROWTH</b></span> WITH NEXT LEVEL</h1>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam optio eius, qui ducimus reprehenderit delectus.</p>
+      <button class="btn btn-danger rounded-pill">Get Consultant</button>
+    </div>`,
+
+    `<div class="col-8 p-5 m-5 slide-up">
+      <p><span style="color: #f14500;">WELCOME</span> START GROWING YOUR BUSINESS TODAY</p>
+      <h1 class="p-3" style="font-size: 50px;">LAUNCH <span style="color: #f14500;"><b>ULTRA MODERN</b></span> EFFECTIVE BUSINESS</h1>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam optio eius, qui ducimus reprehenderit delectus.</p>
+      <button class="btn btn-danger rounded-pill">Get Consultant</button>
+    </div>`,
+
+    `<div class="col-8 p-5 m-5 slide-up">
+      <p><span style="color: #f14500;">WELCOME</span> START GROWING YOUR BUSINESS TODAY</p>
+      <h1 class="p-3" style="font-size: 50px;">MAKE <span style="color: #f14500;"><b>BUSINESS UNIQUE</b></span> WITH GREAT IDEAS</h1>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam optio eius, qui ducimus reprehenderit delectus.</p>
+      <button class="btn btn-danger rounded-pill" id="get1">Get Consultant</button>
+    </div>`
+  ];
+
+  let i = 0;
+
+  function updateCarousel() {
+    document.getElementById('caro').innerHTML = arr[i];
+    i = (i + 1) % arr.length;
+  }
+
+  updateCarousel();
+  setInterval(updateCarousel, 3000);
+</script>
+
+
+  <div class="container-fluid py-5">
+    <div class="row align-items-center">
+      
+      <!-- Left content -->
+      <div class="col-md-6 px-5">
+        <h6 class="text-danger">MORE ABOUT US</h6>
+        <h1 class="fw-bold">We Provide Best Business Solution in Town</h1>
+        <p class="text-muted">Porttitor ornare fermentum aliquam pharetra ut facilisis gravida risus suscipit...</p>
+
+        <div class="row">
+          <div class="col-6">
+            <ul class="list-unstyled">
+              <li>✅ 24/7 Call Services Available</li>
+              <li>✅ Great Skilled Consultant</li>
+              <li>✅ Expert Team Members</li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <ul class="list-unstyled">
+              <li>✅ How to improve business</li>
+              <li>✅ Business is the best plan</li>
+              <li>✅ Services we provide</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center mt-4">
+          <img src="sm-01.png" alt="CEO" class="rounded-circle" width="60" height="60">
+          <div class="ms-3">
+            <strong>Andrew David</strong><br>
+            <small class="text-danger">CEO & Founder</small>
+          </div>
+          <div class="ms-auto text-center">
+            <div>📞 Call us anytime</div>
+            <strong>+256 21458.2146</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right background image and floating images -->
+      <div class="col-md-6 p-0">
+        <div class="right-image-container">
+          <img src="about-02.png" alt="Floating 1" class="small-floating-img floating img-one">
+        <div class="small-floating-img floating img-two w-50 ml-0" style=""><h3 class="w-50">sdfsdfsd</h3>
+        <p class="w-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id pariatur fuga, rem magni ducimus accusamus.</p></div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
