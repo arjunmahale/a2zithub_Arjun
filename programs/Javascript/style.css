@@ -241,7 +241,12 @@ body {
   }
 }
 
-
+@media (min-width:720px) {
+#caro{
+  margin-left: 10%;
+  margin-top: 5%;
+}
+}
 /* services div started */
 .box {
   height:max-content;
