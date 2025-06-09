@@ -75,14 +75,162 @@ function add(plus){
   document.getElementsByClassName(plus)[0].innerText="+";
 }
 </script>
-    <!-- Right Controls -->
-    <div class="header-controls">
-      <div class="icon-circle"><i class="fas fa-search"></i></div>
-      <button class="get-quote d-none d-md-inline-block">Get Quote</button>
 
-      <div class="icon-circle"><i class="fas fa-bars"></i></div>
+
+<!-- Search Bar -->
+<div id="search-bar"
+     class="container-fluid"
+     style="display: none; position: fixed; top: 0; left: 0; width: 100%; z-index: 1040;">
+  <div class="row justify-content-center py-4 shadow-sm" style="background-color: #ffffff;">
+    <div class="col-12 col-md-8 d-flex justify-content-center position-relative" id="search-content">
+      <div class="d-flex w-100 bg-light rounded-3 overflow-hidden" style="max-width: 100%;">
+        <input type="text"
+               placeholder="Search by keyword or #"
+               class="form-control border-0 bg-light px-4 py-3"
+               style="font-size: 16px;">
+        <button class="btn text-white px-4" style="background-color: #fc4c02;">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
     </div>
   </div>
+</div>
+
+<script>
+  function show() {
+    const searchBar = document.getElementById('search-bar');
+    searchBar.style.display = 'block';
+
+    // Delay needed to ensure this element exists before click event triggers
+    setTimeout(() => {
+      document.addEventListener('click', handleClickOutside);
+    }, 0);
+  }
+
+  function closeSearch() {
+    document.getElementById('search-bar').style.display = 'none';
+    document.removeEventListener('click', handleClickOutside);
+  }
+
+  function handleClickOutside(event) {
+    const searchBar = document.getElementById('search-bar');
+    const trigger = document.querySelector('.icon-circle');
+
+    // If the click is NOT inside the search-bar or on the trigger, close it
+    if (!searchBar.contains(event.target) && !trigger.contains(event.target)) {
+      closeSearch();
+    }
+  }
+</script>
+
+    <!-- Right Controls -->
+    <div class="header-controls">
+      <div class="icon-circle p-4" onclick="show()"><i class="fas fa-search" style="font-size: larger;"></i></div>
+      <button class="get-quote d-none d-md-inline-block">Get Quote</button>
+  <!-- Button to open the sidebar -->
+   
+      <div class="icon-circle p-4" id="openSidebarBtn"><i class="fas fa-bars" style="font-size: larger;"></i></div>
+
+    <!-- Main container div for the Bizcoz Consulting Business Card, now acting as the sidebar -->
+    <div id="bizcozSidebar" class="sidebar rounded-xl">
+
+        <!-- Close button at the top left of the sidebar content -->
+        <button class="absolute top-4 left-4 close-button" id="closeSidebarBtn">
+            X
+        </button>
+
+        <!-- Logo and Business Name Section -->
+        <div class="flex flex-col items-start mb-6 pt-4">
+            <!-- Placeholder for Bizcoz Logo (using a placeholder image) -->
+            <div class="w-50" style="min-height: 100px; background-image: url('logo-1.svg'); background-repeat: no-repeat; background-size: contain;"></div>
+
+           
+            <div class="text-xl font-semibold text-gray-800">Bizcoz</div>
+            <div class="text-sm text-gray-600">Consulting Business</div>
+        </div>
+
+        <!-- Descriptive Text Section -->
+        <div class="mb-6 text-gray-700 leading-relaxed text-base">
+            <p>We must explain to you how all seds this mistakens idea denouncing pleasures and praising account.</p>
+        </div>
+
+        <!-- Get In Touch Section -->
+        <div class="mb-8">
+            <h4 class="text-lg font-semibold text-gray-800 mb-4">Get In Touch</h4>
+            <ul class="space-y-3 text-gray-700" style="list-style: none;">
+                <li class="flex items-center">
+                    <i class="fas fa-phone mr-3 text-orange-500 text-danger"></i>
+                    <span>+8801234566789</span>
+                </li>
+                <li class="flex items-center">
+                    <i class="fas fa-envelope mr-3 text-orange-500 text-danger"></i>
+                    <span>example@gmail.com</span>
+                </li>
+                <li class="flex items-center">
+                    <i class="fas fa-globe mr-3 text-orange-500 text-danger"></i>
+                    <span>www.webexample.com</span>
+                </li>
+                <li class="flex items-center">
+                    <i class="fas fa-map-marker-alt mr-3 text-orange-500 text-danger"></i>
+                    <span>13/A, New Pro State, NYC</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Social Media Icons Section -->
+        <div class="flex justify-around items-center mt-6 py-4 border-t border-gray-200">
+            <!-- Social Media Buttons -->
+            
+                <i class="fab fa-facebook-f text-lg rounded-circle p-3 bg-danger " style="width: 14%;"></i>
+           
+            <button class="flex items-center justify-center w-12 h-12 bg-red-600 text-white rounded-full shadow-md hover:bg-red-700 transition">
+                <i class="fab fa-pinterest-p text-lg"></i>
+            </button>
+            <button class="flex items-center justify-center w-12 h-12 bg-purple-600 text-white rounded-full shadow-md hover:bg-purple-700 transition">
+                <i class="fab fa-instagram text-lg"></i>
+            </button>
+            <button class="flex items-center justify-center w-12 h-12 bg-green-500 text-white rounded-full shadow-md hover:bg-green-600 transition">
+                <i class="fab fa-whatsapp text-lg"></i>
+            </button>
+            <button class="flex items-center justify-center w-12 h-12 bg-blue-500 text-white rounded-full shadow-md hover:bg-blue-600 transition">
+                <i class="fas fa-arrow-up text-lg"></i>
+            </button>
+        </div>
+
+        <!-- Optional: Activate Windows text at the very bottom, similar to image -->
+        <!-- Placed outside the main card to match image position (bottom-right) -->
+        <div class="absolute bottom-4 right-4 text-xs text-gray-500 hidden md:block">
+            Activate Windows <span class="ml-1">&#8599;</span>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const openSidebarBtn = document.getElementById('openSidebarBtn');
+            const closeSidebarBtn = document.getElementById('closeSidebarBtn');
+            const bizcozSidebar = document.getElementById('bizcozSidebar');
+
+            // Open sidebar when the 'Open Sidebar' button is clicked
+            openSidebarBtn.addEventListener('click', function() {
+                bizcozSidebar.classList.add('sidebar-open');
+            });
+
+            // Close sidebar when the 'X' button inside the sidebar is clicked
+            closeSidebarBtn.addEventListener('click', function() {
+                bizcozSidebar.classList.remove('sidebar-open');
+            });
+
+            // Optional: Close sidebar if clicked outside (e.g., a backdrop)
+            // For this setup, we'll keep it simple with explicit buttons.
+        });
+    </script>
+
+
+      
+    </div>
+  </div>
+
 
 
   <!-- Container to show dynamic content -->

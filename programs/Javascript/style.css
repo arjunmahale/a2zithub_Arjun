@@ -181,6 +181,7 @@ body {
   cursor: pointer;
 }
 
+
 .get-quote {
   background-color: #f14500;
   color: white;
@@ -195,6 +196,65 @@ body {
     display: none;
   }
 }
+
+
+/* side bar for the menu button */
+
+.close-button {
+            background-color: #ff4500; /* Orange-red background */
+            color: white;
+            padding: 20px;
+            border-radius: 8px; /* Rounded corners */
+            width: 32px;
+            border: none;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.25rem; /* Larger 'X' */
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.2s ease;
+        }
+        .close-button:hover {
+            background-color: #cc3700; /* Darker orange on hover */
+        }
+
+        /* Styles for the sidebar (the contact card itself) */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -100%; /* Initially off-screen to the right */
+            height: 100vh;
+            /* Adjust width as needed, ensure it's not too wide on mobile */
+            width: 100%;
+            max-width: 400px; /* Limit sidebar width on larger screens */
+            background-color: white;
+            box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1); /* Shadow for sliding effect */
+            transition: right 0.3s ease-out; /* Smooth transition for sliding */
+            z-index: 1000; /* Ensure it's above other content */
+            padding: 20px; /* Add padding consistent with previous design */
+            overflow-y: auto; /* Enable scrolling if content is too long */
+        }
+
+        .sidebar.sidebar-open {
+            right: 0; /* Slide in to view */
+        }
+
+        /* Styling for the open sidebar button */
+        .open-sidebar-btn {
+            position: fixed; /* Keep it visible */
+            top: 20px;
+            left: 20px; /* Position on the left side of the page */
+            background-color: #007bff; /* Blue button */
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1001; /* Above the sidebar if sidebar is open */
+        }
+
 
 /* Animation for sliding up */
 .slide-up {
