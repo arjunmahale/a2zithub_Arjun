@@ -83,8 +83,25 @@ body {
   padding: 10px 30px;
   display: flex;
   align-items: center;
+  height: 100px;
   justify-content: space-between;
+  padding-top:50px;
 }
+
+
+@media (max-width: 720px) {
+.custom-header {
+  background-color: #fff;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  justify-content: space-between;
+  padding-top:0px;
+}
+
+}
+
 
 .brand {
   display: flex;
@@ -92,9 +109,20 @@ body {
 }
 
 .brand img {
+  height: 70px;
+  margin-right: 10px;
+ 
+}
+
+
+@media (max-width: 720px) {
+ .brand img {
   height: 40px;
   margin-right: 10px;
+  margin-left: 10px;
 }
+}
+
 
 .brand-text {
   line-height: 1;
@@ -171,13 +199,15 @@ body {
 .header-controls {
   display: flex;
   align-items: center;
+  width: 20%;
+  justify-content: space-evenly;
   gap: 10px;
 }
 
 .icon-circle {
   background-color: #ffeeee;
   border-radius: 50%;
-  padding: 8px 10px;
+  padding: 9%;
   cursor: pointer;
 }
 
@@ -186,9 +216,11 @@ body {
   background-color: #f14500;
   color: white;
   border: none;
+  height: 100%;
+ font-size: x-large;
   border-radius: 50px;
   padding: 8px 20px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 @media (max-width: 992px) {
@@ -261,6 +293,43 @@ body {
   animation: slideUp 1s ease-out;
 }
 
+
+.slide-up p{
+  font-size: x-large;
+}
+.slide-up h1{
+  font-size:70px;
+}
+.slide-up button{
+  font-size:x-large;
+  font-weight: 600;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+
+@media (max-width: 720px) {
+ 
+.slide-up p{
+  font-size: larger;
+}
+.slide-up h1{
+  font-size:30px;
+}
+.slide-up button{
+  font-size:larger;
+  font-weight: 600;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+}
+
+
 @keyframes slideUp {
   0% {
     opacity: 0;
@@ -303,8 +372,9 @@ body {
 
 @media (min-width:720px) {
 #caro{
-  margin-left: 10%;
-  margin-top: 5%;
+  padding-left: 10%;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 }
 /* services div started */

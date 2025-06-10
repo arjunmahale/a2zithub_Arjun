@@ -16,8 +16,8 @@
 
 
 
-  <!-- ✅ Combined Header -->
-  <div class="custom-header">
+  <!--  Header -->
+  <div class="custom-header  pb-4">
 
     <!-- Logo + Brand -->
     <div class="brand">
@@ -28,7 +28,7 @@
     <!-- Nav Links -->
     <div class="custom-nav" >
       <div class="nav-item dropdown" onmouseover="rem('plus1')" onmouseout="add('plus1')">
-        <a href="#" class="nav-link">Home<i  class="plus1" >+</i></a>
+        <a href="#" class="nav-link" style="font-size: x-large;">Home<i  class="plus1" >+</i></a>
         <div class="dropdown-menu shadow " style="border:none;margin-top:30px">
           <a href="#" style="border-bottom: 2px solid whitesmoke;">Home v1</a>
           <a href="#">Home v2</a>
@@ -36,35 +36,35 @@
         </div>
       </div>
       <div class="nav-item dropdown" onmouseover="rem('plus2')" onmouseout="add('plus2')">
-        <a href="#" class="nav-link">Services<i  class="plus2" >+</i></a>
+        <a href="#" class="nav-link" style="font-size: x-large;">Services<i  class="plus2" >+</i></a>
         <div class="dropdown-menu shadow" style="border:none;margin-top:30px">
           <a href="#">Consulting</a>
           <a href="#">Strategy</a>
         </div>
       </div>
       <div class="nav-item dropdown" onmouseover="rem('plus3')" onmouseout="add('plus3')">
-        <a href="#" class="nav-link">Pages<i  class="plus3" >+</i></a>
+        <a href="#" class="nav-link" style="font-size: x-large;">Pages<i  class="plus3" >+</i></a>
         <div class="dropdown-menu shadow"style="border:none;margin-top:30px">
           <a href="#">About</a>
           <a href="#">Team</a>
         </div>
       </div>
       <div class="nav-item dropdown" onmouseover="rem('plus4')" onmouseout="add('plus4')">
-        <a href="#" class="nav-link">Blog<i  class="plus4" >+</i></a>
+        <a href="#" class="nav-link" style="font-size: x-large;">Blog<i  class="plus4" >+</i></a>
         <div class="dropdown-menu shadow"style="border:none;margin-top:30px">
           <a href="#">Blog Grid</a>
           <a href="#">Blog Details</a>
         </div>
       </div>
       <div class="nav-item dropdown" onmouseover="rem('plus5')" onmouseout="add('plus5')">
-        <a href="#" class="nav-link">Elements<i  class="plus5" >+</i></a>
+        <a href="#" class="nav-link" style="font-size: x-large;">Elements<i  class="plus5" >+</i></a>
         <div class="dropdown-menu shadow"style="border:none;margin-top:30px">
           <a href="#">FAQ</a>
           <a href="#">Testimonials</a>
         </div>
       </div>
       <div class="nav-item"  >
-        <a href="#" class="nav-link" style="padding-right: 0;">Contact</a>
+        <a href="#" class="nav-link" style="padding-right: 0;font-size: x-large;">Contact</a>
       </div>
     </div>
 <script>
@@ -125,11 +125,11 @@ function add(plus){
 
     <!-- Right Controls -->
     <div class="header-controls">
-      <div class="icon-circle p-4" onclick="show()"><i class="fas fa-search" style="font-size: larger;"></i></div>
-      <button class="get-quote d-none d-md-inline-block">Get Quote</button>
+      <div class="icon-circle " onclick="show()"><i class="fas fa-search" style="font-size: x-large;"></i></div>
+      <button class="get-quote d-none d-md-inline-block  p-3 ">Get Quote</button>
   <!-- Button to open the sidebar -->
    
-      <div class="icon-circle p-4" id="openSidebarBtn"><i class="fas fa-bars" style="font-size: larger;"></i></div>
+      <div class="icon-circle " id="openSidebarBtn"><i class="fas fa-bars" style="font-size: x-large;"></i></div>
 
     <!-- Main container div for the Bizcoz Consulting Business Card, now acting as the sidebar -->
     <div id="bizcozSidebar" class="sidebar rounded-xl">
@@ -234,14 +234,14 @@ function add(plus){
 
 
   <!-- Container to show dynamic content -->
-  <div id="caro" class="position-relative overflow-hidden"></div>
+  <div id="caro" class="position-relative overflow-hidden m-0 "></div>
 
 
   <script>
     var arr = [
-      `<div class="col-12 col-md-8 px-3 px-md-5 py-4 slide-up mt-5">
+      `<div class="col-12 col-md-8 px-3 px-md-5 py-4 slide-up mt-5 pb-5">
     <p class="mb-2 pb-4"><span style="color: #f14500;">WELCOME!</span> START GROWING YOUR BUSINESS TODAY</p>
-    <h1 class="fw-bold pb-4" style="font-size: 32px; font-size: clamp(24px, 5vw, 50px);">
+    <h1 class="fw-bold pb-4">
       MAKE <span style="color: #f14500;"><b>BUSINESS GROWTH</b></span> WITH NEXT LEVEL
     </h1>
     <p class="text-muted pb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam optio eius, qui ducimus reprehenderit delectus.</p>
@@ -250,7 +250,7 @@ function add(plus){
 
       `<div class="col-12 col-md-8 px-3 px-md-5 py-4 slide-up mt-5">
     <p class="mb-2 pb-4"><span style="color: #f14500;">WELCOME!</span> START GROWING YOUR BUSINESS TODAY</p>
-    <h1 class="fw-bold pb-4" style="font-size: clamp(24px, 5vw, 50px);">
+    <h1 class="fw-bold pb-4" >
       LAUNCH <span style="color: #f14500;"><b>ULTRA MODERN</b></span> EFFECTIVE BUSINESS
     </h1>
     <p class="text-muted pb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam optio eius, qui ducimus reprehenderit delectus.</p>
@@ -259,7 +259,7 @@ function add(plus){
 
       `<div class="col-12 col-md-8 px-3 px-md-5 py-4 slide-up mt-5">
     <p class="mb-2 pb-4"><span style="color: #f14500;">WELCOME!</span> START GROWING YOUR BUSINESS TODAY</p>
-    <h1 class="fw-bold pb-4" style="font-size: clamp(24px, 5vw, 50px);">
+    <h1 class="fw-bold pb-4" >
       MAKE <span style="color: #f14500;"><b>BUSINESS UNIQUE</b></span> WITH GREAT IDEAS
     </h1>
     <p class="text-muted pb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam optio eius, qui ducimus reprehenderit delectus.</p>
@@ -288,7 +288,7 @@ function add(plus){
 
 
       <!-- Left content -->
-      <div class="col-md-6 pt-5 pb-5 left-div">
+      <div class="col-md-6  pb-5 left-div">
         <h6 class="text-danger">MORE ABOUT US</h6>
         <h1 class="fw-bold">We Provide Best Business Solution in Town</h1>
         <p class="text-muted">Porttitor ornare fermentum aliquam pharetra ut facilisis gravida risus suscipit...</p>
