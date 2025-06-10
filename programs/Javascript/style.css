@@ -408,3 +408,27 @@ body {
 }
 
 
+/* service div completed */
+
+.lets-work{
+  padding: 12px 30px; background-color: white; color: #f04900; font-weight: bold; border-radius: 30px; text-decoration: none;
+}
+.lets-work:hover{
+   background-color: red; color:white ; 
+}
+
+
+@keyframes ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.5);
+    opacity: 0;
+  }
+}
+
+
+
+
