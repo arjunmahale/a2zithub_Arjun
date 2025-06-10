@@ -28,7 +28,7 @@
     <!-- Nav Links -->
     <div class="custom-nav" >
       <div class="nav-item dropdown" onmouseover="rem('plus1')" onmouseout="add('plus1')">
-        <a href="#" class="nav-link" style="font-size: x-large;">Home<i  class="plus1" >+</i></a>
+        <a href="#" class="nav-link" style="font-size: x-large;font-weight: 600;">Home<i class="fa-solid fa-plus " id="plus1" style="font-size: large;margin-left: 6px;"></i></a>
         <div class="dropdown-menu shadow " style="border:none;margin-top:30px">
           <a href="#" style="border-bottom: 2px solid whitesmoke;">Home v1</a>
           <a href="#">Home v2</a>
@@ -36,45 +36,51 @@
         </div>
       </div>
       <div class="nav-item dropdown" onmouseover="rem('plus2')" onmouseout="add('plus2')">
-        <a href="#" class="nav-link" style="font-size: x-large;">Services<i  class="plus2" >+</i></a>
+        <a href="#" class="nav-link" style="font-size: x-large;font-weight: 600;">Services<i class="fa-solid fa-plus " id="plus2"style="font-size: large;margin-left: 6px;"></i></a>
         <div class="dropdown-menu shadow" style="border:none;margin-top:30px">
           <a href="#">Consulting</a>
           <a href="#">Strategy</a>
         </div>
       </div>
       <div class="nav-item dropdown" onmouseover="rem('plus3')" onmouseout="add('plus3')">
-        <a href="#" class="nav-link" style="font-size: x-large;">Pages<i  class="plus3" >+</i></a>
+        <a href="#" class="nav-link" style="font-size: x-large;font-weight: 600;">Pages<i class="fa-solid fa-plus " id="plus3"style="font-size: large;margin-left: 6px;"></i></a>
         <div class="dropdown-menu shadow"style="border:none;margin-top:30px">
           <a href="#">About</a>
           <a href="#">Team</a>
         </div>
       </div>
       <div class="nav-item dropdown" onmouseover="rem('plus4')" onmouseout="add('plus4')">
-        <a href="#" class="nav-link" style="font-size: x-large;">Blog<i  class="plus4" >+</i></a>
+        <a href="#" class="nav-link" style="font-size: x-large;font-weight: 600;">Blog<i class="fa-solid fa-plus " id="plus4"style="font-size: large;margin-left: 6px;"></i></a>
         <div class="dropdown-menu shadow"style="border:none;margin-top:30px">
           <a href="#">Blog Grid</a>
           <a href="#">Blog Details</a>
         </div>
       </div>
       <div class="nav-item dropdown" onmouseover="rem('plus5')" onmouseout="add('plus5')">
-        <a href="#" class="nav-link" style="font-size: x-large;">Elements<i  class="plus5" >+</i></a>
+        <a href="#" class="nav-link" style="font-size: x-large;font-weight: 500;">Elements<i class="fa-solid fa-plus " id="plus5"style="font-size: large;margin-left: 6px;"></i></a>
         <div class="dropdown-menu shadow"style="border:none;margin-top:30px">
           <a href="#">FAQ</a>
           <a href="#">Testimonials</a>
         </div>
       </div>
       <div class="nav-item"  >
-        <a href="#" class="nav-link" style="padding-right: 0;font-size: x-large;">Contact</a>
+        <a href="#" class="nav-link" style="padding-right: 0;font-size: x-large;font-weight: 600;">Contact</a>
       </div>
     </div>
 <script>
-function rem(plus){
-  document.getElementsByClassName(plus)[0].innerText="-";
+function rem(id) {
+  const icon = document.getElementById(id);
+  icon.classList.remove("fa-plus");
+  icon.classList.add("fa-minus");
 }
-function add(plus){
-  document.getElementsByClassName(plus)[0].innerText="+";
+
+function add(id) {
+  const icon = document.getElementById(id);
+  icon.classList.remove("fa-minus");
+  icon.classList.add("fa-plus");
 }
 </script>
+
 
 
 <!-- Search Bar -->
