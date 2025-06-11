@@ -587,7 +587,7 @@ function add(id) {
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 <!-- numbers div -->
-<div style="background-color: #0c0d11; padding: 50px 0; display: flex; flex-wrap: wrap; justify-content: space-evenly; gap: 40px;"class="mb-5">
+<div style="background-color: #0c0d11; padding: 70px 0; display: flex; flex-wrap: wrap; justify-content: space-evenly; gap: 40px;align-items: center;"class="mb-5">
 
   <!-- Card Template -->
   <div style="display: flex; align-items: center; color: white; gap: 15px; flex: 1 1 250px; max-width: 300px; justify-content: center;">
@@ -596,7 +596,7 @@ function add(id) {
     </div>
     <div>
       <div style="font-size: 32px; font-weight: bold;" id="cnt"></div>
-      <div style="font-size: 12px;">Successfull Projects</div>
+      <div style="font-size: larger;"> Projects Done</div>
     </div>
   </div>
 
@@ -606,7 +606,7 @@ function add(id) {
     </div>
     <div>
       <div style="font-size: 32px; font-weight: bold;" id="cnt1">550+</div>
-      <div style="font-size: 12px;">Media Activities</div>
+      <div style="font-size: larger;">Media Activities</div>
     </div>
   </div>
 
@@ -616,7 +616,7 @@ function add(id) {
     </div>
     <div>
       <div style="font-size: 32px; font-weight: bold;" id="cnt2"></div>
-      <div style="font-size: 12px;">Skilled Experts</div>
+      <div style="font-size: larger;">Skilled Experts</div>
     </div>
   </div>
 
@@ -626,7 +626,7 @@ function add(id) {
     </div>
     <div>
       <div style="font-size: 32px; font-weight: bold;" id="cnt3"></div>
-      <div style="font-size: 12px;">Happy Clients</div>
+      <div style="font-size: larger;">Happy Clients</div>
     </div>
   </div>
 
@@ -706,7 +706,51 @@ function add(id) {
   };
 </script>
 
+<!-- our projects div -->
+ 
+  <!-- Parent container to align section title and boxes vertically -->
+  <div style="width: 100%; padding: 0 40px;">
 
+    <!-- First row: Section title aligned to left -->
+    <div class="section-title" style="margin-bottom: 40px;">
+      <h4 style="color: #f04900;">POPULAR PROJECTS</h4>
+      <h1>Our Completed Projects</h1>
+    </div>
+
+    <!-- Second row: All 3 boxes in a single row -->
+    <div class="projects-container">
+      <!-- Project 1 -->
+      <div class="project-card" style="background-image: url(project1.jpg);">
+        <div class="overlay"></div>
+        <div class="content">
+          <h4>UI & UX, IT Solution</h4>
+          <h3>SmartRics Web Solution</h3>
+          <div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card" style="background-image: url(project2.jpg);">
+        <div class="overlay"></div>
+        <div class="content">
+          <h4>Mobile App, Cloud</h4>
+          <h3>FinTech App Project</h3>
+          <div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card" style="background-image: url(project3.jpg);">
+        <div class="overlay"></div>
+        <div class="content">
+          <h4>Branding, Strategy</h4>
+          <h3>Creative Design</h3>
+          <div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
  
 
 </body>
