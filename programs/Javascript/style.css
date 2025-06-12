@@ -394,14 +394,18 @@ body {
 
 @media (max-width: 720px) {
  
+
+.slide-up {
+ padding-top: 20%;
+}
 .slide-up p{
-  font-size: larger;
+  font-size:medium;
 }
 .slide-up h1{
   font-size:30px;
 }
 .slide-up button{
-  font-size:larger;
+  font-size:large;
   font-weight: 600;
   padding-left: 5%;
   padding-right: 5%;
