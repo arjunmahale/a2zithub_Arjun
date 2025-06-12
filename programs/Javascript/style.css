@@ -330,42 +330,42 @@ body {
             transition: background-color 0.2s ease;
         }
         .close-button:hover {
-            background-color: #cc3700; /* Darker orange on hover */
+            background-color: #cc3700; 
         }
 
-        /* Styles for the sidebar (the contact card itself) */
+       
         .sidebar {
             position: fixed;
             top: 0;
-            right: -100%; /* Initially off-screen to the right */
+            right: -100%; 
             height: 100vh;
-            /* Adjust width as needed, ensure it's not too wide on mobile */
+            
             width: 100%;
-            max-width: 400px; /* Limit sidebar width on larger screens */
+            max-width: 400px; 
             background-color: white;
-            box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1); /* Shadow for sliding effect */
-            transition: right 0.3s ease-out; /* Smooth transition for sliding */
-            z-index: 1000; /* Ensure it's above other content */
-            padding: 20px; /* Add padding consistent with previous design */
-            overflow-y: auto; /* Enable scrolling if content is too long */
+            box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1); 
+            transition: right 0.3s ease-out;
+            z-index: 1000; 
+            padding: 20px;
+            overflow-y: auto; 
         }
 
         .sidebar.sidebar-open {
-            right: 0; /* Slide in to view */
+            right: 0; 
         }
 
-        /* Styling for the open sidebar button */
+       
         .open-sidebar-btn {
-            position: fixed; /* Keep it visible */
+            position: fixed; 
             top: 20px;
-            left: 20px; /* Position on the left side of the page */
-            background-color: #007bff; /* Blue button */
+            left: 20px;
+            background-color: #007bff;
             color: white;
             padding: 10px 15px;
             border-radius: 8px;
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            z-index: 1001; /* Above the sidebar if sidebar is open */
+            z-index: 1001;
         }
 
 
@@ -1713,12 +1713,3 @@ body {
 }
 
 
-
-/* Arrow inside */
-/* #scrollProgress .arrow {
-  background: white;
-  color: red;
-  
-  font-size: x-large;
-  position: absolute;
-} */
