@@ -14,6 +14,23 @@
 
 <body>
 
+<div class="topbar1 d-none d-md-block">
+  <div class="topbar1-left">
+    <span><i class="fas fa-envelope"></i> info@example.com</span>
+    <span class="divider"></span>
+    <span><i class="fas fa-clock"></i> Working: 8.00am – 5.00pm</span>
+  </div>
+  <div class="topbar1-right">
+    <a href="#">About</a>
+    <a href="#">News</a>
+    <a href="#">Contact</a>
+    <span class="divider"></span>
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+</div>
 
 
   <!--  Header -->
@@ -26,20 +43,20 @@
     </div>
 
     <!-- Nav Links -->
-    <div class="custom-nav">
+    <div class="custom-nav" >
       <div class="nav-item dropdown" onmouseover="rem('plus1')" onmouseout="add('plus1')">
-        <a href="#" class="nav-link" style="font-size: large;font-weight: 500;">Home<i class="fa-solid fa-plus "
-            id="plus1" style="font-size: large;margin-left: 6px;"></i></a>
-        <div class="dropdown-menu shadow " style="border:none;margin-top:30px;border-top: 3px solid red;border-top-left-radius: 0%;border-top-right-radius: 0%;">
+        <a href="#" class="nav-link" style="font-size: medium;font-weight: 500;">Home<i class="fa-solid fa-plus "
+            id="plus1" style="font-size: small;margin-left: 6px;"></i></a>
+        <div class="dropdown-menu shadow " style="border:none;margin-top:15px;border-top: 3px solid red;border-top-left-radius: 0%;border-top-right-radius: 0%;">
           <div>
-            <a href="#" style="border-bottom: 2px solid whitesmoke;">Multipages</a>
+            <a href="#" style="border-bottom: px solid whitesmoke; font-size: large;font-weight: 500;">Multipages</a>
             <a href="#">Main Home</a>
             <a href="#"> Consulting Home</a>
             <a href="#">Corporate Home</a>
             
           </div>
-          <div>
-            <a href="#" style="border-bottom: 2px solid whitesmoke;">Onepages</a>
+          <div class="p-4 pt-0">
+            <a href="#" style="border-bottom: px solid whitesmoke; font-size: large;font-weight: 500;">Onepages</a>
              <a href="#">Main Home Onepage</a>
             <a href="#"> Consulting Home Onepage</a>
             <a href="#">Corporate Home Onepage</a>
@@ -48,21 +65,22 @@
         </div>
       </div>
       <div class="nav-item dropdown" onmouseover="rem('plus2')" onmouseout="add('plus2')">
-        <a href="#" class="nav-link" style="font-size: large;font-weight: 500;">Services<i class="fa-solid fa-plus "
-            id="plus2" style="font-size: large;margin-left: 6px;"></i></a>
-        <div class="dropdown-menu shadow" style="border:none;margin-top:30px;border-top: 3px solid red;border-top-left-radius: 0%;border-top-right-radius: 0%;">
+        <a href="#" class="nav-link" style="font-size: medium;font-weight: 500;">Services<i class="fa-solid fa-plus "
+            id="plus2" style="font-size: small;margin-left: 6px;"></i></a>
+        <div class="dropdown-menu shadow" style="border:none;margin-top:15px;border-top: 3px solid red;border-top-left-radius: 0%;border-top-right-radius: 0%;">
          <div>
+           <a href="#" style="border-bottom: px solid whitesmoke; font-size: large;font-weight: 500;">Services</a>
            <a href="#">Our Service</a>
           <a href="#">Service Details</a>
          </div>
         </div>
       </div>
       <div class="nav-item dropdown" onmouseover="rem('plus3')" onmouseout="add('plus3')">
-        <a href="#" class="nav-link" style="font-size: large;font-weight: 500;">Pages<i class="fa-solid fa-plus "
-            id="plus3" style="font-size: large;margin-left: 6px;"></i></a>
-        <div class="dropdown-menu shadow" style="border:none;margin-top:30px;border-top: 3px solid red;border-top-left-radius: 0%;border-top-right-radius: 0%;">
-         <div>
-           <a href="#">Pages</a>
+        <a href="#" class="nav-link" style="font-size: medium;font-weight: 500;">Pages<i class="fa-solid fa-plus "
+            id="plus3" style="font-size: small;margin-left: 6px;"></i></a>
+        <div class="dropdown-menu shadow" style="border:none;margin-top:15px;border-top: 3px solid red;border-top-left-radius: 0%;border-top-right-radius: 0%;">
+         <div class="p-4 pt-0">
+           <a href="#" style=" font-size: large;font-weight: 500;">Pages</a>
           <a href="#">Appointment</a>
           <a href="#">About Us</a>
           <a href="#">Price Plans</a>
@@ -70,8 +88,8 @@
           <a href="#">Testimonials</a>
           <a href="#">404 Page</a>
          </div>
-         <div>
-           <a href="#">Portfolio</a>
+         <div class="p-4 pt-0" >
+           <a href="#" style=" font-size: large;font-weight: 500;">Portfolio</a>
           <a href="#">Portfolio Style 1</a>
           <a href="#">Portfolio Style 2</a>
           <a href="#">Portfolio Style 3</a>
@@ -79,8 +97,8 @@
           <a href="#">Portfolio Style 5</a>
           <a href="#">Portfolio Details</a>
          </div>
-         <div>
-           <a href="#"> Our Teams</a>
+         <div class="p-4 pt-0">
+           <a href="#" style=" font-size: large;font-weight: 500;"> Our Teams</a>
           <a href="#">Team style 1</a>
           <a href="#">Team style 2</a>
           <a href="#">Team style 3</a>
@@ -91,10 +109,11 @@
         </div>
       </div>
       <div class="nav-item dropdown" onmouseover="rem('plus4')" onmouseout="add('plus4')">
-        <a href="#" class="nav-link" style="font-size: large;font-weight: 500;">Blog<i class="fa-solid fa-plus "
-            id="plus4" style="font-size: large;margin-left: 6px;"></i></a>
-        <div class="dropdown-menu shadow" style="border:none;margin-top:30px;border-top: 3px solid red;border-top-left-radius: 0%;border-top-right-radius: 0%;">
+        <a href="#" class="nav-link" style="font-size: medium;font-weight: 500;">Blog<i class="fa-solid fa-plus "
+            id="plus4" style="font-size: small;margin-left: 6px;"></i></a>
+        <div class="dropdown-menu shadow" style="border:none;margin-top:15px;border-top: 3px solid red;border-top-left-radius: 0%;border-top-right-radius: 0%;">
          <div>
+           <a href="#" style="border-bottom: px solid whitesmoke; font-size: large;font-weight: 500;">Blogs</a>
            <a href="#">Blog list</a>
           <a href="#">Blog Grid</a>
           <a href="#">Blog Details</a>
@@ -102,9 +121,9 @@
         </div>
       </div>
       <div class="nav-item dropdown" onmouseover="rem('plus5')" onmouseout="add('plus5')">
-        <a href="#" class="nav-link" style="font-size: large;font-weight: 500;">Elements<i class="fa-solid fa-plus "
-            id="plus5" style="font-size: large;margin-left: 6px;"></i></a>
-        <div class="dropdown-menu shadow" style="border:none;margin-top:30px;border-top: 3px solid red;border-top-left-radius: 0%;border-top-right-radius: 0%;">
+        <a href="#" class="nav-link" style="font-size: medium;font-weight: 500;">Elements<i class="fa-solid fa-plus "
+            id="plus5" style="font-size: small;margin-left: 6px;"></i></a>
+        <div class="dropdown-menu shadow" style="border:none;margin-top:15px;border-top: 3px solid red;border-top-left-radius: 0%;border-top-right-radius: 0%;">
           <div>
             <a href="#"> Accordian</a>
           <a href="#">Address Box</a>
@@ -113,7 +132,7 @@
           <a href="#"> Blog Slider</a>
           <a href="#">Blog Quote</a>
           </div>
-          <div>
+          <div class="p-4 pt-0">
             <a href="#">Heading</a>
           <a href="#">Call to action</a>
           <a href="#">Contact form</a>
@@ -121,7 +140,7 @@
           <a href="#">Brand logo</a>
           <a href="#">Video Addon</a>
           </div>
-          <div>
+          <div class="p-4 pt-0">
             <a href="#">Pricing Table</a>
           <a href="#">Typography</a>
           <a href="#">Tab Addon</a>
@@ -132,9 +151,13 @@
         </div>
       </div>
       <div class="nav-item">
-        <a href="#" class="nav-link" style="padding-right: 0;font-size: large;font-weight: 600;">Contact</a>
+        <a href="#" class="nav-link" style="padding-right: 0;font-size: medium;font-weight: 500;">Contact</a>
       </div>
     </div>
+
+    <script>
+      
+    </script>
     <script>
       function rem(id) {
         const icon = document.getElementById(id);
@@ -172,7 +195,7 @@
         const searchBar = document.getElementById('search-bar');
         searchBar.style.display = 'block';
 
-        // Delay needed to ensure this element exists before click event triggers
+        
         setTimeout(() => {
           document.addEventListener('click', handleClickOutside);
         }, 0);
@@ -187,98 +210,80 @@
         const searchBar = document.getElementById('search-bar');
         const trigger = document.querySelector('.icon-circle');
 
-        // If the click is NOT inside the search-bar or on the trigger, close it
+      
         if (!searchBar.contains(event.target) && !trigger.contains(event.target)) {
           closeSearch();
         }
       }
     </script>
 
-    <!-- Right Controls -->
+  
     <div class="header-controls">
-      <div class="icon-circle " onclick="show()"><i class="fas fa-search" style="font-size: x-large;"></i></div>
-      <button class="get-quote d-none d-md-inline-block  p-3 ">Get Quote</button>
-      <!-- Button to open the sidebar -->
+      <div class="icon-circle " onclick="show()"><i class="fas fa-search" style="font-size: large;"></i></div>
+      <button class="get-quote d-none d-md-inline-block  "style="padding: auto;">Get Quote</button>
+      
 
-      <div class="icon-circle " id="openSidebarBtn"><i class="fas fa-bars" style="font-size: x-large;"></i></div>
+      <div class="icon-circle " id="openSidebarBtn"><i class="fas fa-bars" style="font-size: large;"></i></div>
 
-      <!-- Main container div for the Bizcoz Consulting Business Card, now acting as the sidebar -->
+     
       <div id="bizcozSidebar" class="sidebar rounded-xl">
 
-        <!-- Close button at the top left of the sidebar content -->
+        
         <button class="absolute top-4 left-4 close-button" id="closeSidebarBtn">
           X
         </button>
 
-        <!-- Logo and Business Name Section -->
+       
         <div class="flex flex-col items-start mb-6 pt-4">
-          <!-- Placeholder for Bizcoz Logo (using a placeholder image) -->
-          <div class="w-50"
+         
+          <div class="w-50 mt-4"
             style="min-height: 100px; background-image: url('logo-1.svg'); background-repeat: no-repeat; background-size: contain;">
           </div>
 
 
-          <div class="text-xl font-semibold text-gray-800">Bizcoz</div>
-          <div class="text-sm text-gray-600">Consulting Business</div>
+         
         </div>
 
-        <!-- Descriptive Text Section -->
+        
         <div class="mb-6 text-gray-700 leading-relaxed text-base">
           <p>We must explain to you how all seds this mistakens idea denouncing pleasures and praising account.</p>
         </div>
 
-        <!-- Get In Touch Section -->
-        <div class="mb-8">
+       
+        <div class="mb-8 pt-3">
           <h4 class="text-lg font-semibold text-gray-800 mb-4">Get In Touch</h4>
-          <ul class="space-y-3 text-gray-700" style="list-style: none;">
+          <ul class="space-y-3 text-gray-700 p-0" style="list-style: none;">
             <li class="flex items-center">
-              <i class="fas fa-phone mr-3 text-orange-500 text-danger"></i>
+              <i class="fas fa-phone me-2 text-orange-500 text-danger"></i>
               <span>+8801234566789</span>
             </li>
             <li class="flex items-center">
-              <i class="fas fa-envelope mr-3 text-orange-500 text-danger"></i>
+              <i class="fas fa-envelope me-2 text-orange-500 text-danger"></i>
               <span>example@gmail.com</span>
             </li>
             <li class="flex items-center">
-              <i class="fas fa-globe mr-3 text-orange-500 text-danger"></i>
+              <i class="fas fa-globe me-2 text-orange-500 text-danger"></i>
               <span>www.webexample.com</span>
             </li>
             <li class="flex items-center">
-              <i class="fas fa-map-marker-alt mr-3 text-orange-500 text-danger"></i>
+              <i class="fas fa-map-marker-alt me-2 text-orange-500 text-danger"></i>
               <span>13/A, New Pro State, NYC</span>
             </li>
           </ul>
         </div>
 
-        <!-- Social Media Icons Section -->
-        <div class="flex justify-around items-center mt-6 py-4 border-t border-gray-200">
-          <!-- Social Media Buttons -->
+       
+<div class="social-wrapper">
+  <ul class="social-icons">
+    <li><a href="#" class="circle facebook"><i class="fab fa-facebook-f"></i></a></li>
+    <li><a href="#" class="circle pinterest"><i class="fab fa-pinterest-p"></i></a></li>
+    <li><a href="#" class="circle instagram"><i class="fab fa-instagram"></i></a></li>
+    <li><a href="#" class="circle whatsapp"><i class="fab fa-whatsapp"></i></a></li>
+   
+  </ul>
+</div>
 
-          <i class="fab fa-facebook-f text-lg rounded-circle p-3 bg-danger " style="width: 14%;"></i>
-
-          <button
-            class="flex items-center justify-center w-12 h-12 bg-red-600 text-white rounded-full shadow-md hover:bg-red-700 transition">
-            <i class="fab fa-pinterest-p text-lg"></i>
-          </button>
-          <button
-            class="flex items-center justify-center w-12 h-12 bg-purple-600 text-white rounded-full shadow-md hover:bg-purple-700 transition">
-            <i class="fab fa-instagram text-lg"></i>
-          </button>
-          <button
-            class="flex items-center justify-center w-12 h-12 bg-green-500 text-white rounded-full shadow-md hover:bg-green-600 transition">
-            <i class="fab fa-whatsapp text-lg"></i>
-          </button>
-          <button
-            class="flex items-center justify-center w-12 h-12 bg-blue-500 text-white rounded-full shadow-md hover:bg-blue-600 transition">
-            <i class="fas fa-arrow-up text-lg"></i>
-          </button>
-        </div>
-
-        <!-- Optional: Activate Windows text at the very bottom, similar to image -->
-        <!-- Placed outside the main card to match image position (bottom-right) -->
-        <div class="absolute bottom-4 right-4 text-xs text-gray-500 hidden md:block">
-          Activate Windows <span class="ml-1">&#8599;</span>
-        </div>
+       
 
       </div>
 
@@ -288,18 +293,16 @@
           const closeSidebarBtn = document.getElementById('closeSidebarBtn');
           const bizcozSidebar = document.getElementById('bizcozSidebar');
 
-          // Open sidebar when the 'Open Sidebar' button is clicked
+         
           openSidebarBtn.addEventListener('click', function () {
             bizcozSidebar.classList.add('sidebar-open');
           });
 
-          // Close sidebar when the 'X' button inside the sidebar is clicked
+        
           closeSidebarBtn.addEventListener('click', function () {
             bizcozSidebar.classList.remove('sidebar-open');
           });
 
-          // Optional: Close sidebar if clicked outside (e.g., a backdrop)
-          // For this setup, we'll keep it simple with explicit buttons.
         });
       </script>
 
@@ -316,28 +319,28 @@
 
   <script>
     var arr = [
-      `<div class="col-12 col-md-8 px-3 px-md-5 py-4 slide-up mt-5 pb-5">
+      `<div class="col-12 col-md-8 px-3 px-md-5 py-4 slide-up mt-3 pb-5">
     <p class="mb-2 pb-4"><span style="color: #f14500;">WELCOME!</span> START GROWING YOUR BUSINESS TODAY</p>
-    <h1 class="fw-bold pb-4">
-      MAKE <span style="color: #f14500;"><b>BUSINESS GROWTH</b></span> WITH NEXT LEVEL
+    <h1 class=" pb-4">
+      MAKE <span style="color: #f14500;" class="fw-bold"><b>BUSINESS GROWTH</b></span> WITH NEXT LEVEL
     </h1>
     <p class="text-muted pb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam optio eius, qui ducimus reprehenderit delectus.</p>
     <button class="btn btn-danger rounded-pill mt-3 d-md-inline-block mb-5">Get Consultant</button>
   </div>`,
 
-      `<div class="col-12 col-md-8 px-3 px-md-5 py-4 slide-up mt-5">
+      `<div class="col-12 col-md-8 px-3 px-md-5 py-4 slide-up mt-3">
     <p class="mb-2 pb-4"><span style="color: #f14500;">WELCOME!</span> START GROWING YOUR BUSINESS TODAY</p>
-    <h1 class="fw-bold pb-4" >
-      LAUNCH <span style="color: #f14500;"><b>ULTRA MODERN</b></span> EFFECTIVE BUSINESS
+    <h1 class=" pb-4"  >
+      LAUNCH <span style="color: #f14500;" class="fw-bold"><b>ULTRA MODERN</b></span> EFFECTIVE BUSINESS
     </h1>
     <p class="text-muted pb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam optio eius, qui ducimus reprehenderit delectus.</p>
     <button class="btn btn-danger rounded-pill mt-3 d-md-inline-block mb-5">Get Consultant</button>
   </div>`,
 
-      `<div class="col-12 col-md-8 px-3 px-md-5 py-4 slide-up mt-5">
+      `<div class="col-12 col-md-8 px-3 px-md-5 py-4 slide-up mt-3">
     <p class="mb-2 pb-4"><span style="color: #f14500;">WELCOME!</span> START GROWING YOUR BUSINESS TODAY</p>
-    <h1 class="fw-bold pb-4" >
-      MAKE <span style="color: #f14500;"><b>BUSINESS UNIQUE</b></span> WITH GREAT IDEAS
+    <h1 class=" pb-4" >
+      MAKE <span style="color: #f14500;" class="fw-bold"><b>BUSINESS UNIQUE</b></span> WITH GREAT IDEAS
     </h1>
     <p class="text-muted pb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam optio eius, qui ducimus reprehenderit delectus.</p>
     <button class="btn btn-danger rounded-pill mt-3 d-md-inline-block mb-5" id="get1">Get Consultant</button>
@@ -960,10 +963,10 @@
   <!-- our testimonials -->
   <div class="testimonial2-wrapper">
     <div class="testimonial2-left">
-      <h5>OUR TESTIMONIALS</h5>
-      <h2>Client’s Feedbacks</h2>
+      <h4>OUR TESTIMONIALS</h4>
+      <h1>Client’s Feedbacks</h1>
       <p id="testimonial2-text">
-        “Consectetur adipiscing elit velit porta sapien purus erat nec, a ornare laoreet sem gravida accumsan in commodo
+        “Consectetur adipiscing elit velit porta sapien purus erat nec, a ornare velit porta sapien purus erat nec, a ornare laoreet sem gravida accumsan in commodo
         aliquet nascetur.”
       </p>
       <div class="testimonial2-profile" id="testimonial2-profile">
@@ -988,13 +991,13 @@
   <script>
     const testimonials2 = [
       {
-        text: "\u201cConsectetur adipiscing elit velit porta sapien purus erat nec, a ornare laoreet sem gravida accumsan in commodo aliquet nascetur.Sed tempus hendrerit diam mauris leo magna sociosqu viverra, accumsan massa \u201d",
+        text: "\u201cConsectetur adipiscing elit velit porta sapien purus erat nec,adipiscing elit velit porta sapien purus erat nec, a ornare laoreet sem gravida accumsan in commodo aliquet nascetur.Sed tempus hendrerit diam mauris leo magna sociosqu viverra, accumsan massa \u201d",
         img: "profile1.png",
         name: "David Smith",
         title: "JHKL Owner"
       },
       {
-        text: "\u201cSed tempus hendrerit diam mauris leo magna sociosqu viverra, accumsan massa tristique egestas cum sodales hac lacinia feugiat scelerisque.Sed tempus hendrerit diam mauris leo magna sociosqu viverra, accumsan massa  \u201d",
+        text: "\u201cSed tempus hendrerit diam mauris leo magna sociosqu viverra, accumsan massa tristique egestas cum sodales hac leo magna sociosqu viverra, hac lacinia feugiat scelerisque.Sed tempus hendrerit diam mauris leo magna sociosqu viverra, accumsan massa  \u201d",
         img: "profile1.png",
         name: "Laura Jones",
         title: "Product Manager"
@@ -1031,8 +1034,8 @@
         </div>
         <p class="blog-category-3">BUSINESS SOLUTION / <span>BY DAVID DOLEAN</span></p>
         <h3 class="blog-heading-3">Monkey Form settle tips of the new ages end</h3>
-        <a href="#" class="blog-readmore-3"><i class="fa-solid fa-arrow-right rounded-circle p-1"
-            style="background-color: #2e3038;"></i>Read More</a>
+        <a href="#" class="blog-readmore-3"><i class="fa-solid me-2 p-2 fa-arrow-right rounded-circle p-1"
+           ></i><span>Read More</span></a>
       </div>
 
       <!-- Card 2 -->
@@ -1043,8 +1046,8 @@
         </div>
         <p class="blog-category-3">BUSINESS SOLUTION / <span>BY DAVID DOLEAN</span></p>
         <h3 class="blog-heading-3">The quick settle tips of the new ages exist</h3>
-        <a href="#" class="blog-readmore-3"><i class="fa-solid fa-arrow-right rounded-circle p-1"
-            style="background-color: #2e3038;"></i>Read More</a>
+        <a href="#" class="blog-readmore-3"><i class="fa-solid me-2 p-2 fa-arrow-right rounded-circle p-1"
+            ></i>Read More</a>
       </div>
 
       <!-- Card 3 -->
@@ -1055,11 +1058,157 @@
         </div>
         <p class="blog-category-3">BUSINESS SOLUTION / <span>BY DAVID DOLEAN</span></p>
         <h3 class="blog-heading-3">Old generation settle tips of the new ages upps !</h3>
-        <a href="#" class="blog-readmore-3"><i class="fa-solid fa-arrow-right rounded-circle p-1"
-            style="background-color: #2e3038;" id="news-arrow"></i>Read More</a>
+        <a href="#" class="blog-readmore-3"><i class="fa-solid me-2 p-2 fa-arrow-right rounded-circle p-1"
+             id="news-arrow"></i>Read More</a>
       </div>
     </div>
   </section>
+
+
+  <!-- Appointment div started -->
+
+  
+<div class="appoint-container">
+  <!-- Left side image -->
+  <div class="appoint-left">
+    <img src="appointment.jpg" alt="Appointment">
+  </div>
+
+  <!-- Right side form -->
+  <div class="appoint-right">
+    <p>Make an Appointment</p>
+    <h1>Request a free quote</h1>
+    <form class="appoint-form">
+      <div class="appoint-form-row">
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Email Address">
+      </div>
+      <input type="text" placeholder="Business Topic">
+      <textarea rows="5" placeholder="Type Your Message"></textarea>
+      <button type="submit" class="appoint-submit-btn shadow" id="sub1">Submit Message</button>
+    </form>
+  </div>
+</div>
+
+<!-- map div started -->
+
+<div class="map5-container">
+  <!-- Left Info Section -->
+  <div class="map5-left">
+    <div class="map5-box">
+      <h3>Get in touch</h3>
+      <p>Work and general inquiries</p>
+      <p><a href="tel:+35091208605">+3509.120–8605</a></p>
+      <p class="pt-3">Assistance hours:</p>
+      <p><strong>Monday – Friday<br>6 am to 8 pm EST</strong></p>
+    </div>
+    <div class="map5-box">
+      <h3>Post Address</h3>
+      <p>Service Office<br>
+      <strong>786 Dortans Ave, Otam Sites,<br>CA 36108, United States</strong></p>
+      <p class="pt-3">Head Office<br><strong>142 Drive Lane. USA</strong></p>
+    </div>
+  </div>
+
+  <!-- Right Map Section -->
+  <div class="map5-right">
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.0521339213255!2d74.7303281!3d19.105368700000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdcb17ca9d749e5%3A0x516744f9b2f35ec9!2sA2Z%20IT%20HUB%20PVT.%20LTD.!5e0!3m2!1sen!2sin!4v1749720155702!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
+
+<!-- signup newsletter div started -->
+
+<div class="pt-4 pb-4 " style="background-color: #00020F;">
+  <div class="signup2-container">
+  <div class="signup2-left">
+    <p>LATEST BUSINESS IDEAS</p>
+    <h2>Sign Up Newsletter</h2>
+  </div>
+  <div class="signup2-right">
+    <input type="email" placeholder="Enter Email Address" />
+    <button>Subscribe Now</button>
+  </div>
+</div>
+
+</div>
+
+
+
+<!-- final footer started -->
+
+<div class="foot3-main">
+  <!-- Left Column -->
+  <div class="foot3-column">
+    <h2>Ready To<br><span>Work With Us?</span></h2>
+    <p>Felis consequat magnis est fames sagittis ultrices placerat sodales porttitor quisque.</p>
+    <a href="#" class="foot3-btn">Get a Quote</a>
+  </div>
+
+  <!-- Middle Column -->
+  <div class="foot3-column">
+    <div class="foot3-hours-box">
+      <h3>Opening Hours</h3>
+      <hr />
+      <table style="color: white;">
+        <tr><td>Week Days</td><td style="text-align: right;">09.00 – 24:00</td></tr>
+        <tr><td>Saturday</td><td style="text-align: right;">08:00 – 03.00</td></tr>
+        <tr><td>Sunday</td><td style="text-align: right;">Day Off</td></tr>
+      </table>
+      <button class="contact-btn">Contact Us</button>
+    </div>
+  </div>
+
+  <!-- Right Column -->
+  <div class="foot3-column foot3-updates">
+    <h3>Popular Updates</h3>
+    <hr />
+    <div class="foot3-update-item">
+      <img src="foot1.png" alt="update1" />
+      <div class="foot3-update-content">
+        <span>🕒 15th April, 2024</span>
+        <p>Best Business Ideas For Getting Solution</p>
+        <a href="#">Read More →</a>
+      </div>
+    </div>
+    <div class="foot3-update-item">
+      <img src="foot2.png" alt="update2" />
+      <div class="foot3-update-content">
+        <span>🕒 15th April, 2024</span>
+        <p>Best Business Ideas For Getting Solution</p>
+        <a href="#">Read More →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="foot3-copyright">
+  Bizcoz – Copyright 2024. All rights reserved.
+</div>
+
+<!-- Scroll Button -->
+<div id="scrollProgress">
+ <div class="  rounded-circle " style="height: 60%; width: 60%; display:  flex; align-items: center; justify-content: center; background: white;">
+  <i class="fa-solid fa-arrow-up" ></i>
+ </div>
+</div>
+
+<!-- scrollbutton javascript -->
+<script>
+  const scrollBtn = document.getElementById("scrollProgress");
+
+  window.addEventListener("scroll", () => {
+    const scrollTop = document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / scrollHeight) * 360;
+
+    scrollBtn.style.background = `conic-gradient(#f04900 ${scrollPercent}deg, #ddd ${scrollPercent}deg)`;
+  });
+
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
 </body>
 
 </html>
