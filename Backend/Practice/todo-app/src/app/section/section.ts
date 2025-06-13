@@ -1,27 +1,18 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-
-
+import { CommonModule } from '@angular/common';
+import { Header } from '../header/header';
 
 @Component({
   selector: 'app-section',
-  imports: [CommonModule],
+ 
+  imports: [CommonModule, Header],
   templateUrl: './section.html',
-  styleUrl: './section.css'
+  styleUrls: ['./section.css']
 })
 export class Section {
-     arr:{name:string,id:string}[]=[
-      {
-        name:"arjun",
-        id:"1"
-      },
-      {
-        name:"om",
-        id : "2"
-      },
-      {
-        name:"omkar",
-        id : "3"
-      }
-     ];
+  arr = [
+    { name: "arjun", id: "1" },
+    { name: "om", id: "2" },
+    { name: "omkar", id: "3" }
+  ];
 }

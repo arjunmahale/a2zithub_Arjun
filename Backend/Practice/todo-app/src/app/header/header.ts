@@ -1,11 +1,15 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  
+  imports:[CommonModule],
   templateUrl: './header.html',
-  styleUrl: './header.css'
+  styleUrls: ['./header.css']
 })
 export class Header {
-     name="Arjun";
+  @Input() nums: any;
+
+
 }
