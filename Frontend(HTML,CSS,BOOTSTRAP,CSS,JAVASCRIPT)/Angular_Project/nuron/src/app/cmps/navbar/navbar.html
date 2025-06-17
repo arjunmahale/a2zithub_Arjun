@@ -1,0 +1,58 @@
+<nav class="navbar" [ngClass]="theme">
+  <div class="logo-section">
+    <div class="logo-box">N</div>
+    <div class="logo-text">nuron</div>
+  </div>
+
+  <ul class="nav-links">
+    <li class="nav-item" (mouseenter)="showDropdown('home')" (mouseleave)="hideDropdown()">Home
+      <div class="dropdown" *ngIf="activeDropdown === 'home'">
+        <a href="#">Create NFT</a>
+        <a href="#">Upload Type</a>
+        <a href="#">Activity</a>
+        <a href="#">Creators</a>
+        <a href="#">Our Collection</a>
+        <a href="#">Upcoming Projects</a>
+      </div>
+    </li>
+
+    <li class="nav-item" (mouseenter)="showDropdown('about')" (mouseleave)="hideDropdown()">About
+      <div class="dropdown" *ngIf="activeDropdown === 'about'">
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+        <a href="#">Support/FAQ</a>
+        <a href="#">Terms & Condition</a>
+        <a href="#">Coming Soon</a>
+        <a href="#">Maintenance</a>
+      </div>
+    </li>
+
+    <li class="nav-item" (mouseenter)="showDropdown('explore')" (mouseleave)="hideDropdown()">Explore
+      <div class="dropdown" *ngIf="activeDropdown === 'explore'">
+        <a href="#">Product</a>
+        <a href="#">Product Details</a>
+        <a href="#">NFT Ranking</a>
+        <a href="#">Edit Profile</a>
+        <a href="#">Blog Details</a>
+        <a href="#">404</a>
+      </div>
+    </li>
+
+    <li class="nav-item">Pages</li>
+    <li class="nav-item">Blog</li>
+    <li class="nav-item">Contact</li>
+  </ul>
+
+  <div class="nav-actions">
+    <input type="text" placeholder="Search Here" class="search-bar">
+    <button class="wallet-btn">Wallet connect</button>
+    <div class="notification">
+      🔔
+      <span class="badge">6</span>
+    </div>
+    <div class="theme-toggle" (click)="toggleTheme()">
+      <span *ngIf="theme === 'dark'">🌞</span>
+      <span *ngIf="theme === 'light'">🌙</span>
+    </div>
+  </div>
+</nav>
