@@ -4,7 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nuron Navbar</title>
+  <!-- Bootstrap CSS CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MQ6LvbA7DTHC+KxkwSxz9Wr3Xnv7PspzH1Pv1p8cD4AaKK9HsS0ezc6sG2tP7L9F" crossorigin="anonymous">
+
+<!-- Optional: Bootstrap JS CDN (if you need JS components like modals, dropdowns) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-FM4TxBDn2dGi6R6oZ3rCbD5oHHjwhOn8iCmrw64s2C9NUPiPdk8UeeiMWLB3P2eZ" crossorigin="anonymous"></script>
+
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     * {
       margin: 0; padding: 0; box-sizing: border-box;
@@ -69,6 +76,7 @@
   background: #1f1f2e;
   border-radius: 6px;
   overflow: hidden;
+  padding: 1.5% 0%;
   border: 1px solid #333;
 }
 
@@ -117,19 +125,25 @@
 
 
     .wallet-btn {
-      background: #0aa5ff;
+      background: #14141C;
       color: #fff;
       border: none;
-      padding: 6px 14px;
+     padding: 1.5% 1%;
       border-radius: 6px;
       font-weight: 600;
+     
       cursor: pointer;
       font-size: 12px;
+        border: 1px solid #333;
+    }
+    .wallet-btn:hover {
+      background: #00A3FF;
+     
     }
     .icons {
       display: flex;
       align-items: center;
-
+ color: #ccc;
      
       gap: 10px;
     }
@@ -205,6 +219,103 @@
         display: none;
       }
     }
+
+
+    /* introdiv css  */
+
+      body {
+      margin: 0;
+      padding: 0;
+      background: #161b22;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 40px;
+      flex-wrap: wrap;
+    }
+
+    .text-section {
+      max-width: 500px;
+    }
+
+    .text-section h1 {
+      font-size: 48px;
+      padding-top: 10%;
+      margin: 0 0 20px;
+      line-height: 1.2;
+    }
+
+    .text-section p {
+      font-size: 20px;
+      padding-top: 5%;
+      padding-bottom: 5%;
+      color: #b0b0b0;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .buttons button {
+      padding: 14px 28px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .get-started {
+      background-color: #0d6efd;
+      color: #fff;
+    }
+
+    .create {
+      background-color: #23272f;
+      color: #fff;
+    }
+
+    .image-section {
+      max-width: 400px;
+      margin-top: 20px;
+    }
+
+    .image-section img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .text-section h1 {
+        font-size: 36px;
+      }
+
+      .buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .buttons button {
+        width: 100%;
+      }
+
+      .image-section {
+        align-self: center;
+      }
+    }
   </style>
 </head>
 <body class="dark-mode">
@@ -261,18 +372,18 @@
     <div class="icons">
    <div class="search-bar">
   <input type="text" placeholder="Search Here" />
-  <button class="search-btn">🔍</button>
+  <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
 </div>
-<div class="search-icon">🔍</div>
+<div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
 
 
       <button class="wallet-btn">Wallet connect</button>
       <div class="icon-circle">
-        🔔
+       <i class="fa-regular fa-bell"></i>
         <div class="badge">6</div>
       </div>
-      <div class="hamburger">≡</div>
-      <div class="icon-circle theme-toggle" onclick="toggleTheme()">🌞</div>
+      <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
+      <div class="icon-circle theme-toggle" onclick="toggleTheme()"><i class="fa-regular fa-sun"></i></div>
     </div>
   </nav>
 
@@ -293,11 +404,11 @@
       if (body.classList.contains('dark-mode')) {
         body.classList.remove('dark-mode');
         body.classList.add('light-mode');
-        toggle.textContent = '🌙';
+        toggle.innerHTML = '<i class="fa-regular fa-moon"></i>';
       } else {
         body.classList.remove('light-mode');
         body.classList.add('dark-mode');
-        toggle.textContent = '🌞';
+        toggle.innerHTML = '<i class="fa-regular fa-sun"></i>';
       }
     }
 
@@ -307,5 +418,27 @@
 
     document.querySelector('.hamburger').addEventListener('click', toggleSidebar);
   </script>
+
+
+<!-- intro div started -->
+
+ <div class="container ">
+    <div class="text-section " style="padding-right: 5%;">
+      <h1>Discover Digital Art, Collect and Sell Your Specific NFTs.</h1>
+      <p>Partner with one of the world’s largest retailers to showcase your brand and products.</p>
+      <div class="buttons">
+        <button class="get-started">Get Started</button>
+        <button class="create">Create</button>
+      </div>
+    </div>
+    <div class="image-section " style="padding-left: 5%;">
+      <img src="intro-1.png" alt="NFT Illustration" style="float: left;">
+    </div>
+  </div>
+
+
+  <!-- slider div started -->
+
+  
 </body>
 </html>
