@@ -20,50 +20,31 @@
     nav {
       font-family: 'Roboto', sans-serif;
       display: flex;
-      color: #ccc;
       align-items: center;
-      justify-content: space-between;
-      padding-left: 10%;
-      padding-right: 10%;
-      padding-top: 1%;
-      padding-bottom: 1%;
+      justify-content: space-evenly;
+      padding: 1.5% 7%;
       background: #151521;
+      flex-wrap: wrap;
     }
-    .logo {
-      display: flex;
-      align-items: center;
-    }
-    .logo-box {
-      background: #0aa5ff;
-      color: #fff;
-      font-weight: bold;
-      font-size: 24px;
-      padding: 4px 8px;
-      border-radius: 4px;
-    }
-    .logo-text {
-      color: #fff;
-      font-size: 22px;
-      margin-left: 8px;
-      font-weight: 700;
+    .logo img {
+      height: 40px;
+      width: auto;
     }
     .menu {
       display: flex;
       align-items: center;
       gap: 20px;
-      
-      position: relative;
     }
     .menu-item {
-      position: relative;
-      color: #fff;
+      color: #ccc;
       text-decoration: none;
       font-weight: 500;
       cursor: pointer;
+      position: relative;
     }
     .dropdown {
       position: absolute;
-      top: 35px;
+      top: 100%;
       left: 0;
       background: #1f1f2e;
       padding: 10px;
@@ -71,8 +52,10 @@
       grid-template-columns: repeat(2, auto);
       gap: 10px 30px;
       border-radius: 6px;
+      z-index: 999;
     }
-    .menu-item:hover .dropdown {
+    .menu-item:hover .dropdown,
+    .menu-item .dropdown:hover {
       display: grid;
     }
     .dropdown a {
@@ -80,70 +63,156 @@
       text-decoration: none;
       font-size: 14px;
     }
-    .search-bar {
-      position: relative;
-    }
-    .search-bar input {
-      padding: 5px 30px 5px 10px;
-      border-radius: 6px;
-      border: none;
-      outline: none;
-    }
+  .search-bar {
+  display: flex;
+  align-items: center;
+  background: #1f1f2e;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #333;
+}
+
+.search-bar input {
+  background: transparent;
+  border: none;
+  padding: 6px 10px;
+  color: #ccc;
+  font-size: 14px;
+  width: 150px;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+.search-btn {
+  background: transparent;
+  border: none;
+  color: #ccc;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.search-icon {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #333;
+  border-radius: 50%;
+  display: none; /* hidden by default, shown on mobile */
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .search-bar {
+    display: none; /* hide search bar on mobile */
+  }
+  .search-icon {
+    display: flex; /* show circle icon on mobile */
+  }
+}
+
+
     .wallet-btn {
       background: #0aa5ff;
       color: #fff;
       border: none;
-      padding: 6px 12px;
+      padding: 6px 14px;
       border-radius: 6px;
-      margin-left: 10px;
+      font-weight: 600;
       cursor: pointer;
+      font-size: 12px;
     }
     .icons {
       display: flex;
       align-items: center;
+
+     
       gap: 10px;
-      margin-left: 10px;
-      color: #fff;
     }
-    .notification {
-      position: relative;
-      font-size: 18px;
+    .icon-circle {
+      width: 32px;
+      height: 32px;
+      border: 1px solid #333;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
       cursor: pointer;
+      position: relative;
     }
     .badge {
       position: absolute;
-      top: -6px;
-      right: -6px;
+      top: -4px;
+      right: -4px;
       background: #0aa5ff;
       color: #fff;
       font-size: 10px;
-      padding: 2px 5px;
+      padding: 2px 4px;
       border-radius: 50%;
     }
-    .theme-toggle {
-      cursor: pointer;
-      font-size: 18px;
+   .hamburger {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #333;
+  border-radius: 50%;
+  display: none; /* hide by default for desktop */
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* show on mobile */
+  }
+}
+
+    .sidebar {
+      position: fixed;
+      top: 0; left: 0;
+      width: 250px;
+      height: 100%;
+      background: #151521;
+      padding: 20px;
+      display: none;
+      flex-direction: column;
+      z-index: 1000;
     }
-    /* Responsive */
+    .sidebar.active {
+      display: flex;
+    }
+    .sidebar .menu-item {
+      padding: 10px 0;
+      border-bottom: 1px solid #333;
+    }
+    .close-btn {
+      align-self: flex-end;
+      cursor: pointer;
+      font-size: 20px;
+      color: #ccc;
+    }
     @media(max-width: 768px) {
       .menu {
         display: none;
       }
-      nav {
-        flex-wrap: wrap;
-      }
-      .search-bar, .wallet-btn, .icons {
-        margin-top: 10px;
+      .search-bar input {
+        display: none;
       }
     }
   </style>
 </head>
 <body class="dark-mode">
-  <nav >
+  <nav>
     <div class="logo">
-      <div class="logo-box">N</div>
-      <div class="logo-text">nuron</div>
+      <img src="logo1.png" alt="Nuron Logo">
     </div>
+
     <div class="menu">
       <div class="menu-item">Home
         <div class="dropdown">
@@ -188,18 +257,34 @@
       <div class="menu-item">Blog</div>
       <div class="menu-item">Contact</div>
     </div>
-    <div class="search-bar">
-      <input type="text" placeholder="Search Here">
-    </div>
-    <button class="wallet-btn">Wallet connect</button>
+
     <div class="icons">
-      <div class="notification">
+   <div class="search-bar">
+  <input type="text" placeholder="Search Here" />
+  <button class="search-btn">🔍</button>
+</div>
+<div class="search-icon">🔍</div>
+
+
+      <button class="wallet-btn">Wallet connect</button>
+      <div class="icon-circle">
         🔔
         <div class="badge">6</div>
       </div>
-      <div class="theme-toggle" onclick="toggleTheme()">🌞</div>
+      <div class="hamburger">≡</div>
+      <div class="icon-circle theme-toggle" onclick="toggleTheme()">🌞</div>
     </div>
   </nav>
+
+  <div class="sidebar" id="sidebar">
+    <div class="close-btn" onclick="toggleSidebar()">✖</div>
+    <div class="menu-item">Home</div>
+    <div class="menu-item">About</div>
+    <div class="menu-item">Explore</div>
+    <div class="menu-item">Pages</div>
+    <div class="menu-item">Blog</div>
+    <div class="menu-item">Contact</div>
+  </div>
 
   <script>
     function toggleTheme() {
@@ -215,6 +300,12 @@
         toggle.textContent = '🌞';
       }
     }
+
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('active');
+    }
+
+    document.querySelector('.hamburger').addEventListener('click', toggleSidebar);
   </script>
 </body>
 </html>
