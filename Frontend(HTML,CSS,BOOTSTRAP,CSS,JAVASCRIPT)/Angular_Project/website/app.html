@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nuron Navbar</title>
   <!-- Bootstrap CSS CDN -->
+   <link rel="stylesheet" href="style.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MQ6LvbA7DTHC+KxkwSxz9Wr3Xnv7PspzH1Pv1p8cD4AaKK9HsS0ezc6sG2tP7L9F" crossorigin="anonymous">
 
 <!-- Optional: Bootstrap JS CDN (if you need JS components like modals, dropdowns) -->
@@ -13,309 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-    }
-    body.dark-mode {
-      background-color: #0d0d0d;
-      color: #fff;
-    }
-    body.light-mode {
-      background-color: #fff;
-      color: #000;
-    }
-    nav {
-      font-family: 'Roboto', sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      padding: 1.5% 7%;
-      background: #151521;
-      flex-wrap: wrap;
-    }
-    .logo img {
-      height: 40px;
-      width: auto;
-    }
-    .menu {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-    .menu-item {
-      color: #ccc;
-      text-decoration: none;
-      font-weight: 500;
-      cursor: pointer;
-      position: relative;
-    }
-    .dropdown {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: #1f1f2e;
-      padding: 10px;
-      display: none;
-      grid-template-columns: repeat(2, auto);
-      gap: 10px 30px;
-      border-radius: 6px;
-      z-index: 999;
-    }
-    .menu-item:hover .dropdown,
-    .menu-item .dropdown:hover {
-      display: grid;
-    }
-    .dropdown a {
-      color: #ccc;
-      text-decoration: none;
-      font-size: 14px;
-    }
-  .search-bar {
-  display: flex;
-  align-items: center;
-  background: #1f1f2e;
-  border-radius: 6px;
-  overflow: hidden;
-  padding: 1.5% 0%;
-  border: 1px solid #333;
-}
-
-.search-bar input {
-  background: transparent;
-  border: none;
-  padding: 6px 10px;
-  color: #ccc;
-  font-size: 14px;
-  width: 150px;
-}
-
-.search-bar input:focus {
-  outline: none;
-}
-
-.search-btn {
-  background: transparent;
-  border: none;
-  color: #ccc;
-  padding: 0 10px;
-  cursor: pointer;
-}
-
-.search-icon {
-  width: 32px;
-  height: 32px;
-  border: 1px solid #333;
-  border-radius: 50%;
-  display: none; /* hidden by default, shown on mobile */
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  color: #ccc;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .search-bar {
-    display: none; /* hide search bar on mobile */
-  }
-  .search-icon {
-    display: flex; /* show circle icon on mobile */
-  }
-}
-
-
-    .wallet-btn {
-      background: #14141C;
-      color: #fff;
-      border: none;
-     padding: 1.5% 1%;
-      border-radius: 6px;
-      font-weight: 600;
-     
-      cursor: pointer;
-      font-size: 12px;
-        border: 1px solid #333;
-    }
-    .wallet-btn:hover {
-      background: #00A3FF;
-     
-    }
-    .icons {
-      display: flex;
-      align-items: center;
- color: #ccc;
-     
-      gap: 10px;
-    }
-    .icon-circle {
-      width: 32px;
-      height: 32px;
-      border: 1px solid #333;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      cursor: pointer;
-      position: relative;
-    }
-    .badge {
-      position: absolute;
-      top: -4px;
-      right: -4px;
-      background: #0aa5ff;
-      color: #fff;
-      font-size: 10px;
-      padding: 2px 4px;
-      border-radius: 50%;
-    }
-   .hamburger {
-  width: 32px;
-  height: 32px;
-  border: 1px solid #333;
-  border-radius: 50%;
-  display: none; /* hide by default for desktop */
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex; /* show on mobile */
-  }
-}
-
-    .sidebar {
-      position: fixed;
-      top: 0; left: 0;
-      width: 250px;
-      height: 100%;
-      background: #151521;
-      padding: 20px;
-      display: none;
-      flex-direction: column;
-      z-index: 1000;
-    }
-    .sidebar.active {
-      display: flex;
-    }
-    .sidebar .menu-item {
-      padding: 10px 0;
-      border-bottom: 1px solid #333;
-    }
-    .close-btn {
-      align-self: flex-end;
-      cursor: pointer;
-      font-size: 20px;
-      color: #ccc;
-    }
-    @media(max-width: 768px) {
-      .menu {
-        display: none;
-      }
-      .search-bar input {
-        display: none;
-      }
-    }
-
-
-    /* introdiv css  */
-
-      body {
-      margin: 0;
-      padding: 0;
-      background: #161b22;
-      color: #fff;
-      font-family: 'Roboto', sans-serif;
-    }
-
-    .container {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-evenly;
-      padding: 40px;
-      flex-wrap: wrap;
-    }
-
-    .text-section {
-      max-width: 500px;
-    }
-
-    .text-section h1 {
-      font-size: 48px;
-      padding-top: 10%;
-      margin: 0 0 20px;
-      line-height: 1.2;
-    }
-
-    .text-section p {
-      font-size: 20px;
-      padding-top: 5%;
-      padding-bottom: 5%;
-      color: #b0b0b0;
-      margin-bottom: 30px;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 20px;
-    }
-
-    .buttons button {
-      padding: 14px 28px;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .get-started {
-      background-color: #0d6efd;
-      color: #fff;
-    }
-
-    .create {
-      background-color: #23272f;
-      color: #fff;
-    }
-
-    .image-section {
-      max-width: 400px;
-      margin-top: 20px;
-    }
-
-    .image-section img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .text-section h1 {
-        font-size: 36px;
-      }
-
-      .buttons {
-        flex-direction: column;
-        width: 100%;
-      }
-
-      .buttons button {
-        width: 100%;
-      }
-
-      .image-section {
-        align-self: center;
-      }
-    }
+   
   </style>
 </head>
 <body class="dark-mode">
@@ -325,7 +24,7 @@
     </div>
 
     <div class="menu">
-      <div class="menu-item">Home
+      <div class="menu-item"><span>Home</span> <i class="fa-solid fa-angle-down" ></i>
         <div class="dropdown">
           <a href="#">Create NFT</a>
           <a href="#">Upload Type</a>
@@ -345,7 +44,7 @@
           <a href="#">Maintenance</a>
         </div>
       </div>
-      <div class="menu-item">Explore
+      <div class="menu-item"><span>Explore</span> <i class="fa-solid fa-angle-down"></i>
         <div class="dropdown">
           <a href="#">Log In</a>
           <a href="#">Registration</a>
@@ -355,7 +54,7 @@
           <a href="#">Privacy Policy</a>
         </div>
       </div>
-      <div class="menu-item">Pages
+      <div class="menu-item"><span>Pages</span> <i class="fa-solid fa-angle-down"></i>
         <div class="dropdown">
           <a href="#">Product</a>
           <a href="#">Product Details</a>
@@ -365,19 +64,19 @@
           <a href="#">404</a>
         </div>
       </div>
-      <div class="menu-item">Blog</div>
+      <div class="menu-item"><span >Blog</span> <i class="fa-solid fa-angle-down" ></i></div>
       <div class="menu-item">Contact</div>
     </div>
 
     <div class="icons">
    <div class="search-bar">
   <input type="text" placeholder="Search Here" />
-  <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+  <button class="search-btn"><i class="fa-solid fa-magnifying-glass "></i></button>
 </div>
 <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
 
 
-      <button class="wallet-btn">Wallet connect</button>
+      <button class="wallet-btn ">Wallet connect</button>
       <div class="icon-circle">
        <i class="fa-regular fa-bell"></i>
         <div class="badge">6</div>
@@ -423,7 +122,7 @@
 <!-- intro div started -->
 
  <div class="container ">
-    <div class="text-section " style="padding-right: 5%;">
+    <div class="text-section " >
       <h1>Discover Digital Art, Collect and Sell Your Specific NFTs.</h1>
       <p>Partner with one of the world’s largest retailers to showcase your brand and products.</p>
       <div class="buttons">
@@ -431,13 +130,195 @@
         <button class="create">Create</button>
       </div>
     </div>
-    <div class="image-section " style="padding-left: 5%;">
+    <div class="image-section "">
       <img src="intro-1.png" alt="NFT Illustration" style="float: left;">
     </div>
   </div>
 
 
-  <!-- slider div started -->
+  <!-- slider div started- live bidding -->
+
+
+  <div class="sd1-header">
+    <div class="sd1-header-left">
+      <span class="sd1-circle"></span>
+      <h1>Live Bidding</h1>
+    </div>
+    <div class="sd1-slider-buttons">
+      <button onclick="sd1Slide(-1)"><i class="fa-solid fa-angle-left"></i></button>
+      <button onclick="sd1Slide(1)"><i class="fa-solid fa-angle-right"></i></button>
+    </div>
+  </div>
+
+  <div class="sd1-slider-wrapper">
+    <div class="sd1-card-container" id="sd1-cardContainer" style="padding-left: 5%;">
+      
+      <!-- Example Card -->
+      <div class="sd1-card-wrapper">
+        <div class="sd1-bg-div" style="background-image: linear-gradient(rgba(16,48,75,0.8), rgba(4,145,226,0.8)), url('https://via.placeholder.com/240x300?text=1');"></div>
+        <div class="sd1-content-div">
+          <div class="sd1-top-div" style="background-image: url('slider1.jpg');">
+            <div class="sd1-timer-div">
+              <div><div>00</div><small>D'S</small></div>
+              <div><div>00</div><small>H'S</small></div>
+              <div><div>00</div><small>MIN'S</small></div>
+              <div><div>00</div><small>SEC</small></div>
+            </div>
+          </div>
+          <div class="sd1-bottom-div">
+            <div class="sd1-avatars">
+              <img src="client-1.64bd52dc.png" alt="avatar" style="transform: translateX(13px);">
+              <img src="client-10.916ce2a4.png" alt="avatar">
+              <img src="client-11.bfc29ff8.png" alt="avatar"style="transform: translateX(-13px);">
+              <span>20+ Place Bit.</span>
+            </div>
+            <p style="font-size: larger; font-weight: 600;">Preatent</p>
+            <p style="color: #ccc;">Highest bid 1/20</p>
+            <p class="sd1-eth">0.244wETH</p>
+          </div>
+        </div>
+      </div>
+      <div class="sd1-card-wrapper">
+        <div class="sd1-bg-div" style="background-image: linear-gradient(rgba(16,48,75,0.8), rgba(4,145,226,0.8)), url('https://via.placeholder.com/240x300?text=1');"></div>
+        <div class="sd1-content-div">
+          <div class="sd1-top-div" style="background-image: url('slider2.jpg');">
+            <div class="sd1-timer-div">
+              <div><div>00</div><small>D'S</small></div>
+              <div><div>00</div><small>H'S</small></div>
+              <div><div>00</div><small>MIN'S</small></div>
+              <div><div>00</div><small>SEC</small></div>
+            </div>
+          </div>
+          <div class="sd1-bottom-div">
+            <div class="sd1-avatars">
+              <img src="client-12.fa2ef573.png" alt="avatar"style="transform: translateX(13px);">
+              <img src="client-13.f44400b4.png" alt="avatar">
+              <img src="client-14.da3d02f0.png" alt="avatar"style="transform: translateX(-13px);">
+              <span>12+ Place Bit.</span>
+            </div>
+            <p style="font-size: larger; font-weight: 600;"># 21 The Wonder</p>
+            <p style="color: #ccc;">Highest bid 1/20</p>
+            <p class="sd1-eth">0.244wETH</p>
+          </div>
+        </div>
+      </div>
+      <div class="sd1-card-wrapper">
+        <div class="sd1-bg-div" style="background-image: linear-gradient(rgba(16,48,75,0.8), rgba(4,145,226,0.8)), url('https://via.placeholder.com/240x300?text=1');"></div>
+        <div class="sd1-content-div">
+          <div class="sd1-top-div" style="background-image: url('slider3.jpg');">
+            <div class="sd1-timer-div">
+              <div><div>00</div><small>D'S</small></div>
+              <div><div>00</div><small>H'S</small></div>
+              <div><div>00</div><small>MIN'S</small></div>
+              <div><div>00</div><small>SEC</small></div>
+            </div>
+          </div>
+          <div class="sd1-bottom-div">
+            <div class="sd1-avatars">
+              <img src="client-15.53c8fa7f.png" alt="avatar"style="transform: translateX(13px);">
+              <img src="client-2.a231df67.png" alt="avatar">
+              <img src="client-3.2f0ed113.png" alt="avatar"style="transform: translateX(-13px);">
+              <span>16+ Place Bit.</span>
+            </div>
+            <p style="font-size: larger; font-weight: 600;">Orbid6</p>
+            <p style="color: #ccc;">Highest bid 1/20</p>
+            <p class="sd1-eth">0.244wETH</p>
+          </div>
+        </div>
+      </div>
+      <div class="sd1-card-wrapper">
+        <div class="sd1-bg-div" style="background-image: linear-gradient(rgba(16,48,75,0.8), rgba(4,145,226,0.8)), url('https://via.placeholder.com/240x300?text=1');"></div>
+        <div class="sd1-content-div">
+          <div class="sd1-top-div" style="background-image: url('slider4.jpg');">
+            <div class="sd1-timer-div">
+              <div><div>00</div><small>D'S</small></div>
+              <div><div>00</div><small>H'S</small></div>
+              <div><div>00</div><small>MIN'S</small></div>
+              <div><div>00</div><small>SEC</small></div>
+            </div>
+          </div>
+          <div class="sd1-bottom-div">
+            <div class="sd1-avatars">
+              <img src="client-7.8335c1d0.png" alt="avatar"style="transform: translateX(13px);">
+              <img src="client-6.529fd71b.png" alt="avatar">
+              <img src="client-5.e2bfbb91.png" alt="avatar"style="transform: translateX(-13px);">
+              <span>9+ Place Bit.</span>
+            </div>
+            <p style="font-size: larger; font-weight: 600;">Delta25</p>
+            <p style="color: #ccc;">Highest bid 1/20</p>
+            <p class="sd1-eth">0.244wETH</p>
+          </div>
+        </div>
+      </div>
+      <div class="sd1-card-wrapper">
+        <div class="sd1-bg-div" style="background-image: linear-gradient(rgba(16,48,75,0.8), rgba(4,145,226,0.8)), url('https://via.placeholder.com/240x300?text=1');"></div>
+        <div class="sd1-content-div">
+          <div class="sd1-top-div" style="background-image: url('slider1.jpg');">
+            <div class="sd1-timer-div">
+              <div><div>00</div><small>D'S</small></div>
+              <div><div>00</div><small>H'S</small></div>
+              <div><div>00</div><small>MIN'S</small></div>
+              <div><div>00</div><small>SEC</small></div>
+            </div>
+          </div>
+          <div class="sd1-bottom-div">
+            <div class="sd1-avatars">
+              <img src="client-1.64bd52dc.png" alt="avatar"style="transform: translateX(13px);">
+              <img src="client-10.916ce2a4.png" alt="avatar">
+              <img src="client-11.bfc29ff8.png" alt="avatar"style="transform: translateX(-13px);">
+              <span>15+ Place Bit.</span>
+            </div>
+            <p style="font-size: larger; font-weight: 600;">Morgan11</p>
+            <p style="color: #ccc;">Highest bid 1/20</p>
+            <p class="sd1-eth">0.244wETH</p>
+          </div>
+        </div>
+      </div>
+      <div class="sd1-card-wrapper">
+        <div class="sd1-bg-div" style="background-image: linear-gradient(rgba(16,48,75,0.8), rgba(4,145,226,0.8)), url('https://via.placeholder.com/240x300?text=1');"></div>
+        <div class="sd1-content-div">
+          <div class="sd1-top-div" style="background-image: url('slider2.jpg');">
+            <div class="sd1-timer-div">
+              <div><div>00</div><small>D'S</small></div>
+              <div><div>00</div><small>H'S</small></div>
+              <div><div>00</div><small>MIN'S</small></div>
+              <div><div>00</div><small>SEC</small></div>
+            </div>
+          </div>
+          <div class="sd1-bottom-div">
+            <div class="sd1-avatars">
+              <img src="client-13.f44400b4.png" alt="avatar"style="transform: translateX(13px);">
+              <img src="client-14.da3d02f0.png" alt="avatar">
+              <img src="client-15.53c8fa7f.png" alt="avatar"style="transform: translateX(-13px);">
+              <span>20+ Place Bit.</span>
+            </div>
+            <p style="font-size: larger; font-weight: 600;">Matal8</p>
+            <p style="color: #ccc;">Highest bid 1/20</p>
+            <p class="sd1-eth">0.244wETH</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more cards similarly -->
+
+    </div>
+  </div>
+
+  <script>
+    let sd1Offset = 0;
+    const sd1CardWidth = 280; 
+    const sd1Container = document.getElementById('sd1-cardContainer');
+
+    function sd1Slide(dir) {
+      const wrapperWidth = document.querySelector('.sd1-slider-wrapper').offsetWidth;
+      const maxScroll = (sd1Container.children.length * sd1CardWidth) - wrapperWidth;
+      sd1Offset += dir * sd1CardWidth;
+      if (sd1Offset < 0) sd1Offset = 0;
+      if (sd1Offset > maxScroll) sd1Offset = maxScroll;
+      sd1Container.style.transform = `translateX(-${sd1Offset}px)`;
+    }
+  </script>
+
 
   
 </body>
