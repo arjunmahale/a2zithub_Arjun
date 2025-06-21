@@ -568,3 +568,113 @@
 
 
 
+/* create and sell nft */
+
+
+    #cr7-h1 {
+      font-size: 40px;
+      margin-bottom: 50px;
+      margin-left: 5%;
+      text-align: left;
+    }
+
+.cr7-container {
+  display: flex;
+  flex-wrap: wrap; /* allow wrapping on all screen sizes */
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  overflow-x: hidden; /* prevent horizontal scroll */
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.cr7-card {
+  position: relative;
+  background: #191925;
+  padding: 30px;
+  border-radius: 20px;
+  width: 250px;
+  max-width: 90vw; /* card won't exceed 90% of viewport width */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 1;
+  box-sizing: border-box;
+}
+
+    .cr7-card-wrapper {
+      padding-top: 30px; /* space at the top for upward slide */
+    }
+
+   
+    .cr7-card:hover {
+      transform: translateY(-20px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .cr7-card-step {
+      font-size: medium;
+      color: #aaa;
+      margin-bottom: 55px;
+    }
+
+    .cr7-card-title {
+      font-size: 25px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      transition: color 0.3s ease;
+    }
+
+    .cr7-card-desc {
+      font-size: 17px;
+      color: #ccc;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    .cr7-arrow {
+      font-size: 32px;
+      color: #666;
+      transition: color 0.3s ease;
+      font-weight: 700;
+    }
+
+    .cr7-card:hover .cr7-card-title,
+    .cr7-card:hover .cr7-arrow {
+      color: #00bfff;
+    }
+
+.cr7-image {
+  position: absolute;
+  top: 10px;  /* move inside card */
+  right: 10px;  /* move inside card */
+  width: 50px;  /* smaller for mobile-friendly look */
+  height: 50px;
+}
+
+@media (max-width: 768px) {
+  .cr7-image {
+    width: 40px;
+    height: 40px;
+    top: 8px;
+    right: 8px;
+  }
+}
+
+
+    @media (max-width: 1024px) {
+      .cr7-container {
+        flex-wrap: wrap;
+      }
+
+      .cr7-card {
+        width: 100%;
+        min-width: unset;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+    }
+

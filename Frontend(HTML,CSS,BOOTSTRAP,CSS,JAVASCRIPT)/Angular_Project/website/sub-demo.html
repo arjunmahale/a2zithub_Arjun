@@ -13,39 +13,43 @@
       padding: 40px;
     }
 
-    h1 {
+    #cr7-h1 {
       font-size: 40px;
       margin-bottom: 50px;
       margin-left: 5%;
       text-align: left;
     }
 
-    .cr7-container {
-      display: flex;
-      flex-wrap: nowrap;
-      gap: 30px;
-      justify-content: center;
-      align-items: flex-start;
-      overflow-x: auto;
-      padding-bottom: 50px; /* space at the bottom for hover movement */
-      padding-top: 50px; /* space at the bottom for hover movement */
-    }
+.cr7-container {
+  display: flex;
+  flex-wrap: wrap; /* allow wrapping on all screen sizes */
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  overflow-x: hidden; /* prevent horizontal scroll */
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.cr7-card {
+  position: relative;
+  background: #191925;
+  padding: 30px;
+  border-radius: 20px;
+  width: 250px;
+  max-width: 90vw; /* card won't exceed 90% of viewport width */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 1;
+  box-sizing: border-box;
+}
 
     .cr7-card-wrapper {
       padding-top: 30px; /* space at the top for upward slide */
     }
 
-    .cr7-card {
-      position: relative;
-      background: #191925;
-      padding: 30px;
-      border-radius: 20px;
-      width: 250px;
-      min-width: 250px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      flex-shrink: 0;
-    }
-
+   
     .cr7-card:hover {
       transform: translateY(-20px);
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
@@ -75,6 +79,7 @@
       font-size: 32px;
       color: #666;
       transition: color 0.3s ease;
+      font-weight: 700;
     }
 
     .cr7-card:hover .cr7-card-title,
@@ -82,13 +87,23 @@
       color: #00bfff;
     }
 
-    .cr7-image {
-      position: absolute;
-      top: -20px;
-      right: -20px;
-      width: 70px;
-      height: 70px;
-    }
+.cr7-image {
+  position: absolute;
+  top: 10px;  /* move inside card */
+  right: 10px;  /* move inside card */
+  width: 50px;  /* smaller for mobile-friendly look */
+  height: 50px;
+}
+
+@media (max-width: 768px) {
+  .cr7-image {
+    width: 40px;
+    height: 40px;
+    top: 8px;
+    right: 8px;
+  }
+}
+
 
     @media (max-width: 1024px) {
       .cr7-container {
@@ -108,7 +123,7 @@
 </head>
 <body>
 
-  <h1>Create and sell your NFTs</h1>
+  <h1 id="cr7-h1">Create and sell your NFTs</h1>
   <div class="cr7-container">
     <div class="cr7-card-wrapper">
       <div class="cr7-card">
@@ -140,7 +155,7 @@
         <div class="cr7-card-step">STEP-03</div>
         <div class="cr7-card-title">Add your NFT's</div>
         <div class="cr7-card-desc">
-          We've made the template fully responsive, so it looks great on all devices: desktop, tablets and.
+          We've made the template fully responsive, so it looks great on all devices: desktop, tablets and. Lorem ipsum, .
         </div>
         <div class="cr7-arrow">→</div>
       </div>
@@ -152,7 +167,7 @@
         <div class="cr7-card-step">STEP-04</div>
         <div class="cr7-card-title">Sell Your NFT's</div>
         <div class="cr7-card-desc">
-          I throw myself down among the tall grass by the stream as I lie close to the earth NFT's.
+          I throw myself down among the tall grass by the stream as I lie close to the earth NFT's. Lorem, ipsum dolor. Lorem ipsum dolor sit.
         </div>
         <div class="cr7-arrow">→</div>
       </div>
