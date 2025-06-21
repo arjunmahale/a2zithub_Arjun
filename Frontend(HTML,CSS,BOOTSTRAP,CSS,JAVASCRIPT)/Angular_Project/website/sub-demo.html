@@ -2,379 +2,162 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Live Bidding Slider</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create and Sell Your NFTs</title>
   <style>
     body {
-  background: #131722;
-  font-family: sans-serif;
-  margin: 0;
-  padding: 40px;
-  color: white;
-}
+      background: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+    }
 
-.sd1-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1000px;
-  margin: 0 auto 20px;
-}
+    h1 {
+      font-size: 40px;
+      margin-bottom: 50px;
+      margin-left: 5%;
+      text-align: left;
+    }
 
-.sd1-header-left {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+    .cr7-container {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 30px;
+      justify-content: center;
+      align-items: flex-start;
+      overflow-x: auto;
+      padding-bottom: 50px; /* space at the bottom for hover movement */
+      padding-top: 50px; /* space at the bottom for hover movement */
+    }
 
-.sd1-circle {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #2196f3;
-  animation: sd1-pulse 1.5s infinite;
-}
+    .cr7-card-wrapper {
+      padding-top: 30px; /* space at the top for upward slide */
+    }
 
-@keyframes sd1-pulse {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.5); opacity: 0.6; }
-  100% { transform: scale(1); opacity: 1; }
-}
+    .cr7-card {
+      position: relative;
+      background: #191925;
+      padding: 30px;
+      border-radius: 20px;
+      width: 250px;
+      min-width: 250px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      flex-shrink: 0;
+    }
 
-.sd1-slider-buttons button {
-  background: #222;
-  color: white;
-  border: none;
-  padding: 6px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 18px;
-}
+    .cr7-card:hover {
+      transform: translateY(-20px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
 
-.sd1-slider-wrapper {
-  overflow: hidden; /* key change */
-  max-width: 1000px;
-  margin: 0 auto;
-}
+    .cr7-card-step {
+      font-size: medium;
+      color: #aaa;
+      margin-bottom: 55px;
+    }
 
-.sd1-card-container {
-  display: flex;
-  gap: 40px;
-  transition: transform 0.5s ease;
-  padding: 20px 0;
-}
+    .cr7-card-title {
+      font-size: 25px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      transition: color 0.3s ease;
+    }
 
-.sd1-card-wrapper {
-  position: relative;
-  min-width: 240px;
-  height: 330px;
-  border-radius: 12px;
-}
+    .cr7-card-desc {
+      font-size: 17px;
+      color: #ccc;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
 
-.sd1-bg-div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to left, #131722, rgba(4,145,226));
-  background-size: cover;
-  background-position: center;
-  border-radius: 12px;
-  z-index: 1;
-  transition: transform 0.4s ease, background-size 0.4s ease;
-}
+    .cr7-arrow {
+      font-size: 32px;
+      color: #666;
+      transition: color 0.3s ease;
+    }
 
-.sd1-card-wrapper:hover .sd1-bg-div {
-  transform: translateY(10px) translateX(-5px) rotate(2deg);
-  background-size: 110%;
-}
+    .cr7-card:hover .cr7-card-title,
+    .cr7-card:hover .cr7-arrow {
+      color: #00bfff;
+    }
 
-.sd1-content-div {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  overflow: hidden;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-}
+    .cr7-image {
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      width: 70px;
+      height: 70px;
+    }
 
-.sd1-top-div {
-  flex: 7;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  padding-bottom: 6px;
-}
+    @media (max-width: 1024px) {
+      .cr7-container {
+        flex-wrap: wrap;
+      }
 
-.sd1-bottom-div {
-  flex: 3;
-  background: #131722;
-  padding: 8px;
-  box-sizing: border-box;
-}
+      .cr7-card {
+        width: 100%;
+        min-width: unset;
+      }
 
-.sd1-timer-div {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 0 6px;
-  font-size: 12px;
-}
-
-.sd1-timer-div > div {
-  text-align: center;
-  flex: 1;
-}
-
-.sd1-avatars {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  margin-bottom: 4px;
-}
-
-.sd1-avatars img {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 1px solid #fff;
-}
-
-.sd1-avatars span {
-  font-size: 12px;
-  color: #bbb;
-}
-
-.sd1-eth {
-  color: #03a9f4;
-  font-weight: bold;
-}
-
+      h1 {
+        font-size: 36px;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Live Bidding Slider SD1</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-  <div class="sd1-header">
-    <div class="sd1-header-left">
-      <span class="sd1-circle"></span>
-      <h2>Live Bidding</h2>
+  <h1>Create and sell your NFTs</h1>
+  <div class="cr7-container">
+    <div class="cr7-card-wrapper">
+      <div class="cr7-card">
+        <img src="sell1.png" alt="icon" class="cr7-image" />
+        <div class="cr7-card-step">STEP-01</div>
+        <div class="cr7-card-title">Set up your wallet</div>
+        <div class="cr7-card-desc">
+          Powerful features and inclusions, which makes Nuron standout, easily customizable and scalable.
+        </div>
+        <div class="cr7-arrow">→</div>
+      </div>
     </div>
-    <div class="sd1-slider-buttons">
-      <button onclick="sd1Slide(-1)">&#8249;</button>
-      <button onclick="sd1Slide(1)">&#8250;</button>
+
+    <div class="cr7-card-wrapper">
+      <div class="cr7-card">
+        <img src="sell2.png" alt="icon" class="cr7-image" />
+        <div class="cr7-card-step">STEP-02</div>
+        <div class="cr7-card-title">Create your NFT's</div>
+        <div class="cr7-card-desc">
+          A great collection of beautiful website templates for your need. Choose the best suitable template.
+        </div>
+        <div class="cr7-arrow">→</div>
+      </div>
     </div>
-  </div>
 
-  <div class="sd1-slider-wrapper">
-    <div class="sd1-card-container" id="sd1-cardContainer" style="padding-left: 5%;">
-      
-      <!-- Example Card -->
-      <div class="sd1-card-wrapper">
-        <div class="sd1-bg-div" style="background-image: linear-gradient(rgba(16,48,75,0.8), rgba(4,145,226,0.8)), url('https://via.placeholder.com/240x300?text=1');"></div>
-        <div class="sd1-content-div">
-          <div class="sd1-top-div" style="background-image: url('slider1.jpg');">
-            <div class="sd1-timer-div">
-              <div><div>00</div><small>D'S</small></div>
-              <div><div>00</div><small>H'S</small></div>
-              <div><div>00</div><small>MIN'S</small></div>
-              <div><div>00</div><small>SEC</small></div>
-            </div>
-          </div>
-          <div class="sd1-bottom-div">
-            <div class="sd1-avatars">
-              <img src="https://via.placeholder.com/20" alt="avatar">
-              <img src="https://via.placeholder.com/20" alt="avatar">
-              <img src="https://via.placeholder.com/20" alt="avatar">
-              <span>20+ Place Bit.</span>
-            </div>
-            <p>Preatent</p>
-            <p>Highest bid 1/20</p>
-            <p class="sd1-eth">0.244wETH</p>
-          </div>
+    <div class="cr7-card-wrapper">
+      <div class="cr7-card">
+        <img src="sell3.png" alt="icon" class="cr7-image" />
+        <div class="cr7-card-step">STEP-03</div>
+        <div class="cr7-card-title">Add your NFT's</div>
+        <div class="cr7-card-desc">
+          We've made the template fully responsive, so it looks great on all devices: desktop, tablets and.
         </div>
+        <div class="cr7-arrow">→</div>
       </div>
-      <div class="sd1-card-wrapper">
-        <div class="sd1-bg-div" style="background-image: linear-gradient(rgba(16,48,75,0.8), rgba(4,145,226,0.8)), url('https://via.placeholder.com/240x300?text=1');"></div>
-        <div class="sd1-content-div">
-          <div class="sd1-top-div" style="background-image: url('slider1.jpg');">
-            <div class="sd1-timer-div">
-              <div><div>00</div><small>D'S</small></div>
-              <div><div>00</div><small>H'S</small></div>
-              <div><div>00</div><small>MIN'S</small></div>
-              <div><div>00</div><small>SEC</small></div>
-            </div>
-          </div>
-          <div class="sd1-bottom-div">
-            <div class="sd1-avatars">
-              <img src="https://via.placeholder.com/20" alt="avatar">
-              <img src="https://via.placeholder.com/20" alt="avatar">
-              <img src="https://via.placeholder.com/20" alt="avatar">
-              <span>20+ Place Bit.</span>
-            </div>
-            <p>Preatent</p>
-            <p>Highest bid 1/20</p>
-            <p class="sd1-eth">0.244wETH</p>
-          </div>
-        </div>
-      </div>
-      <div class="sd1-card-wrapper">
-        <div class="sd1-bg-div" style="background-image: linear-gradient(rgba(16,48,75,0.8), rgba(4,145,226,0.8)), url('https://via.placeholder.com/240x300?text=1');"></div>
-        <div class="sd1-content-div">
-          <div class="sd1-top-div" style="background-image: url('slider1.jpg');">
-            <div class="sd1-timer-div">
-              <div><div>00</div><small>D'S</small></div>
-              <div><div>00</div><small>H'S</small></div>
-              <div><div>00</div><small>MIN'S</small></div>
-              <div><div>00</div><small>SEC</small></div>
-            </div>
-          </div>
-          <div class="sd1-bottom-div">
-            <div class="sd1-avatars">
-              <img src="https://via.placeholder.com/20" alt="avatar">
-              <img src="https://via.placeholder.com/20" alt="avatar">
-              <img src="https://via.placeholder.com/20" alt="avatar">
-              <span>20+ Place Bit.</span>
-            </div>
-            <p>Preatent</p>
-            <p>Highest bid 1/20</p>
-            <p class="sd1-eth">0.244wETH</p>
-          </div>
-        </div>
-      </div>
-      <div class="sd1-card-wrapper">
-        <div class="sd1-bg-div" style="background-image: linear-gradient(rgba(16,48,75,0.8), rgba(4,145,226,0.8)), url('https://via.placeholder.com/240x300?text=1');"></div>
-        <div class="sd1-content-div">
-          <div class="sd1-top-div" style="background-image: url('slider1.jpg');">
-            <div class="sd1-timer-div">
-              <div><div>00</div><small>D'S</small></div>
-              <div><div>00</div><small>H'S</small></div>
-              <div><div>00</div><small>MIN'S</small></div>
-              <div><div>00</div><small>SEC</small></div>
-            </div>
-          </div>
-          <div class="sd1-bottom-div">
-            <div class="sd1-avatars">
-              <img src="https://via.placeholder.com/20" alt="avatar">
-              <img src="https://via.placeholder.com/20" alt="avatar">
-              <img src="https://via.placeholder.com/20" alt="avatar">
-              <span>20+ Place Bit.</span>
-            </div>
-            <p>Preatent</p>
-            <p>Highest bid 1/20</p>
-            <p class="sd1-eth">0.244wETH</p>
-          </div>
-        </div>
-      </div>
-      <div class="sd1-card-wrapper">
-        <div class="sd1-bg-div" style="background-image: linear-gradient(rgba(16,48,75,0.8), rgba(4,145,226,0.8)), url('https://via.placeholder.com/240x300?text=1');"></div>
-        <div class="sd1-content-div">
-          <div class="sd1-top-div" style="background-image: url('slider1.jpg');">
-            <div class="sd1-timer-div">
-              <div><div>00</div><small>D'S</small></div>
-              <div><div>00</div><small>H'S</small></div>
-              <div><div>00</div><small>MIN'S</small></div>
-              <div><div>00</div><small>SEC</small></div>
-            </div>
-          </div>
-          <div class="sd1-bottom-div">
-            <div class="sd1-avatars">
-              <img src="https://via.placeholder.com/20" alt="avatar">
-              <img src="https://via.placeholder.com/20" alt="avatar">
-              <img src="https://via.placeholder.com/20" alt="avatar">
-              <span>20+ Place Bit.</span>
-            </div>
-            <p>Preatent</p>
-            <p>Highest bid 1/20</p>
-            <p class="sd1-eth">0.244wETH</p>
-          </div>
-        </div>
-      </div>
-      <div class="sd1-card-wrapper">
-        <div class="sd1-bg-div" style="background-image: linear-gradient(rgba(16,48,75,0.8), rgba(4,145,226,0.8)), url('https://via.placeholder.com/240x300?text=1');"></div>
-        <div class="sd1-content-div">
-          <div class="sd1-top-div" style="background-image: url('slider1.jpg');">
-            <div class="sd1-timer-div">
-              <div><div>00</div><small>D'S</small></div>
-              <div><div>00</div><small>H'S</small></div>
-              <div><div>00</div><small>MIN'S</small></div>
-              <div><div>00</div><small>SEC</small></div>
-            </div>
-          </div>
-          <div class="sd1-bottom-div">
-            <div class="sd1-avatars">
-              <img src="https://via.placeholder.com/20" alt="avatar">
-              <img src="https://via.placeholder.com/20" alt="avatar">
-              <img src="https://via.placeholder.com/20" alt="avatar">
-              <span>20+ Place Bit.</span>
-            </div>
-            <p>Preatent</p>
-            <p>Highest bid 1/20</p>
-            <p class="sd1-eth">0.244wETH</p>
-          </div>
-        </div>
-      </div>
-      <div class="sd1-card-wrapper">
-        <div class="sd1-bg-div" style="background-image: linear-gradient(rgba(16,48,75,0.8), rgba(4,145,226,0.8)), url('https://via.placeholder.com/240x300?text=1');"></div>
-        <div class="sd1-content-div">
-          <div class="sd1-top-div" style="background-image: url('slider1.jpg');">
-            <div class="sd1-timer-div">
-              <div><div>00</div><small>D'S</small></div>
-              <div><div>00</div><small>H'S</small></div>
-              <div><div>00</div><small>MIN'S</small></div>
-              <div><div>00</div><small>SEC</small></div>
-            </div>
-          </div>
-          <div class="sd1-bottom-div">
-            <div class="sd1-avatars">
-              <img src="https://via.placeholder.com/20" alt="avatar">
-              <img src="https://via.placeholder.com/20" alt="avatar">
-              <img src="https://via.placeholder.com/20" alt="avatar">
-              <span>20+ Place Bit.</span>
-            </div>
-            <p>Preatent</p>
-            <p>Highest bid 1/20</p>
-            <p class="sd1-eth">0.244wETH</p>
-          </div>
-        </div>
-      </div>
+    </div>
 
-      <!-- Add more cards similarly -->
-
+    <div class="cr7-card-wrapper">
+      <div class="cr7-card">
+        <img src="sell4.png" alt="icon" class="cr7-image" />
+        <div class="cr7-card-step">STEP-04</div>
+        <div class="cr7-card-title">Sell Your NFT's</div>
+        <div class="cr7-card-desc">
+          I throw myself down among the tall grass by the stream as I lie close to the earth NFT's.
+        </div>
+        <div class="cr7-arrow">→</div>
+      </div>
     </div>
   </div>
-
-  <script>
-    let sd1Offset = 0;
-    const sd1CardWidth = 280; 
-    const sd1Container = document.getElementById('sd1-cardContainer');
-
-    function sd1Slide(dir) {
-      const wrapperWidth = document.querySelector('.sd1-slider-wrapper').offsetWidth;
-      const maxScroll = (sd1Container.children.length * sd1CardWidth) - wrapperWidth;
-      sd1Offset += dir * sd1CardWidth;
-      if (sd1Offset < 0) sd1Offset = 0;
-      if (sd1Offset > maxScroll) sd1Offset = maxScroll;
-      sd1Container.style.transform = `translateX(-${sd1Offset}px)`;
-    }
-  </script>
-
-</body>
-</html>
 
 </body>
 </html>
