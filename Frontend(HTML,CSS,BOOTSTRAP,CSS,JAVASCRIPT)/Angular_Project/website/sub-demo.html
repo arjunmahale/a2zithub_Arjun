@@ -3,174 +3,226 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Create and Sell Your NFTs</title>
+  <title>Live Bidding</title>
   <style>
     body {
       background: #111;
       color: #fff;
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 40px;
+      padding: 40px 0;
     }
 
-    #cr7-h1 {
-      font-size: 40px;
-      margin-bottom: 50px;
-      margin-left: 5%;
-      text-align: left;
+    .sd1-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 90%;
+      margin: 0 auto 20px;
+      padding: 0 5%;
     }
 
-.cr7-container {
-  display: flex;
-  flex-wrap: wrap; /* allow wrapping on all screen sizes */
-  gap: 30px;
-  justify-content: center;
-  align-items: flex-start;
-  padding-bottom: 50px;
-  padding-top: 50px;
-  overflow-x: hidden; /* prevent horizontal scroll */
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-.cr7-card {
-  position: relative;
-  background: #191925;
-  padding: 30px;
-  border-radius: 20px;
-  width: 250px;
-  max-width: 90vw; /* card won't exceed 90% of viewport width */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  flex-shrink: 1;
-  box-sizing: border-box;
-}
-
-    .cr7-card-wrapper {
-      padding-top: 30px; /* space at the top for upward slide */
+    .sd1-header-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
-   
-    .cr7-card:hover {
-      transform: translateY(-20px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    .sd1-circle {
+      position: relative;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: transparent;
+      overflow: visible;
     }
 
-    .cr7-card-step {
-      font-size: medium;
-      color: #aaa;
-      margin-bottom: 55px;
+    .sd1-circle::before,
+    .sd1-circle::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 3px solid rgba(4,145,226);
+      background: transparent;
+      transform: translate(-50%, -50%);
+      animation: sd1-ripple 1.2s linear infinite;
     }
 
-    .cr7-card-title {
-      font-size: 25px;
+    .sd1-circle::after {
+      animation-delay: 0.75s;
+    }
+
+    @keyframes sd1-ripple {
+      0% {
+        width: 10px;
+        height: 10px;
+        opacity: 0.8;
+      }
+      100% {
+        width: 30px;
+        height: 30px;
+        opacity: 0;
+      }
+    }
+
+    .sd1-slider-wrapper {
+      max-width: 90%;
+      margin: 0 auto;
+    }
+
+    .sd1-card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 40px;
+      padding: 20px 5%;
+    }
+
+    .sd1-card-wrapper {
+      position: relative;
+      height: 330px;
+      border-radius: 12px;
+    }
+
+    .sd1-bg-div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to left, #131722, rgba(4,145,226));
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+      z-index: 1;
+      transition: transform 0.4s ease, background-size 0.4s ease;
+    }
+
+    .sd1-card-wrapper:hover .sd1-bg-div {
+      transform: translateY(10px) translateX(-5px) rotate(2deg);
+      background-size: 110%;
+    }
+
+    .sd1-content-div {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sd1-top-div {
+      flex: 7;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      padding-bottom: 6px;
+    }
+
+    .sd1-bottom-div {
+      flex: 3;
+      background: #131722;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    .sd1-timer-div {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      font-size: 12px;
+    }
+
+    .sd1-timer-div > div {
+      text-align: center;
+      flex: 1;
+    }
+
+    .sd1-avatars {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin: 10px 0;
+    }
+
+    .sd1-avatars img {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      border: 1px solid #fff;
+    }
+
+    .sd1-avatars span {
+      font-size: small;
+      color: #bbb;
+    }
+
+    .sd1-eth {
+      color: #03a9f4;
+      font-size: small;
       font-weight: bold;
-      margin-bottom: 15px;
-      transition: color 0.3s ease;
-    }
-
-    .cr7-card-desc {
-      font-size: 17px;
-      color: #ccc;
-      margin-bottom: 20px;
-      margin-top: 20px;
-    }
-
-    .cr7-arrow {
-      font-size: 32px;
-      color: #666;
-      transition: color 0.3s ease;
-      font-weight: 700;
-    }
-
-    .cr7-card:hover .cr7-card-title,
-    .cr7-card:hover .cr7-arrow {
-      color: #00bfff;
-    }
-
-.cr7-image {
-  position: absolute;
-  top: 10px;  /* move inside card */
-  right: 10px;  /* move inside card */
-  width: 50px;  /* smaller for mobile-friendly look */
-  height: 50px;
-}
-
-@media (max-width: 768px) {
-  .cr7-image {
-    width: 40px;
-    height: 40px;
-    top: 8px;
-    right: 8px;
-  }
-}
-
-
-    @media (max-width: 1024px) {
-      .cr7-container {
-        flex-wrap: wrap;
-      }
-
-      .cr7-card {
-        width: 100%;
-        min-width: unset;
-      }
-
-      h1 {
-        font-size: 36px;
-      }
     }
   </style>
 </head>
 <body>
 
-  <h1 id="cr7-h1">Create and sell your NFTs</h1>
-  <div class="cr7-container">
-    <div class="cr7-card-wrapper">
-      <div class="cr7-card">
-        <img src="sell1.png" alt="icon" class="cr7-image" />
-        <div class="cr7-card-step">STEP-01</div>
-        <div class="cr7-card-title">Set up your wallet</div>
-        <div class="cr7-card-desc">
-          Powerful features and inclusions, which makes Nuron standout, easily customizable and scalable.
-        </div>
-        <div class="cr7-arrow">→</div>
-      </div>
+  <div class="sd1-header">
+    <div class="sd1-header-left">
+      <span class="sd1-circle"></span>
+      <h1>Live Bidding</h1>
     </div>
+  </div>
 
-    <div class="cr7-card-wrapper">
-      <div class="cr7-card">
-        <img src="sell2.png" alt="icon" class="cr7-image" />
-        <div class="cr7-card-step">STEP-02</div>
-        <div class="cr7-card-title">Create your NFT's</div>
-        <div class="cr7-card-desc">
-          A great collection of beautiful website templates for your need. Choose the best suitable template.
+  <div class="sd1-slider-wrapper">
+    <div class="sd1-card-container">
+      
+      <!-- Example Card 1 -->
+      <div class="sd1-card-wrapper">
+        <div class="sd1-bg-div" style="background-image: linear-gradient(rgba(16,48,75,0.8), rgba(4,145,226,0.8)), url('https://via.placeholder.com/240x300?text=1');"></div>
+        <div class="sd1-content-div">
+          <div class="sd1-top-div" style="background-image: url('slider1.jpg');">
+            <div class="sd1-timer-div">
+              <div><div>00</div><small>D'S</small></div>
+              <div><div>00</div><small>H'S</small></div>
+              <div><div>00</div><small>MIN'S</small></div>
+              <div><div>00</div><small>SEC</small></div>
+            </div>
+          </div>
+          <div class="sd1-bottom-div">
+            <div class="sd1-avatars">
+              <img src="client-1.64bd52dc.png" alt="avatar" style="transform: translateX(13px);">
+              <img src="client-10.916ce2a4.png" alt="avatar">
+              <img src="client-11.bfc29ff8.png" alt="avatar" style="transform: translateX(-13px);">
+              <span>20+ Place Bit.</span>
+            </div>
+            <p style="font-size: larger; font-weight: 600;">Preatent</p>
+            <p style="color: #ccc;">Highest bid 1/20</p>
+            <p class="sd1-eth">0.244wETH</p>
+          </div>
         </div>
-        <div class="cr7-arrow">→</div>
       </div>
-    </div>
 
-    <div class="cr7-card-wrapper">
-      <div class="cr7-card">
-        <img src="sell3.png" alt="icon" class="cr7-image" />
-        <div class="cr7-card-step">STEP-03</div>
-        <div class="cr7-card-title">Add your NFT's</div>
-        <div class="cr7-card-desc">
-          We've made the template fully responsive, so it looks great on all devices: desktop, tablets and. Lorem ipsum, .
-        </div>
-        <div class="cr7-arrow">→</div>
-      </div>
-    </div>
+      <!-- Example Card 2 -->
+      <!-- Repeat same structure with different content -->
+      
+      <!-- Example Card 3 -->
+      
+      <!-- Example Card 4 -->
+      
+      <!-- Example Card 5 -->
+      
+      <!-- Example Card 6 -->
 
-    <div class="cr7-card-wrapper">
-      <div class="cr7-card">
-        <img src="sell4.png" alt="icon" class="cr7-image" />
-        <div class="cr7-card-step">STEP-04</div>
-        <div class="cr7-card-title">Sell Your NFT's</div>
-        <div class="cr7-card-desc">
-          I throw myself down among the tall grass by the stream as I lie close to the earth NFT's. Lorem, ipsum dolor. Lorem ipsum dolor sit.
-        </div>
-        <div class="cr7-arrow">→</div>
-      </div>
+      <!-- Add other cards as needed (you already have their code; just insert similarly) -->
+
     </div>
   </div>
 
