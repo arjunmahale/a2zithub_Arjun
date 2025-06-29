@@ -1,151 +1,489 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Live Bidding Slider</title>
-  <style>
-    body {
-      background: #131722;
-      color: #fff;
-      font-family: sans-serif;
-      margin: 0;
-      padding: 40px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+
+/* live bidding div started */
+/* slider div started */
+
+
+.sd1-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 80%;
+ 
+  margin: 0 auto 20px;
+}
+
+.sd1-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sd1-circle {
+  position: relative;
+  width: 10px;
+
+  height: 10px;
+  border-radius: 50%;
+  background: transparent;
+  overflow: visible;
+}
+
+.sd1-circle::before,
+.sd1-circle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 3px solid rgba(4,145,226);
+  background: transparent;
+  transform: translate(-50%, -50%);
+  animation: sd1-ripple 1.2s linear infinite;
+}
+
+.sd1-circle::after {
+  animation-delay: 0.75s; /* Staggered start for continuous ripple */
+}
+
+@keyframes sd1-ripple {
+  0% {
+    width: 10px;
+    height: 10px;
+    opacity: 0.8;
+  }
+  100% {
+    width: 30px;  /* Final ripple size */
+    height: 30px;
+    opacity: 0;
+  }
+}
+
+
+.sd1-slider-buttons button {
+  background: #222;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.sd1-slider-buttons button:hover{
+      background: rgba(4,145,226);
+  color: #222;
+}
+
+.sd1-slider-wrapper {
+  overflow: hidden; /* key change */
+  max-width: 90%;
+  margin: 5% auto;
+}
+
+.sd1-card-container {
+  display: flex;
+  gap: 40px;
+  transition: transform 0.5s ease;
+  padding: 20px 0;
+  width: max-content;
+}
+
+.sd1-card-wrapper {
+  position: relative;
+  min-width: 240px;
+  height: 330px;
+  border-radius: 12px;
+}
+
+.sd1-bg-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, #131722, rgba(4,145,226));
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  z-index: 1;
+  transition: transform 0.4s ease, background-size 0.4s ease;
+}
+
+.sd1-card-wrapper:hover .sd1-bg-div {
+  transform: translateY(10px) translateX(-5px) rotate(2deg);
+  background-size: 110%;
+}
+
+.sd1-content-div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.sd1-top-div {
+  flex: 7;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 6px;
+  height: 300px; /* Ensure there's visible space */
+  transition: background-size 0.3s ease-in-out; /* Smooth and elegant */
+}
+
+.sd1-top-div:hover {
+  background-size: 110%;
+}
+
+
+.sd1-bottom-div {
+  flex: 3;
+  background: #131722;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.sd1-bottom-div p {
+
+  padding: 8px;
+ 
+}
+
+.sd1-timer-div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8 6px;
+  font-size: 12px;
+}
+
+.sd1-timer-div > div {
+  text-align: center;
+  flex: 1;
+}
+
+.sd1-avatars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.sd1-avatars img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+
+.sd1-avatars span {
+  font-size: small;
+  color: #bbb;
+}
+
+.sd1-eth {
+  color: #03a9f4;
+  font-size: small;
+  font-weight: bold;
+}
+
+
+
+/* create and sell nft */
+
+
+    #cr7-h1 {
+      font-size: 40px;
+      margin-bottom: 50px;
+      margin-left: 5%;
+      text-align: left;
     }
 
-    .live-bidding-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      max-width: 1000px;
-      margin-bottom: 20px;
+.cr7-container {
+  display: flex;
+  flex-wrap: wrap; /* allow wrapping on all screen sizes */
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  overflow-x: hidden; /* prevent horizontal scroll */
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.cr7-card {
+  position: relative;
+  background: #191925;
+  padding: 30px;
+  border-radius: 20px;
+  width: 250px;
+  max-width: 90vw; /* card won't exceed 90% of viewport width */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 1;
+  box-sizing: border-box;
+}
+
+    .cr7-card-wrapper {
+      padding-top: 30px; /* space at the top for upward slide */
     }
 
-    .live-bidding-title {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+   
+    .cr7-card:hover {
+      transform: translateY(-20px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
     }
 
-    .circle {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #2196f3;
-      animation: pulse 1.5s infinite;
+    .cr7-card-step {
+      font-size: medium;
+      color: #aaa;
+      margin-bottom: 55px;
     }
 
-    @keyframes pulse {
-      0% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.5); opacity: 0.6; }
-      100% { transform: scale(1); opacity: 1; }
-    }
-
-    .slider-buttons .slider-btn {
-      background: #222;
-      color: #fff;
-      border: none;
-      padding: 8px 12px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    .slider-wrapper {
-      overflow: hidden;
-      max-width: 1000px;
-      width: 100%;
-    }
-
-    .card-container {
-      display: flex;
-      gap: 20px;
-      transition: transform 0.5s ease;
-    }
-
-    .bid-card {
-      min-width: 240px;
-      height: 300px;
-      border-radius: 12px;
-      background-size: cover;
-      background-position: center;
-      overflow: hidden;
-      position: relative;
-      transition: transform 0.4s ease, box-shadow 0.4s ease, background-size 0.4s ease;
-    }
-
-    .bid-card:hover {
-      transform: translateY(-8px);
-      background-size: 110%; /* slight zoom effect */
-      box-shadow: 0 20px 40px rgba(0, 174, 255, 0.4);
-    }
-
-    .content {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      background: rgba(0,0,0,0.6);
-      padding: 10px;
-      box-sizing: border-box;
-    }
-
-    .timer {
-      text-align: center;
-      font-size: 14px;
-      margin-bottom: 5px;
-    }
-
-    .info p {
-      margin: 2px 0;
-    }
-
-    .eth {
-      color: #03a9f4;
+    .cr7-card-title {
+      font-size: 25px;
       font-weight: bold;
+      margin-bottom: 15px;
+      transition: color 0.3s ease;
     }
-  </style>
-</head>
-<body>
 
-  <div class="live-bidding-header">
-    <div class="live-bidding-title">
-      <span class="circle"></span>
-      <h2>Live Bidding</h2>
-    </div>
-    <div class="slider-buttons">
-      <button class="slider-btn" onclick="slide(-1)">&#8249;</button>
-      <button class="slider-btn" onclick="slide(1)">&#8250;</button>
-    </div>
-  </div>
-
-  <div class="slider-wrapper">
-    <div class="card-container" id="cardContainer">
-    
-
-      
-      
-    </div>
-  </div>
-
-  <script>
-    let offset = 0;
-    const cardWidth = 260;
-    const container = document.getElementById('cardContainer');
-
-    function slide(dir) {
-      const wrapperWidth = document.querySelector('.slider-wrapper').offsetWidth;
-      const maxScroll = (container.children.length * cardWidth) - wrapperWidth;
-
-      offset += dir * cardWidth;
-      if (offset < 0) offset = 0;
-      if (offset > maxScroll) offset = maxScroll;
-
-      container.style.transform = `translateX(-${offset}px)`;
+    .cr7-card-desc {
+      font-size: 17px;
+      color: #ccc;
+      margin-bottom: 20px;
+      margin-top: 20px;
     }
-  </script>
 
-</body>
-</html>
+    .cr7-arrow {
+      font-size: 32px;
+      color: #666;
+      transition: color 0.3s ease;
+      font-weight: 700;
+    }
+
+    .cr7-card:hover .cr7-card-title,
+    .cr7-card:hover .cr7-arrow {
+      color: #00bfff;
+    }
+
+.cr7-image {
+  position: absolute;
+  top: 10px;  /* move inside card */
+  right: 10px;  /* move inside card */
+  width: 50px;  /* smaller for mobile-friendly look */
+  height: 50px;
+}
+
+@media (max-width: 768px) {
+  .cr7-image {
+    width: 40px;
+    height: 40px;
+    top: 8px;
+    right: 8px;
+  }
+}
+
+
+    @media (max-width: 1024px) {
+      .cr7-container {
+        flex-wrap: wrap;
+      }
+
+      .cr7-card {
+        width: 100%;
+        min-width: unset;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+    }
+
+
+/* newest div started with code ne1 */
+
+
+     .ne1-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 15px;
+}
+
+.ne1-card-wrapper {
+  flex: 1 1 calc(20% - 20px); /* 5 cards per row */
+  max-width: calc(20% - 20px);
+  box-sizing: border-box;
+  margin: 1%;
+}
+
+.ne1-card {
+  background: #fff;
+  border-radius: 12px;
+
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  height: 100%;
+}
+
+/* Medium screens (tablet) — 3 cards per row */
+@media (max-width: 1199.98px) {
+  .ne1-card-wrapper {
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+  }
+}
+
+/* Small screens (mobile) — 1 card per row */
+@media (max-width: 767.98px) {
+  .ne1-card-wrapper {
+    flex: 1 1 100%;
+    max-width: 80%;
+  }
+}
+
+
+ /* top seller div started */
+
+.ts-container {
+  padding: 20px;
+  background-color: #121212;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.ts-heading {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.ts-heading h2 {
+  font-size: 24px;
+}
+
+.ts-day-selector {
+  color: #00aaff;
+  cursor: pointer;
+  position: relative;
+}
+
+.ts-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 180px;
+  background-color:#212E48;
+  border-radius: 6px;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  display: none; /* hidden by default */
+  width: 150px;
+  z-index: 1000;
+}
+
+.ts-dropdown.show {
+  display: block; /* visible when toggled */
+}
+
+
+.ts-dropdown li {
+  padding: 8px 15px;
+  cursor: pointer;
+  color: white;
+  font-size: x-large;
+  font-weight: 700;
+}
+
+.ts-dropdown li:hover {
+
+  color: #00aaff;
+}
+
+.ts-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; padding: 2% 3%;
+  justify-content: flex-start;
+}
+
+.ts-profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  padding: 12px 18px;
+  flex: 1 1 calc(20% - 20px);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  max-width: calc(20% - 20px);
+}
+
+.ts-profile:hover img {
+  transform: scale(1.2);
+}
+
+.ts-profile:hover .ts-rank {
+  transform: scale(0.8);
+}
+
+.ts-info {
+  display: flex;
+  align-items: center;
+}
+
+.ts-info img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.ts-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.ts-name {
+  font-weight: bold;
+  margin: 0;
+  font-size: larger;
+}
+
+.ts-price {
+  margin: 0;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.ts-rank {
+  font-size: 55px;
+  color: rgba(204, 204, 204, 0.2); /* #ccc with 70% opacity */
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.ts-profile.active {
+  background-color: #272727;
+}
+@media screen and (max-width: 768px) {
+  .ts-profile {
+    flex: 1 1 45%;
+    padding-left: 2%;
+    max-width: 45%;
+  }
+
+  .ts-dropdown {
+    left: 150px;
+  }
+}

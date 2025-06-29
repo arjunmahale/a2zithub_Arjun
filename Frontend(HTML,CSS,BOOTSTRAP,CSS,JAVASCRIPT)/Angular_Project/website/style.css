@@ -1,6 +1,7 @@
  * {
       margin: 0; padding: 0; box-sizing: border-box;
     }
+    
     body.dark-mode {
       background-color: #0d0d0d;
       color: #fff;
@@ -507,13 +508,21 @@
 
 .sd1-top-div {
   flex: 7;
-  background-size: cover;
+  background-size: 100%;
   background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   padding-bottom: 6px;
+  height: 300px; /* Ensure there's visible space */
+  transition: background-size 0.3s ease-in-out; /* Smooth and elegant */
 }
+
+.sd1-top-div:hover {
+  background-size: 110%;
+}
+
 
 .sd1-bottom-div {
   flex: 3;
@@ -678,3 +687,182 @@
       }
     }
 
+
+/* newest div started with code ne1 */
+
+
+     .ne1-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 15px;
+}
+
+.ne1-card-wrapper {
+  flex: 1 1 calc(20% - 20px); /* 5 cards per row */
+  max-width: calc(20% - 20px);
+  box-sizing: border-box;
+  margin: 1%;
+}
+
+.ne1-card {
+  background: #fff;
+  border-radius: 12px;
+
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  height: 100%;
+}
+
+/* Medium screens (tablet) — 3 cards per row */
+@media (max-width: 1199.98px) {
+  .ne1-card-wrapper {
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+  }
+}
+
+/* Small screens (mobile) — 1 card per row */
+@media (max-width: 767.98px) {
+  .ne1-card-wrapper {
+    flex: 1 1 100%;
+    max-width: 80%;
+  }
+}
+
+
+ /* top seller div started */
+
+.ts-container {
+  padding: 20px;
+  background-color: #121212;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.ts-heading {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.ts-heading h2 {
+  font-size: 24px;
+}
+
+.ts-day-selector {
+  color: #00aaff;
+  cursor: pointer;
+  position: relative;
+}
+
+.ts-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 180px;
+  background-color:#212E48;
+  border-radius: 6px;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  display: none; /* hidden by default */
+  width: 150px;
+  z-index: 1000;
+}
+
+.ts-dropdown.show {
+  display: block; /* visible when toggled */
+}
+
+
+.ts-dropdown li {
+  padding: 8px 15px;
+  cursor: pointer;
+  color: white;
+  font-size: x-large;
+  font-weight: 700;
+}
+
+.ts-dropdown li:hover {
+
+  color: #00aaff;
+}
+
+.ts-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; padding: 2% 3%;
+  justify-content: flex-start;
+}
+
+.ts-profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  padding: 12px 18px;
+  flex: 1 1 calc(20% - 20px);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  max-width: calc(20% - 20px);
+}
+
+.ts-profile:hover img {
+  transform: scale(1.2);
+}
+
+.ts-profile:hover .ts-rank {
+  transform: scale(0.8);
+}
+
+.ts-info {
+  display: flex;
+  align-items: center;
+}
+
+.ts-info img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.ts-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.ts-name {
+  font-weight: bold;
+  margin: 0;
+  font-size: larger;
+}
+
+.ts-price {
+  margin: 0;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.ts-rank {
+  font-size: 55px;
+  color: rgba(204, 204, 204, 0.2); /* #ccc with 70% opacity */
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.ts-profile.active {
+  background-color: #272727;
+}
+@media screen and (max-width: 768px) {
+  .ts-profile {
+    flex: 1 1 100%;
+   
+    max-width: 100%;
+  }
+
+  .ts-dropdown {
+    left: 150px;
+  }
+}
