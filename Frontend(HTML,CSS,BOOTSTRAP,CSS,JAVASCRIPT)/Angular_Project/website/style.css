@@ -397,6 +397,12 @@
   gap: 10px;
 }
 
+@media (max-width: 768px){
+  .sd1-header-left h1{
+    font-size: larger;
+  }
+}
+
 .sd1-circle {
   position: relative;
   width: 10px;
@@ -869,144 +875,245 @@
 
 
 /* explore div .get-started */
-
-.exp-mydiv1{
-  width: 100%;padding-left: 5%;padding-right: 5%; background: #000;height:auto;
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.exp-mydiv2{
-  width: 20%;float: left; padding: 5%;height: max-content;padding: 1%;
+body {
+  overflow-x: hidden;
+  background-color: #0D0D0D;
+  color: white;
 }
 
-@media screen and (max-width: 768px) {
+/* Container Wrapper */
+.exp-mydiv1 {
+  width: 100%;
+  background: #0D0D0D;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 2% 10%;
+}
 
+/* Card Column */
+.exp-mydiv2 {
+  width: 20%;
+  height: max-content;
+}
+
+/* Responsive Mobile */
+@media screen and (max-width: 991.98px) {
+  .exp-mydiv2 {
+    width: 48%;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .exp-mydiv2 {
+    width: 95%;
+    padding-top: 5%;
+   padding-left: 5%;
+  }
+}
+
+
+/* Card Wrapper */
+.exp-card-wrapper {
+  position: relative;
+  min-width: 240px;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Background Layer */
+.exp-bg-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, #131722, rgba(4, 145, 226));
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  z-index: 1;
+  transition: transform 0.4s ease, background-size 0.4s ease;
+}
+
+.exp-card-wrapper:hover .exp-bg-div {
+  transform: translateY(10px) translateX(-5px) rotate(2deg);
+  background-size: 110%;
+}
+
+/* Card Content */
+.exp-content-div {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Div */
+.exp-top-div {
+  flex: 7;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 6px;
+  height: 350px;
+  transition: background-size 0.3s ease-in-out;
+}
+
+.exp-top-div:hover {
+  background-size: 110%;
+}
+
+/* Timer Div */
+.exp-timer-div {
+  display: flex;
+  min-height: 180px;
+  align-items: end;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px 6px;
+  font-size: 12px;
+}
+
+.exp-timer-div > div {
+  text-align: center;
+  flex: 1;
+}
+
+/* Bottom Div */
+.exp-bottom-div {
+  flex: 3;
+  background: #131722;
+  padding: 5px;
+  height: max-content;
+}
+
+.exp-bottom-div p {
+  padding: 8px;
+}
+
+/* Avatar Section */
+.exp-avatars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+.exp-avatars img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+
+.exp-avatars span {
+  font-size: small;
+  color: #bbb;
+}
+
+/* ETH Price */
+.exp-eth {
+  color: #03a9f4;
+  font-size: small;
+  font-weight: bold;
 }
 
 
 
-    .exp-card-wrapper {
-      position: relative;
-      min-width: 240px;
-      height: auto;
+/* top collection div .get-started */
+
+  .l22collection-wrapper {
+      background-color: #1f2233;
       border-radius: 12px;
+      width: 20%;
+      margin: 30px auto;
+      padding-bottom: 50px;
+      position: relative;
+      overflow: hidden;
     }
 
-    .exp-bg-div {
+    .l22main-img {
+      width: 100%;
+      height: min-content;
+      border-radius: 12px 12px 0 0;
+      display: block;
+    }
+
+    .l22bottom-section {
+      padding: 10px;
+      text-align: center;
+      height: auto;
+    }
+
+    .l22collection-name {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .l22sub-images {
+      display: flex;
+      gap: 8px;
+      margin-top: 5%;
+    }
+
+    .l22sub-images img {
+      width: 33%;
+      height: 62px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .l22avatar-wrapper {
       position: absolute;
-      top: 0;
-      left: 0;
+      left: 50%;
+      transform: translate(-50%, -70%);
+      width: 100px;
+      height: 100px;
+      z-index: 2;
+    }
+
+    .l22avatar-wrapper img {
       width: 100%;
       height: 100%;
-      background: linear-gradient(to left, #131722, rgba(4,145,226));
-      background-size: cover;
-      background-position: center;
-      border-radius: 12px;
-      z-index: 1;
-      transition: transform 0.4s ease, background-size 0.4s ease;
-    }
-
-    .exp-card-wrapper:hover .exp-bg-div {
-      transform: translateY(10px) translateX(-5px) rotate(2deg);
-      background-size: 110%;
-    }
-
-    .exp-content-div {
-      position: relative;
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      overflow: hidden;
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .exp-top-div {
-      flex: 7;
-      background-size: 100%;
-      background-position: center;
-      background-repeat: no-repeat;
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      padding-bottom: 6px;
-      height: 350px;
-      transition: background-size 0.3s ease-in-out;
-    }
-
-    .exp-top-div:hover {
-      background-size: 110%;
-    }
-
-    .exp-timer-div {
-      display: flex;
-      min-height: 180px;
-      align-items: end;
-      justify-content: space-between;
-      width: 100%;
-      padding: 8px 6px;
-      font-size: 12px;
-    }
-
-    .exp-timer-div > div {
-      text-align: center;
-      flex: 1;
-    }
-
-    .exp-bottom-div {
-      flex: 3;
-      background: #131722;
-      padding: 5px;
-      box-sizing: border-box;
-      height: max-content;
-    }
-
-    .exp-bottom-div p {
-      padding: 8px;
-    }
-
-    .exp-avatars {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      margin-bottom: 2px;
-      margin-top: 2px;
-    }
-
-    .exp-avatars img {
-      width: 25px;
-      height: 25px;
       border-radius: 50%;
-      border: 1px solid #fff;
+      border: 3px solid #1f2233;
+      object-fit: cover;
     }
 
-    .exp-avatars span {
-      font-size: small;
-      color: #bbb;
+    .l22items-tag {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      margin-top: 1%;
+      font-size: 12px;
+      padding: 2px 5px;
+      width: 100%;
+      border-radius: 6px;
+      z-index: 3;
     }
 
-    .exp-eth {
-      color: #03a9f4;
-      font-size: small;
-      font-weight: bold;
-    }
-
-    .exp-col-custom {
-      flex: 0 0 20%;
-      max-width: 20%;
-    }
-
-    @media (max-width: 991.98px) {
-      .exp-col-custom {
-        flex: 0 0 33.3333%;
-        max-width: 33.3333%;
+    @media screen and (max-width: 480px) {
+      .l22collection-wrapper {
+        width: 90%;
       }
     }
-
-    @media (max-width: 767.98px) {
-      .exp-col-custom {
-        flex: 0 0 100%;
-        max-width: 100%;
-      }
-    }
-

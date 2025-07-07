@@ -1,155 +1,193 @@
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Live Bidding Static Grid</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Top Collection Card</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
-    *{
-        color: white;
+    body {
+      background-color: #181A24;
+      color: #fff;
+      font-family: Arial, sans-serif;
     }
- .sd1-card-wrapper {
-  position: relative;
-  min-width: 240px;
-  height:auto;
-  border-radius: 12px;
-}
 
-.sd1-bg-div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to left, #131722, rgba(4,145,226));
-  background-size: cover;
-  background-position: center;
-  border-radius: 12px;
-  z-index: 1;
-  transition: transform 0.4s ease, background-size 0.4s ease;
-}
+    .l22collection-wrapper {
+      background-color: #1f2233;
+      border-radius: 12px;
+      width: 20%;
+      margin: 30px auto;
+      padding-bottom: 50px;
+      position: relative;
+      overflow: hidden;
+    }
 
-.sd1-card-wrapper:hover .sd1-bg-div {
-  transform: translateY(10px) translateX(-5px) rotate(2deg);
-  background-size: 110%;
-}
+    .l22main-img {
+      width: 100%;
+      height: min-content;
+      border-radius: 12px 12px 0 0;
+      display: block;
+    }
 
-.sd1-content-div {
-  position: relative;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  overflow: hidden;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-}
+    .l22bottom-section {
+      padding: 10px;
+      text-align: center;
+      height: auto;
+    }
 
-.sd1-top-div {
-  flex: 7;
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  padding-bottom: 6px;
-  height: 350px;
-  transition: background-size 0.3s ease-in-out;
-}
+    .l22collection-name {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
 
-.sd1-top-div:hover {
-  background-size: 110%;
-}
+    .l22sub-images {
+      display: flex;
+      gap: 8px;
+      margin-top: 5%;
+    }
 
-.sd1-timer-div {
-  display: flex;
- min-height: 180px;
- align-items: end;
-  justify-content: space-between;
-  width: 100%;
-  padding: 8 6px;
-  font-size: 12px;
-}
+    .l22sub-images img {
+      width: 33%;
+      height: 62px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
 
-.sd1-timer-div > div {
-  text-align: center;
-  flex: 1;
-}
+    .l22avatar-wrapper {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -70%);
+      width: 100px;
+      height: 100px;
+      z-index: 2;
+    }
 
-.sd1-bottom-div {
-  flex: 3;
-  background: #131722;
-  padding: 5px;
-  box-sizing: border-box;
-  height: max-content;
-}
+    .l22avatar-wrapper img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 3px solid #1f2233;
+      object-fit: cover;
+    }
 
-.sd1-bottom-div p {
-  padding: 2px;
-}
+    .l22items-tag {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      margin-top: 1%;
+      font-size: 12px;
+      padding: 2px 5px;
+      width: 100%;
+      border-radius: 6px;
+      z-index: 3;
+    }
 
-.sd1-avatars {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  margin-bottom: 2px;
-  margin-top: 2px;
-}
-
-.sd1-avatars img {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  border: 1px solid #fff;
-}
-
-.sd1-avatars span {
-  font-size: small;
-  color: #bbb;
-}
-
-.sd1-eth {
-  color: #03a9f4;
-  font-size: small;
-  font-weight: bold;
-}
-
+    @media screen and (max-width: 480px) {
+      .l22collection-wrapper {
+        width: 90%;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="sd1-card-wrapper">
-        <div class="sd1-bg-div" style="background-image: linear-gradient(rgba(16,48,75,0.8), rgba(4,145,226,0.8)), url('https://via.placeholder.com/240x300?text=1');"></div>
-        <div class="sd1-content-div">
-          <div class="sd1-top-div" style="background-image: url('slider1.jpg');">
-            <div class="sd1-timer-div">
-              <div><div>00</div><small>D'S</small></div>
-              <div><div>00</div><small>H'S</small></div>
-              <div><div>00</div><small>MIN'S</small></div>
-              <div><div>00</div><small>SEC</small></div>
-            </div>
+
+  <div style="width: auto; height: auto; align-items: center; justify-content: center; display: flex; flex-direction: row; padding: 7%; flex-wrap: wrap;">
+
+    <div class="l22collection-wrapper">
+      <img src="client-12.fa2ef573.png" class="l22main-img" alt="Main Image" />
+      
+      <div class="l22bottom-section">
+        <div class="l22collection-name"> 
+          <div class="l22avatar-wrapper">
+            <img src="client-8.ae28ec40.png" alt="Avatar" />
           </div>
-          <div class="sd1-bottom-div">
-            <div class="sd1-avatars">
-              <img src="client-1.64bd52dc.png" alt="avatar" style="transform: translateX(13px);">
-              <img src="client-10.916ce2a4.png" alt="avatar">
-              <img src="client-11.bfc29ff8.png" alt="avatar"style="transform: translateX(-13px);">
-              <span>20+ Place Bit.</span>
-            </div>
-            <p style="font-size: larger; font-weight: 600;">Preatent</p>
-            <p style="color: #ccc;">Highest bid 1/20</p>
-            <p class="sd1-eth">0.244wETH</p>
-          </div>
+        </div>
+        
+        <div class="l22sub-images">
+          <img src="client-1.64bd52dc.png" alt="Sub 1" />
+          <img src="client-1.64bd52dc.png" alt="Sub 1" />
+          <img src="client-9.092c92e2.png" alt="Sub 2" />
         </div>
       </div>
 
+      <div class="l22items-tag">
+        <span style="padding-left: 10px; font-size: large; font-weight: 700;">Cubic Trad</span>
+        <span style="float: right; padding: 5px;">27 Items</span>
+      </div>
+    </div>
+
+    <!-- Repeat cards with updated class names -->
+    <div class="l22collection-wrapper">
+      <img src="client-12.fa2ef573.png" class="l22main-img" alt="Main Image" />
       
+      <div class="l22bottom-section">
+        <div class="l22collection-name"> 
+          <div class="l22avatar-wrapper">
+            <img src="client-8.ae28ec40.png" alt="Avatar" />
+          </div>
+        </div>
+        
+        <div class="l22sub-images">
+          <img src="client-1.64bd52dc.png" alt="Sub 1" />
+          <img src="client-1.64bd52dc.png" alt="Sub 1" />
+          <img src="client-9.092c92e2.png" alt="Sub 2" />
+        </div>
+      </div>
+
+      <div class="l22items-tag">
+        <span style="padding-left: 10px; font-size: large; font-weight: 700;">Cubic Trad</span>
+        <span style="float: right; padding: 5px;">27 Items</span>
+      </div>
+    </div>
+
+    <div class="l22collection-wrapper">
+      <img src="client-12.fa2ef573.png" class="l22main-img" alt="Main Image" />
+      
+      <div class="l22bottom-section">
+        <div class="l22collection-name"> 
+          <div class="l22avatar-wrapper">
+            <img src="client-8.ae28ec40.png" alt="Avatar" />
+          </div>
+        </div>
+        
+        <div class="l22sub-images">
+          <img src="client-1.64bd52dc.png" alt="Sub 1" />
+          <img src="client-1.64bd52dc.png" alt="Sub 1" />
+          <img src="client-9.092c92e2.png" alt="Sub 2" />
+        </div>
+      </div>
+
+      <div class="l22items-tag">
+        <span style="padding-left: 10px; font-size: large; font-weight: 700;">Cubic Trad</span>
+        <span style="float: right; padding: 5px;">27 Items</span>
+      </div>
+    </div>
+
+    <div class="l22collection-wrapper">
+      <img src="client-12.fa2ef573.png" class="l22main-img" alt="Main Image" />
+      
+      <div class="l22bottom-section">
+        <div class="l22collection-name"> 
+          <div class="l22avatar-wrapper">
+            <img src="client-8.ae28ec40.png" alt="Avatar" />
+          </div>
+        </div>
+        
+        <div class="l22sub-images">
+          <img src="client-1.64bd52dc.png" alt="Sub 1" />
+          <img src="client-1.64bd52dc.png" alt="Sub 1" />
+          <img src="client-9.092c92e2.png" alt="Sub 2" />
+        </div>
+      </div>
+
+      <div class="l22items-tag">
+        <span style="padding-left: 10px; font-size: large; font-weight: 700;">Cubic Trad</span>
+        <span style="float: right; padding: 5px;">27 Items</span>
+      </div>
+    </div>
+    
+  </div>
 </body>
 </html>
