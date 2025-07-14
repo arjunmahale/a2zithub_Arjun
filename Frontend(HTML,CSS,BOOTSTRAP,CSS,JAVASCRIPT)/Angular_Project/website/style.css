@@ -40,12 +40,14 @@
       top: 100%;
       left: 0;
       background: #1f1f2e;
-      padding: 10px;
+      padding: 20px;
       display: none;
-      grid-template-columns: repeat(2, auto);
+      padding-top: 40px;
+      grid-template-columns: repeat(auto);
       gap: 10px 30px;
       border-radius: 6px;
       z-index: 999;
+      width: max-content;
     }
     .menu-item:hover .dropdown,
     .menu-item .dropdown:hover {
@@ -54,7 +56,7 @@
     .dropdown a {
       color: #ccc;
       text-decoration: none;
-      font-size: 14px;
+      font-size: large;
     }
   .search-bar {
   display: flex;
@@ -587,8 +589,8 @@
 
 
     #cr7-h1 {
-      font-size: 40px;
-      margin-bottom: 50px;
+      font-size: xx-large;
+      margin-bottom: 10px;
       margin-left: 5%;
       text-align: left;
     }
@@ -600,7 +602,7 @@
   justify-content: center;
   align-items: flex-start;
   padding-bottom: 50px;
-  padding-top: 50px;
+  padding-top: 20px;
   overflow-x: hidden; /* prevent horizontal scroll */
   max-width: 100%;
   box-sizing: border-box;
@@ -675,6 +677,10 @@
     top: 8px;
     right: 8px;
   }
+  #cr7-h1{
+    font-size: larger;
+  }
+     
 }
 
 
@@ -688,9 +694,7 @@
         min-width: unset;
       }
 
-      h1 {
-        font-size: 36px;
-      }
+     
     }
 
 
@@ -1115,5 +1119,184 @@ body {
     @media screen and (max-width: 480px) {
       .l22collection-wrapper {
         width: 90%;
+      }
+    }
+
+
+
+
+    /* footer css .get-started */
+
+      footer {
+      padding: 50px 20px;
+      background-color: #0b0b22;
+      display: flex;
+      margin-left: 5%;
+      margin-right: 5%;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .footer-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .footer-section {
+      flex: 1 1 200px;
+      min-width: 200px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .footer-logo img {
+      width: 30px;
+      margin-right: 10px;
+    }
+
+    .footer-section h4 {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    .footer-section ul {
+      list-style: none;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: #aaa;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .footer-section ul li a {
+      color: #aaa;
+      text-decoration: none;
+      display: inline-block;
+      transition: color 0.3s;
+    }
+
+    .footer-section ul li a::after {
+      content: "";
+      display: block;
+      height: 2px;
+      background-color: #00cfff;
+      width: 0;
+      transition: width 0.4s ease;
+    }
+
+    .footer-section ul li a:hover {
+      color: #00cfff;
+    }
+
+    .footer-section ul li a:hover::after {
+      width: 100%;
+    }
+
+    .newsletter input {
+      padding: 10px;
+      border: none;
+      outline: none;
+      background: #1b1b35;
+      color: white;
+      width: 70%;
+    }
+
+    .newsletter button {
+      padding: 10px 20px;
+      background-color: #1f2dff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .newsletter-note {
+      font-size: 12px;
+      color: #888;
+      margin-top: 10px;
+    }
+
+    .sold-out-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .sold-out-item img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+
+    .sold-out-item .info {
+      font-size: 13px;
+    }
+
+    .sold-out-item .info p:first-child {
+      font-weight: bold;
+      color: white;
+    }
+
+    .sold-out-item .info p:last-child {
+      color: #0cf;
+      font-weight: bold;
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 20px;
+      border-top: 1px solid #1b1b35;
+    }
+
+    .footer-bottom p {
+      font-size: 13px;
+      color: #aaa;
+      margin-bottom: 10px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      width: 100%;
+    }
+
+    .social-icons i {
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      background-color: #1b1b35;
+      border-radius: 50%;
+      padding: 10px;
+    }
+
+    @media (min-width: 769px) {
+      .footer-bottom {
+        flex-wrap: nowrap;
+      }
+
+      .footer-bottom p {
+        width: auto;
+        text-align: left;
+        margin-bottom: 0;
+      }
+
+      .social-icons {
+        justify-content: flex-end;
+        width: auto;
       }
     }

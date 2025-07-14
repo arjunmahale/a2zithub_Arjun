@@ -3,191 +3,275 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Top Collection Card</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <title>Nuron Footer</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      background-color: #181A24;
+      background-color: #0b0b22;
       color: #fff;
       font-family: Arial, sans-serif;
     }
 
-    .l22collection-wrapper {
-      background-color: #1f2233;
-      border-radius: 12px;
-      width: 20%;
-      margin: 30px auto;
-      padding-bottom: 50px;
+    footer {
+      padding: 50px 20px;
+      background-color: #0b0b22;
+      display: flex;
+      margin-left: 5%;
+      margin-right: 5%;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .footer-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .footer-section {
+      flex: 1 1 200px;
+      min-width: 200px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .footer-logo img {
+      width: 30px;
+      margin-right: 10px;
+    }
+
+    .footer-section h4 {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    .footer-section ul {
+      list-style: none;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: #aaa;
       position: relative;
       overflow: hidden;
     }
 
-    .l22main-img {
-      width: 100%;
-      height: min-content;
-      border-radius: 12px 12px 0 0;
+    .footer-section ul li a {
+      color: #aaa;
+      text-decoration: none;
+      display: inline-block;
+      transition: color 0.3s;
+    }
+
+    .footer-section ul li a::after {
+      content: "";
       display: block;
+      height: 2px;
+      background-color: #00cfff;
+      width: 0;
+      transition: width 0.4s ease;
     }
 
-    .l22bottom-section {
+    .footer-section ul li a:hover {
+      color: #00cfff;
+    }
+
+    .footer-section ul li a:hover::after {
+      width: 100%;
+    }
+
+    .newsletter input {
       padding: 10px;
-      text-align: center;
-      height: auto;
-    }
-
-    .l22collection-name {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-
-    .l22sub-images {
-      display: flex;
-      gap: 8px;
-      margin-top: 5%;
-    }
-
-    .l22sub-images img {
-      width: 33%;
-      height: 62px;
-      border-radius: 8px;
-      object-fit: cover;
-    }
-
-    .l22avatar-wrapper {
-      position: absolute;
-      left: 50%;
-      transform: translate(-50%, -70%);
-      width: 100px;
-      height: 100px;
-      z-index: 2;
-    }
-
-    .l22avatar-wrapper img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      border: 3px solid #1f2233;
-      object-fit: cover;
-    }
-
-    .l22items-tag {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
+      border: none;
+      outline: none;
+      background: #1b1b35;
       color: white;
-      margin-top: 1%;
-      font-size: 12px;
-      padding: 2px 5px;
-      width: 100%;
-      border-radius: 6px;
-      z-index: 3;
+      width: 70%;
     }
 
-    @media screen and (max-width: 480px) {
-      .l22collection-wrapper {
-        width: 90%;
+    .newsletter button {
+      padding: 10px 20px;
+      background-color: #1f2dff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .newsletter-note {
+      font-size: 12px;
+      color: #888;
+      margin-top: 10px;
+    }
+
+    .sold-out-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .sold-out-item img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+
+    .sold-out-item .info {
+      font-size: 13px;
+    }
+
+    .sold-out-item .info p:first-child {
+      font-weight: bold;
+      color: white;
+    }
+
+    .sold-out-item .info p:last-child {
+      color: #0cf;
+      font-weight: bold;
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 20px;
+      border-top: 1px solid #1b1b35;
+    }
+
+    .footer-bottom p {
+      font-size: 13px;
+      color: #aaa;
+      margin-bottom: 10px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      width: 100%;
+    }
+
+    .social-icons i {
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      background-color: #1b1b35;
+      border-radius: 50%;
+      padding: 10px;
+    }
+
+    @media (min-width: 769px) {
+      .footer-bottom {
+        flex-wrap: nowrap;
+      }
+
+      .footer-bottom p {
+        width: auto;
+        text-align: left;
+        margin-bottom: 0;
+      }
+
+      .social-icons {
+        justify-content: flex-end;
+        width: auto;
       }
     }
   </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
-  <div style="width: auto; height: auto; align-items: center; justify-content: center; display: flex; flex-direction: row; padding: 7%; flex-wrap: wrap;">
-
-    <div class="l22collection-wrapper">
-      <img src="client-12.fa2ef573.png" class="l22main-img" alt="Main Image" />
-      
-      <div class="l22bottom-section">
-        <div class="l22collection-name"> 
-          <div class="l22avatar-wrapper">
-            <img src="client-8.ae28ec40.png" alt="Avatar" />
-          </div>
+  <footer>
+    <div class="footer-top">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <img src="https://via.placeholder.com/30x30.png?text=N" alt="N logo">
+          <span style="font-size: 20px; font-weight: bold;">nuron</span>
         </div>
-        
-        <div class="l22sub-images">
-          <img src="client-1.64bd52dc.png" alt="Sub 1" />
-          <img src="client-1.64bd52dc.png" alt="Sub 1" />
-          <img src="client-9.092c92e2.png" alt="Sub 2" />
+        <p style="font-size: 14px; color: #aaa; max-width: 280px;">Created with the collaboration of over 60 of the world's best Nuron Artists.</p>
+        <div class="newsletter" style="margin-top: 20px;">
+          <p style="font-weight: bold; margin-bottom: 10px; font-size: 14px;">Get The Latest Nuron Updates</p>
+          <input type="text" placeholder="Your username">
+          <button>Subscribe</button>
+          <p class="newsletter-note">Email is safe. We don't spam.</p>
         </div>
       </div>
 
-      <div class="l22items-tag">
-        <span style="padding-left: 10px; font-size: large; font-weight: 700;">Cubic Trad</span>
-        <span style="float: right; padding: 5px;">27 Items</span>
+      <div class="footer-section">
+        <h4>Nuron</h4>
+        <ul>
+          <li><a href="#">Protocol Explore</a></li>
+          <li><a href="#">System Token</a></li>
+          <li><a href="#">Optimize Time</a></li>
+          <li><a href="#">Visual Checking</a></li>
+          <li><a href="#">Fadeup System</a></li>
+          <li><a href="#">Activity Log</a></li>
+          <li><a href="#">System Auto Since</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Information</h4>
+        <ul>
+          <li><a href="#">Market Explore</a></li>
+          <li><a href="#">Ready Token</a></li>
+          <li><a href="#">Main Option</a></li>
+          <li><a href="#">Product Checking</a></li>
+          <li><a href="#">Blog Grid</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Fix Bug</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Recent Sold Out</h4>
+        <div class="sold-out-item">
+          <img src="https://via.placeholder.com/40" alt="sold 1">
+          <div class="info">
+            <p>#21 The Wonder</p>
+            <p>0.244wETH</p>
+          </div>
+        </div>
+        <div class="sold-out-item">
+          <img src="https://via.placeholder.com/40" alt="sold 2">
+          <div class="info">
+            <p>Diamond Dog</p>
+            <p>0.022wETH</p>
+          </div>
+        </div>
+        <div class="sold-out-item">
+          <img src="https://via.placeholder.com/40" alt="sold 3">
+          <div class="info">
+            <p>Morgan11</p>
+            <p>0.892wETH</p>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Repeat cards with updated class names -->
-    <div class="l22collection-wrapper">
-      <img src="client-12.fa2ef573.png" class="l22main-img" alt="Main Image" />
-      
-      <div class="l22bottom-section">
-        <div class="l22collection-name"> 
-          <div class="l22avatar-wrapper">
-            <img src="client-8.ae28ec40.png" alt="Avatar" />
-          </div>
-        </div>
-        
-        <div class="l22sub-images">
-          <img src="client-1.64bd52dc.png" alt="Sub 1" />
-          <img src="client-1.64bd52dc.png" alt="Sub 1" />
-          <img src="client-9.092c92e2.png" alt="Sub 2" />
-        </div>
-      </div>
-
-      <div class="l22items-tag">
-        <span style="padding-left: 10px; font-size: large; font-weight: 700;">Cubic Trad</span>
-        <span style="float: right; padding: 5px;">27 Items</span>
+    <div class="footer-bottom">
+      <p>© 2022 Nuron, Inc. All rights reserved. &nbsp;&nbsp; <a href="#" style="color: #aaa; text-decoration: none;">Terms</a> &bull; <a href="#" style="color: #aaa; text-decoration: none;">Privacy Policy</a></p>
+      <div class="social-icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-linkedin-in"></i>
+        <i class="fas fa-envelope"></i>
       </div>
     </div>
-
-    <div class="l22collection-wrapper">
-      <img src="client-12.fa2ef573.png" class="l22main-img" alt="Main Image" />
-      
-      <div class="l22bottom-section">
-        <div class="l22collection-name"> 
-          <div class="l22avatar-wrapper">
-            <img src="client-8.ae28ec40.png" alt="Avatar" />
-          </div>
-        </div>
-        
-        <div class="l22sub-images">
-          <img src="client-1.64bd52dc.png" alt="Sub 1" />
-          <img src="client-1.64bd52dc.png" alt="Sub 1" />
-          <img src="client-9.092c92e2.png" alt="Sub 2" />
-        </div>
-      </div>
-
-      <div class="l22items-tag">
-        <span style="padding-left: 10px; font-size: large; font-weight: 700;">Cubic Trad</span>
-        <span style="float: right; padding: 5px;">27 Items</span>
-      </div>
-    </div>
-
-    <div class="l22collection-wrapper">
-      <img src="client-12.fa2ef573.png" class="l22main-img" alt="Main Image" />
-      
-      <div class="l22bottom-section">
-        <div class="l22collection-name"> 
-          <div class="l22avatar-wrapper">
-            <img src="client-8.ae28ec40.png" alt="Avatar" />
-          </div>
-        </div>
-        
-        <div class="l22sub-images">
-          <img src="client-1.64bd52dc.png" alt="Sub 1" />
-          <img src="client-1.64bd52dc.png" alt="Sub 1" />
-          <img src="client-9.092c92e2.png" alt="Sub 2" />
-        </div>
-      </div>
-
-      <div class="l22items-tag">
-        <span style="padding-left: 10px; font-size: large; font-weight: 700;">Cubic Trad</span>
-        <span style="float: right; padding: 5px;">27 Items</span>
-      </div>
-    </div>
-    
-  </div>
+  </footer>
 </body>
 </html>
