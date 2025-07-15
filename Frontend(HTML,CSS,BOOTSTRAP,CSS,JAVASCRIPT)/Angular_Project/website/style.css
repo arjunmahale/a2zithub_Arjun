@@ -1129,7 +1129,7 @@ body {
 
       footer {
       padding: 50px 20px;
-      background-color: #0b0b22;
+      background-color: transparent;
       display: flex;
       margin-left: 5%;
       margin-right: 5%;
@@ -1156,7 +1156,7 @@ body {
     }
 
     .footer-logo img {
-      width: 30px;
+      width: 100px;
       margin-right: 10px;
     }
 
@@ -1207,7 +1207,7 @@ body {
       outline: none;
       background: #1b1b35;
       color: white;
-      width: 70%;
+      width: 40%;
     }
 
     .newsletter button {
@@ -1215,6 +1215,7 @@ body {
       background-color: #1f2dff;
       color: white;
       border: none;
+      
       cursor: pointer;
     }
 
