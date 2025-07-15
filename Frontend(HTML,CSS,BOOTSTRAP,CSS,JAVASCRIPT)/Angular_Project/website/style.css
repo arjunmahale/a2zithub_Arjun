@@ -1129,7 +1129,7 @@ body {
 
       footer {
       padding: 50px 20px;
-   
+   background-color:red;
       display: flex;
       margin-left: 5%;
       margin-right: 5%;
