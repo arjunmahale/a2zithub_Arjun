@@ -1356,6 +1356,32 @@
       </div>
     </div>
   </footer>
+  
+  <!-- Scroll Button -->
+  <div id="scrollProgress">
+    <div class="  rounded-circle "
+      style="height: 60%; width: 60%; display:  flex; align-items: center; justify-content: center; background: white;">
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
+  </div>
+
+  <!-- scrollbutton javascript -->
+  <script>
+    const scrollBtn = document.getElementById("scrollProgress");
+
+    window.addEventListener("scroll", () => {
+      const scrollTop = document.documentElement.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / scrollHeight) * 360;
+
+      scrollBtn.style.background = `conic-gradient(#f04900 ${scrollPercent}deg, #ddd ${scrollPercent}deg)`;
+    });
+
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+
 </body>
 
 </html>
