@@ -1359,8 +1359,8 @@
   
   <!-- Scroll Button -->
   <div id="scrollProgress">
-    <div class="  rounded-circle "
-      style="height: 60%; width: 60%; display:  flex; align-items: center; justify-content: center; background: white;">
+    <div class="rounded-circle"
+      style="height: 88%; width: 88%; display:  flex; align-items: center; justify-content: center; background: #1C1C26;border-radius: 50%;color:#00A3FF;font-size: larger;">
       <i class="fa-solid fa-arrow-up"></i>
     </div>
   </div>
@@ -1374,7 +1374,7 @@
       const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercent = (scrollTop / scrollHeight) * 360;
 
-      scrollBtn.style.background = `conic-gradient(#f04900 ${scrollPercent}deg, #ddd ${scrollPercent}deg)`;
+      scrollBtn.style.background = `conic-gradient(#00A3FF ${scrollPercent}deg, #ddd ${scrollPercent}deg)`;
     });
 
     scrollBtn.addEventListener("click", () => {
