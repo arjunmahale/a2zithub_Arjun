@@ -110,12 +110,12 @@
 
   <div class="sidebar" id="sidebar">
     <div class="close-btn" onclick="toggleSidebar()">✖</div>
-    <div class="menu-item">Home</div>
-    <div class="menu-item">About</div>
-    <div class="menu-item">Explore</div>
-    <div class="menu-item">Pages</div>
-    <div class="menu-item">Blog</div>
-    <div class="menu-item">Contact</div>
+    <div class="menu-item"><a href="#home" style="text-decoration: none;color: white;" onclick="toggleSidebar()">Home</a></div>
+    <div class="menu-item"><a href="#about" style="text-decoration: none;color: white;" onclick="toggleSidebar()">About</a></div>
+    <div class="menu-item"><a href="#explore" style="text-decoration: none;color: white;" onclick="toggleSidebar()">Explore</a></div>
+    <div class="menu-item"><a href="#pages" style="text-decoration: none;color: white;" onclick="toggleSidebar()">Pages</a></div>
+    <div class="menu-item"><a href="#blog" style="text-decoration: none;color: white;" onclick="toggleSidebar()">Blog</a></div>
+    <div class="menu-item"><a href="#contact" style="text-decoration: none;color: white;" onclick="toggleSidebar()">Contact</a></div>
   </div>
 
   <script>
@@ -415,7 +415,7 @@
 
 
   <h1 id="cr7-h1">Create and sell your NFTs</h1>
-  <div class="cr7-container">
+  <div class="cr7-container" id="about">
     <div class="cr7-card-wrapper">
       <div class="cr7-card">
         <img src="sell1.png" alt="icon" class="cr7-image" />
@@ -661,7 +661,7 @@
 
 
   <!-- Top Seller Section -->
-  <div class="ts-container">
+  <div class="ts-container" id="blog">
     <div class="ts-heading" style="padding-left: 5%;">
       <h2>Top Seller in <span class="ts-day-selector" onclick="toggleDropdown()">1 day <i
             class="fa-solid fa-chevron-down"></i></span></h2>
@@ -825,7 +825,7 @@
   <!-- explore products div  -->
 
 
-  <div class="sd1-header  " style="padding-top: 30px;padding-bottom: 30px;padding-left: 0%;">
+  <div class="sd1-header  " style="padding-top: 30px;padding-bottom: 30px;padding-left: 0%;" id="explore">
     <div class="sd1-header-left">
 
       <h1>Explore Products</h1>
@@ -840,7 +840,7 @@
 
   <!-- explore product <div></div> -->
 
-  <div class="exp-mydiv1">
+  <div class="exp-mydiv1" id="explore">
     <div class="exp-mydiv2">
 
       <div class="exp-card-wrapper">
@@ -1166,7 +1166,7 @@
 
   <!-- top collections div started -->
 
-  <div class="sd1-header  " style="padding-top: 30px;padding-bottom: 30px;padding-left: 0%;">
+  <div class="sd1-header  " style="padding-top: 30px;padding-bottom: 30px;padding-left: 0%;" id="pages">
     <div class="sd1-header-left">
 
       <h1>Top collections</h1>
@@ -1279,7 +1279,7 @@
   <!-- footer code started -->
 
   <footer>
-    <div class="footer-top">
+    <div class="footer-top" id="contact">
       <div class="footer-section">
         <div class="footer-logo">
           <img src="logo1.png" alt="N logo">
