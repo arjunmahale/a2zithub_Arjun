@@ -1,9 +1,6 @@
 package com.trg.servlet;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.SQLException;
-
 import com.trg.db.ConnectDB;
 
 import jakarta.servlet.RequestDispatcher;
@@ -18,37 +15,33 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException {
+            throws ServletException, IOException {
 
+        // Retrieve input from form
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String role = request.getParameter("role");
 
-        boolean connected = false;
+        // Debug logs
+        System.out.println("➡️ Username: " + username + ", Role: " + role);
+
         boolean isAuthenticated = false;
 
         try {
-            ConnectDB cn =new  ConnectDB(); // Get DB connection
-
-            connected = (cn != null);
-
-            if (connected) {
-
-
-            }
-
+            // Validate credentials
+            //isAuthenticated = ;
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        if (connected && ConnectDB.authenticateUser(username, password)) {
-            // Save login info in session
+        if (ConnectDB.authenticateUser(username, password)) {
+            // ✅ Authentication successful
             HttpSession session = request.getSession();
             session.setAttribute("username", username);
             session.setAttribute("role", role);
 
-            // Redirect based on role
-            switch (role) {
+            // ✅ Redirect to respective dashboard
+            switch (role.toLowerCase()) {
                 case "master":
                     response.sendRedirect("masterDashboard.jsp");
                     break;
@@ -62,13 +55,16 @@ public class LoginServlet extends HttpServlet {
                     response.sendRedirect("stockDashboard.jsp");
                     break;
                 default:
-                    response.sendRedirect("index.html");
+                    // Invalid role provided
+                    request.setAttribute("error", "Invalid role selected.");
+                    RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+                    rd.forward(request, response);
             }
 
         } else {
-            // Show error
-            request.setAttribute("error", "Invalid credentials or role.");
-            RequestDispatcher rd = request.getRequestDispatcher("404.html");
+            // ❌ Invalid credentials
+            request.setAttribute("error", "Invalid username or password.");
+            RequestDispatcher rd = request.getRequestDispatcher("index.jsp"); // or loginError.jsp
             rd.forward(request, response);
         }
     }

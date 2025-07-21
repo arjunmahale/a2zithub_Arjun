@@ -171,17 +171,6 @@
 <%
 
 
-	boolean connected=false;
-try {
-	ConnectDB.connect();
-	 out.println("<script type=\"text/javascript\">");
-	out.println("alert('Database Connection Successful!');");
-	 //out.println("location='index.jsp';");
-	 out.println("</script>");
-} catch (SQLException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
 
 
 %>

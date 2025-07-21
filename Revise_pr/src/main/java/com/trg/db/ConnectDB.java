@@ -1,55 +1,44 @@
 package com.trg.db;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class ConnectDB {
 
-	public static void connect() throws SQLException {
+    public static Connection connect() throws SQLException {
+        Connection con = null;
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo", "root", "root");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return con;
+    }
 
-		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			Connection con= DriverManager.getConnection("jdbc:mysql://localhost/3306/demo","root","root");
+    public static boolean authenticateUser(String uname, String pass) {
+        boolean isAuthenticated = false;
 
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+        try (Connection con = connect()) {
+            if (con == null) {
+                System.out.println("❌ Database connection failed.");
+                return false;
+            }
 
-	  public static boolean authenticateUser(String uname, String pass) {
-	        boolean isAuthenticated = false;
+            String sql = "SELECT * FROM user WHERE uname = ? AND pass = ?";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1, uname);
+            ps.setString(2, pass);
 
-	        try {
-	        	Connection con= DriverManager.getConnection("jdbc:mysql://localhost/3306/demo","root","root");
-	            if (con == null) {
-	                System.out.println("❌ Database connection failed.");
-	                return false;
-	            }
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                System.out.println("✅ Authenticated: " + rs.getString(1));
+                isAuthenticated = true;
+            }
 
-	            String sql = "SELECT * FROM user WHERE uname = ? AND pass = ?";
-	            PreparedStatement ps = con.prepareStatement(sql);
-	            ps.setString(1, uname);
-	            ps.setString(2, pass);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
-	            ResultSet rs = ps.executeQuery();
-
-	            if (rs.next()) {
-
-	            	System.out.println(rs.getString(1)+rs.getString(2));
-	                isAuthenticated = true;
-	            }
-
-	            rs.close();
-	            ps.close();
-	            con.close();
-	        } catch (SQLException e) {
-	            e.printStackTrace();
-	        }
-
-	        return isAuthenticated;
-	    }
+        return isAuthenticated;
+    }
 }
