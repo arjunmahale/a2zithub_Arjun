@@ -1,8 +1,10 @@
 package com.trg.servlet;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
 
-import java.util.HashMap;
+import com.trg.db.ConnectDB;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -11,38 +13,41 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
+@SuppressWarnings("serial")
 public class LoginServlet extends HttpServlet {
-
-    // Dummy user credentials (In real-world, replace with DB authentication)
-    private final HashMap<String, String> users = new HashMap<>();
-
-    @Override
-    public void init() throws ServletException {
-        // Username-password-role pairs (for demo purpose)
-        users.put("masteradmin:master", "admin123");
-        users.put("shopadmin:shop", "shop123");
-        users.put("cashier1:cashier", "cash123");
-        users.put("stock1:stock", "stock123");
-    }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
-        
+
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String role = request.getParameter("role");
 
-        String key = username + ":" + role;
-        String correctPassword = users.get(key);
+        boolean connected = false;
+        boolean isAuthenticated = false;
 
-        if (correctPassword != null && correctPassword.equals(password)) {
+        try {
+            ConnectDB cn =new  ConnectDB(); // Get DB connection
+
+            connected = (cn != null);
+
+            if (connected) {
+
+
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        if (connected && ConnectDB.authenticateUser(username, password)) {
             // Save login info in session
             HttpSession session = request.getSession();
             session.setAttribute("username", username);
             session.setAttribute("role", role);
 
-            // Redirect to role-specific dashboard
+            // Redirect based on role
             switch (role) {
                 case "master":
                     response.sendRedirect("masterDashboard.jsp");
@@ -59,7 +64,9 @@ public class LoginServlet extends HttpServlet {
                 default:
                     response.sendRedirect("index.html");
             }
+
         } else {
+            // Show error
             request.setAttribute("error", "Invalid credentials or role.");
             RequestDispatcher rd = request.getRequestDispatcher("404.html");
             rd.forward(request, response);

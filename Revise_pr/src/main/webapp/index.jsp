@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*, com.trg.db.ConnectDB" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -166,6 +168,23 @@
   </style>
 </head>
 <body>
+<%
+
+
+	boolean connected=false;
+try {
+	ConnectDB.connect();
+	 out.println("<script type=\"text/javascript\">");
+	out.println("alert('Database Connection Successful!');");
+	 //out.println("location='index.jsp';");
+	 out.println("</script>");
+} catch (SQLException e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+}
+
+
+%>
   <div class="bubble"></div>
   <div class="bubble"></div>
   <div class="bubble"></div>
@@ -175,6 +194,7 @@
 
   <div class="login-box">
     <h2 class="login-title">Stationary Billing Login</h2>
+
     <form action="LoginServlet" method="post">
       <div class="mb-3">
         <label for="username" class="form-label">Username</label>
@@ -196,6 +216,7 @@
       </div>
       <button type="submit" class="btn btn-primary w-100">Login</button>
     </form>
+
     <p class="footer-text">© 2025 A2Z IT HUB PVT. LTD.</p>
   </div>
 </body>
