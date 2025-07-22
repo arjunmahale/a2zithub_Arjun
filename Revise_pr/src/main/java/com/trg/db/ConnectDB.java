@@ -4,21 +4,25 @@ import java.sql.*;
 
 public class ConnectDB {
 
-    public static Connection connect() throws SQLException {
-        Connection con = null;
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo", "root", "root");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-        return con;
-    }
+//    public static Connection connect() throws SQLException {
+//        Connection con = null;
+//        try {
+//            Class.forName("com.mysql.cj.jdbc.Driver");
+//            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo", "root", "root");
+//        } catch (ClassNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//        return con;
+//    }
 
-    public static boolean authenticateUser(String uname, String pass) {
+    @SuppressWarnings("unused")
+	public static boolean authenticateUser(String uname, String pass) throws ClassNotFoundException {
         boolean isAuthenticated = false;
 
-        try (Connection con = connect()) {
+        try  {
+        	Class.forName("com.mysql.jdbc.Driver");
+
+           Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo", "root", "root");
             if (con == null) {
                 System.out.println("❌ Database connection failed.");
                 return false;
@@ -32,13 +36,13 @@ public class ConnectDB {
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
                 System.out.println("✅ Authenticated: " + rs.getString(1));
-                isAuthenticated = true;
+                return true;
             }
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        return isAuthenticated;
+        return false;
     }
 }

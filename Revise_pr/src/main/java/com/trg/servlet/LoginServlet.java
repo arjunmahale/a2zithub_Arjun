@@ -29,12 +29,12 @@ public class LoginServlet extends HttpServlet {
 
         try {
             // Validate credentials
-            //isAuthenticated = ;
+            isAuthenticated = ConnectDB.authenticateUser(username, password);
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        if (ConnectDB.authenticateUser(username, password)) {
+        if (isAuthenticated) {
             // ✅ Authentication successful
             HttpSession session = request.getSession();
             session.setAttribute("username", username);
