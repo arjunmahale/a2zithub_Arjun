@@ -1,0 +1,13 @@
+methods https:
+
+get:get resource 
+post:insert data
+put:update
+delete:delete
+
+
+Annotations in springboot:
+
+@Controller: defines the controller
+@ResponseBody: body generates response
+@getMapping:  
